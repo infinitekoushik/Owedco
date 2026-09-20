@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Owedco — Find Out What Your Business Is Owed</title>
+<meta name="description" content="Most businesses that qualify for the federal R&D tax credit have never claimed it. Find out in two minutes if yours is one of them.">
+<meta property="og:title" content="Owedco — Your business may be owed real money">
+<meta property="og:description" content="The R&D tax credit gives businesses cash back for development work, Most never claim it. Find out where you stand.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://owedco.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:      #090E1A;
+    --navy-card: #111827;
+    --navy-edge: #1C2A3E;
+    --gold:      #C9A84C;
+    --gold-lt:   #E2C06A;
+    --gold-dim:  #7A6030;
+    --white:     #FFFFFF;
+    --off-white: #E8EEF5;
+    --text-dim:  #6B7E96;
+    --text-body: #A8BCCE;
+    --good:      #3DB87A;
+    --bad:       #E05C5C;
+    --radius:    13px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    min-height: 100vh;
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ══ HERO ══ */
+  .hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px 60px;
+    overflow: hidden;
+  }
+
+  .hero-bg-glow {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  #canvas3d {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero-nav {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    z-index: 2;
+  }
+
+  .logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--gold);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .nav-right {
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  .hero-body {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 600px;
+    padding-top: 80px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 99px;
+    padding: 5px 14px 5px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gold);
+    margin-bottom: 32px;
+  }
+
+  .badge-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--good);
+    animation: blink 2s ease-in-out infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.3; }
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(38px, 6.5vw, 62px);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    color: var(--white);
+    margin-bottom: 22px;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-p {
+    font-size: 17px;
+    color: var(--text-body);
+    line-height: 1.7;
+    max-width: 460px;
+    margin: 0 auto 40px;
+  }
+
+  .stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    margin-bottom: 44px;
+    flex-wrap: wrap;
+  }
+
+  .stat { text-align: center; }
+  .stat-n {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-l {
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.4;
+  }
+
+  .btn-hero {
+    display: inline-block;
+    background: var(--gold);
+    color: #160F00;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 16px 44px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 24px rgba(201,168,76,0.22);
+    letter-spacing: -0.01em;
+  }
+  .btn-hero:hover { transform: translateY(-2px); box-shadow: 0 8px 36px rgba(201,168,76,0.32); }
+
+  .hero-caption {
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  /* ══ QUIZ ══ */
+  #quizSection {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 48px 24px 80px;
+  }
+
+  .quiz-wrap { width: 100%; max-width: 520px; margin: 0 auto; }
+
+  .quiz-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 19px;
+    color: var(--gold);
+    margin-bottom: 36px;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .prog-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+  }
+  .prog-track {
+    height: 2px;
+    background: var(--navy-edge);
+    border-radius: 99px;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+  .prog-fill {
+    height: 100%;
+    background: var(--gold);
+    border-radius: 99px;
+    transition: width 0.45s cubic-bezier(0.4,0,0.2,1);
+    width: 0%;
+  }
+
+  .card {
+    background: var(--navy-card);
+    border: 1px solid var(--navy-edge);
+    border-radius: var(--radius);
+    padding: 34px;
+  }
+
+  .q-num {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .q-main {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    line-height: 1.38;
+    color: var(--white);
+    margin-bottom: 7px;
+  }
+
+  .q-hint {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.55;
+    margin-bottom: 24px;
+  }
+
+  .opts { display: flex; flex-direction: column; gap: 8px; }
+
+  .opt {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    background: transparent;
+    border: 1px solid var(--navy-edge);
+    border-radius: 10px;
+    padding: 13px 15px;
+    cursor: pointer;
+    color: var(--text-body);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+    transition: border-color 0.14s, background 0.14s, color 0.14s;
+  }
+  .opt:hover     { border-color: var(--gold-dim); background: rgba(201,168,76,0.05); color: var(--white); }
+  .opt.picked    { border-color: var(--gold); background: rgba(201,168,76,0.1); color: var(--white); }
+  .opt:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+  .opt-dot {
+    width: 17px; height: 17px;
+    border-radius: 50%;
+    border: 1.5px solid var(--navy-edge);
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    transition: border-color 0.14s, background 0.14s;
+  }
+  .opt.picked .opt-dot { border-color: var(--gold); background: var(--gold); }
+  .opt.picked .opt-dot::after {
+    content: '';
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: #160F00;
+  }
+
+  .quiz-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .btn-back {
+    background: transparent;
+    border: 1px solid var(--navy-edge);
+    color: var(--text-dim);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: border-color 0.14s, color 0.14s;
+  }
+  .btn-back:hover     { border-color: var(--text-dim); color: var(--white); }
+  .btn-back:disabled  { opacity: 0.25; cursor: default; }
+
+  .btn-next {
+    margin-left: auto;
+    background: var(--gold);
+    border: none;
+    color: #160F00;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 11px 26px;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: opacity 0.14s, transform 0.14s;
+  }
+  .btn-next:hover:not(:disabled) { transform: translateY(-1px); }
+  .btn-next:disabled { opacity: 0.28; cursor: default; }
+
+  /* ══ RESULTS ══ */
+  #resultsSection {
+    display: none;
+    width: 100%;
+    padding: 48px 24px 80px;
+    justify-content: center;
+  }
+
+  .results-wrap { width: 100%; max-width: 580px; margin: 0 auto; }
+
+  .res-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 19px;
+    color: var(--gold);
+    margin-bottom: 32px;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .tier-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 99px;
+    margin-bottom: 18px;
+  }
+  .tier-badge.likely   { background: rgba(61,184,122,0.1); color: var(--good); border: 1px solid rgba(61,184,122,0.28); }
+  .tier-badge.possible { background: rgba(201,168,76,0.1); color: var(--gold); border: 1px solid rgba(201,168,76,0.28); }
+  .tier-badge.unlikely { background: rgba(224,92,92,0.08); color: var(--bad);  border: 1px solid rgba(224,92,92,0.22); }
+
+  .res-headline {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(26px, 4.5vw, 36px);
+    line-height: 1.2;
+    margin-bottom: 28px;
+  }
+
+  .credit-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+
+  .cnum {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(46px, 8vw, 70px);
+    line-height: 1;
+    color: var(--gold);
+    letter-spacing: -0.025em;
+  }
+
+  .cnum-high {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(46px, 8vw, 70px);
+    line-height: 1;
+    color: var(--gold-lt);
+    letter-spacing: -0.025em;
+  }
+
+  .csep {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    color: var(--text-dim);
+  }
+
+  .credit-caption {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.55;
+    margin-bottom: 28px;
+    max-width: 440px;
+  }
+
+  .rule { height: 1px; background: var(--navy-edge); margin: 24px 0; }
+
+  .factors { display: flex; flex-direction: column; gap: 11px; margin-bottom: 4px; }
+  .factor {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    font-size: 13.5px;
+    color: var(--text-body);
+    line-height: 1.55;
+  }
+  .fdot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+  .fdot.g { background: var(--good); }
+  .fdot.y { background: var(--gold); }
+  .fdot.r { background: var(--bad); }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-dim);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .timeline { display: flex; flex-direction: column; }
+  .tl { display: flex; gap: 16px; }
+  .tl-spine { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+  .tl-circle {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.25);
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .tl-line { width: 1px; flex: 1; background: var(--navy-edge); margin: 4px 0; min-height: 20px; }
+  .tl-content { padding-bottom: 22px; }
+  .tl-title { font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 3px; }
+  .tl-desc { font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+
+  .cta-card {
+    background: linear-gradient(135deg, rgba(201,168,76,0.09), rgba(201,168,76,0.03));
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-top: 6px;
+  }
+  .cta-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 21px;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .cta-p {
+    font-size: 13.5px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .btn-cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--gold);
+    color: #160F00;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 4px 20px rgba(201,168,76,0.18);
+  }
+  .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,168,76,0.3); }
+
+  /* Ad slot */
+  .ad-slot {
+    margin-top: 22px;
+    min-height: 90px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--navy-card);
+    border: 1px solid var(--navy-edge);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Once AdSense is approved, remove the .ad-placeholder div and paste your ins tag inside .ad-slot */
+  .ad-placeholder {
+    font-size: 11px;
+    color: var(--text-dim);
+    text-align: center;
+    padding: 16px;
+    line-height: 1.5;
+  }
+
+  .disclaimer {
+    margin-top: 22px;
+    font-size: 11px;
+    color: var(--text-dim);
+    line-height: 1.65;
+  }
+
+  .btn-restart {
+    background: transparent;
+    border: none;
+    color: var(--text-dim);
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 18px;
+    display: block;
+    text-align: center;
+    padding: 0;
+  }
+  .btn-restart:hover { color: var(--white); }
+
+  /* ══ FOOTER ══ */
+  .site-footer {
+    width: 100%;
+    border-top: 1px solid var(--navy-edge);
+    padding: 28px 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.14s;
+  }
+  .footer-links a:hover { color: var(--white); }
+
+  @media (max-width: 480px) {
+    .card { padding: 22px 16px; }
+    .stats-row { gap: 20px; }
+    .credit-row { flex-direction: column; gap: 0; }
+    .csep { display: none; }
+    .cnum-high::before { content: '– '; font-size: 22px; color: var(--text-dim); }
+    .site-footer { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+<link rel="icon" type="image/png" href="/logo.png">
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="heroSection">
+  <div class="hero-bg-glow"></div>
+  <canvas id="canvas3d"></canvas>
+
+  <nav class="hero-nav">
+    <a class="logo" href="#" onclick="goHome(); return false;">Owedco</a>
+    <span class="nav-right">Takes two minutes · Completely free</span>
+  </nav>
+
+  <div class="hero-body">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      2026 tax year — new deduction rules now in effect
+    </div>
+
+    <h1>
+      Your business is<br>probably <em>owed money</em><br>right now
+    </h1>
+
+    <p class="hero-p">
+      The federal R&D tax credit hands businesses real cash back for development work they're already doing. Most never collect a dollar of it, not because they don't qualify — but because nobody told them they did.
+    </p>
+
+    <div class="stats-row">
+      <div class="stat">
+        <span class="stat-n">$13B</span>
+        <span class="stat-l">handed back every year</span>
+      </div>
+      <div class="stat">
+        <span class="stat-n">90%</span>
+        <span class="stat-l">who qualify never collect</span>
+      </div>
+      <div class="stat">
+        <span class="stat-n">2 min</span>
+        <span class="stat-l">to find out if you're one of them</span>
+      </div>
+    </div>
+
+    <button class="btn-hero" id="startBtn">Find Out What You're Owed</button>
+    <p class="hero-caption">Six questions and two minutes is all it takes. We don't ask for your email, your card or anything else.</p>
+  </div>
+</section>
+
+<!-- ══ QUIZ ══ -->
+<section id="quizSection">
+  <div class="quiz-wrap">
+    <a class="quiz-logo" href="#" onclick="goHome(); return false;">Owedco</a>
+
+    <div class="prog-row">
+      <span id="progLabel">Question 1 of 6</span>
+      <span id="progPct">0%</span>
+    </div>
+    <div class="prog-track">
+      <div class="prog-fill" id="progFill"></div>
+    </div>
+
+    <div class="card">
+      <div class="q-num" id="qNum"></div>
+      <p class="q-main" id="qMain"></p>
+      <p class="q-hint" id="qHint"></p>
+      <div class="opts" id="opts"></div>
+    </div>
+
+    <div class="quiz-nav">
+      <button class="btn-back" id="backBtn" disabled>Back</button>
+      <button class="btn-next" id="nextBtn" disabled>Continue</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RESULTS ══ -->
+<section id="resultsSection">
+  <div class="results-wrap">
+    <a class="res-logo" href="#" onclick="goHome(); return false;">Owedco</a>
+
+    <div id="tierBadge" class="tier-badge"></div>
+    <h2 class="res-headline" id="resHeadline"></h2>
+
+    <div id="creditBlock">
+      <div class="credit-row" id="creditRow"></div>
+      <p class="credit-caption" id="creditCaption"></p>
+    </div>
+
+    <div class="rule"></div>
+    <div class="factors" id="factorsList"></div>
+    <div class="rule"></div>
+
+    <div id="timelineBlock"></div>
+
+    <div class="cta-card">
+      <div class="cta-title" id="ctaTitle"></div>
+      <p class="cta-p" id="ctaP"></p>
+      <a href="https://omega-accounting.com/r-d-tax-credits-referral-team-partner/"
+         target="_blank" rel="noopener sponsored"
+         class="btn-cta" id="ctaBtn"></a>
+    </div>
+
+    <div class="ad-slot">
+      <!--
+        HOW TO ACTIVATE ADS:
+        1. Apply at google.com/adsense (takes 1-4 weeks to approve)
+        2. Once approved, replace everything inside .ad-slot with your ins tag:
+           <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                data-ad-slot="XXXXXXXXXX"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+        3. Add this script once to your page footer:
+           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      -->
+      <div class="ad-placeholder">Business finance ads will appear here once AdSense is approved</div>
+    </div>
+
+    <p class="disclaimer">
+      Owedco provides estimates for informational purposes only. Nothing on this site is tax or legal advice. Actual credit amounts depend on your qualified research expenses, payroll and IRS guidelines. Always work with a qualified tax professional before filing any credit claim.
+    </p>
+
+    <button class="btn-restart" id="restartBtn">Run it again for a different business</button>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="site-footer">
+  <span class="footer-copy">&copy; 2026 Owedco. All rights reserved.</span>
+  <div class="footer-links">
+    <a href="mailto:hello@owedco.com">Send us feedback</a>
+    <a href="#" onclick="alert('We collect no personal data. Nothing you enter here is stored or shared.'); return false;">Privacy</a>
+    <a href="#" onclick="alert('This tool gives estimates only — not tax advice. Talk to a professional before filing any claim.'); return false;">Disclaimer</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+
+  /* ── 3D COIN ── */
+  const s3 = document.createElement('script');
+  s3.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+  s3.onload = boot3D;
+  document.head.appendChild(s3);
+
+  function boot3D() {
+    const canvas = document.getElementById('canvas3d');
+    if (!canvas) return;
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    const scene  = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(42, window.innerWidth / window.innerHeight, 0.1, 100);
+    camera.position.z = 5.2;
+
+    const coinGeo = new THREE.CylinderGeometry(1.45, 1.45, 0.16, 72);
+    const coinMat = new THREE.MeshStandardMaterial({
+      color: 0xC9A84C, metalness: 0.88, roughness: 0.22,
+      emissive: 0x3A2800, emissiveIntensity: 0.18,
+    });
+    const coin = new THREE.Mesh(coinGeo, coinMat);
+    coin.rotation.x = Math.PI / 2;
+    scene.add(coin);
+
+    const rimGeo = new THREE.TorusGeometry(1.45, 0.042, 16, 72);
+    const rimMat = new THREE.MeshStandardMaterial({ color: 0x7A6028, metalness: 0.92, roughness: 0.28 });
+    const rim = new THREE.Mesh(rimGeo, rimMat);
+    scene.add(rim);
+
+    scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+    const key = new THREE.DirectionalLight(0xFFE090, 2.8);
+    key.position.set(3, 4, 5); scene.add(key);
+    const fill = new THREE.DirectionalLight(0x3050AA, 0.6);
+    fill.position.set(-4, -2, 3); scene.add(fill);
+    const back = new THREE.DirectionalLight(0xFFCC50, 1.0);
+    back.position.set(0, -3, -4); scene.add(back);
+
+    const pCount = 90;
+    const pos = new Float32Array(pCount * 3);
+    for (let i = 0; i < pCount * 3; i++) pos[i] = (Math.random() - 0.5) * 14;
+    const pGeo = new THREE.BufferGeometry();
+    pGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+    const pMat = new THREE.PointsMaterial({ color: 0xC9A84C, size: 0.038, transparent: true, opacity: 0.45 });
+    const particles = new THREE.Points(pGeo, pMat);
+    scene.add(particles);
+
+    let mx = 0, my = 0, tx = 0, ty = 0, t = 0;
+    const onMove = e => {
+      const x = e.touches ? e.touches[0].clientX : e.clientX;
+      const y = e.touches ? e.touches[0].clientY : e.clientY;
+      mx = (x / window.innerWidth  - 0.5) * 2;
+      my = (y / window.innerHeight - 0.5) * 2;
+    };
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('touchmove', onMove, { passive: true });
+
+    (function loop() {
+      requestAnimationFrame(loop);
+      t += 0.011;
+      tx += (mx - tx) * 0.038;
+      ty += (my - ty) * 0.038;
+      coin.position.y = Math.sin(t * 0.75) * 0.14;
+      coin.rotation.z = t * 0.3;
+      coin.rotation.x = Math.PI / 2 + ty * 0.32;
+      coin.rotation.y = tx * 0.38;
+      rim.position.y  = coin.position.y;
+      rim.rotation.x  = coin.rotation.x - Math.PI / 2;
+      rim.rotation.y  = coin.rotation.y;
+      particles.rotation.y = t * 0.025;
+      particles.rotation.x = t * 0.012;
+      renderer.render(scene, camera);
+    })();
+
+    window.addEventListener('resize', () => {
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+    });
+  }
+
+  /* ── QUIZ DATA ── */
+  const QS = [
+    {
+      id: 'industry',
+      q: 'What industry is your business in?',
+      hint: 'The R&D credit covers far more than labs and biotech — software, manufacturing, food science and architecture all qualify regularly.',
+      opts: [
+        { t: 'Software, SaaS or tech',              v: 'software', w: 3 },
+        { t: 'Manufacturing or engineering',         v: 'mfg',      w: 3 },
+        { t: 'Life sciences, biotech or pharma',     v: 'biotech',  w: 3 },
+        { t: 'Architecture or construction',         v: 'arch',     w: 2 },
+        { t: 'Food, beverage or agriculture',        v: 'food',     w: 2 },
+        { t: 'Something else',                       v: 'other',    w: 1 },
+      ]
+    },
+    {
+      id: 'activities',
+      q: 'Do you develop or improve products, processes, or software?',
+      hint: 'Building internal tools, automating workflows, or iterating on product features can all count — even if you never thought of it as research.',
+      opts: [
+        { t: 'Yes, regularly',                           v: 'yes',      w: 3 },
+        { t: 'Sometimes, for specific projects',         v: 'sometimes', w: 2 },
+        { t: "We do, but I'm not sure if it qualifies",  v: 'unsure',   w: 1 },
+        { t: "No, we don't do development work",         v: 'no',       w: 0 },
+      ]
+    },
+    {
+      id: 'employees',
+      q: 'How many full-time employees does your business have?',
+      hint: "Time your team spends on qualifying work is the biggest factor in how large your credit ends up. Even a small team of developers adds up.",
+      opts: [
+        { t: 'Just me',             v: 'solo',   w: 1 },
+        { t: '2 to 10',             v: 'small',  w: 2 },
+        { t: '11 to 50',            v: 'mid',    w: 3 },
+        { t: '51 to 250',           v: 'large',  w: 3 },
+        { t: 'More than 250',       v: 'xlarge', w: 3 },
+      ]
+    },
+    {
+      id: 'rdspend',
+      q: 'Roughly how much does your business spend on R&D work each year?',
+      hint: 'Add up salaries for developers or engineers, contractor fees, and any materials or cloud costs tied to building or testing something new.',
+      opts: [
+        { t: 'Under $50,000',              v: 'lt50k',  w: 1 },
+        { t: '$50,000 to $250,000',        v: 'mid',    w: 2 },
+        { t: '$250,000 to $1 million',     v: 'high',   w: 3 },
+        { t: 'Over $1 million',            v: 'vhigh',  w: 3 },
+        { t: "Not sure — we haven't tracked it", v: 'unsure', w: 1 },
+      ]
+    },
+    {
+      id: 'startup',
+      q: 'Is your business under 5 years old with less than $5M in annual revenue?',
+      hint: 'Early-stage companies get a special benefit: you can apply up to $500,000 of the credit against payroll taxes, which means real cash even before you turn a profit.',
+      opts: [
+        { t: "Yes, we're early-stage",             v: 'startup',     w: 3 },
+        { t: "No, we're past that stage",          v: 'established', w: 2 },
+        { t: "We haven't filed a tax return yet",  v: 'prefiling',   w: 2 },
+      ]
+    },
+    {
+      id: 'prior',
+      q: 'Have you ever claimed the R&D credit before?',
+      hint: 'Most businesses that qualify have never claimed it. If you have prior unclaimed years, those can often be recovered retroactively.',
+      opts: [
+        { t: 'Never — first time hearing about it', v: 'never',    w: 3 },
+        { t: 'Once or twice',                       v: 'sometimes', w: 2 },
+        { t: 'Every year already',                  v: 'regular',  w: 1 },
+        { t: "We tried but were told we don't qualify", v: 'denied', w: 2 },
+      ]
+    },
+  ];
+
+  const SPEND = { lt50k: 50000, mid: 150000, high: 600000, vhigh: 2000000, unsure: 100000 };
+
+  let cur = 0, ans = {}, sel = null;
+
+  const heroSec    = document.getElementById('heroSection');
+  const quizSec    = document.getElementById('quizSection');
+  const resSec     = document.getElementById('resultsSection');
+  const progFill   = document.getElementById('progFill');
+  const progLabel  = document.getElementById('progLabel');
+  const progPct    = document.getElementById('progPct');
+  const qNum       = document.getElementById('qNum');
+  const qMain      = document.getElementById('qMain');
+  const qHint      = document.getElementById('qHint');
+  const optsEl     = document.getElementById('opts');
+  const backBtn    = document.getElementById('backBtn');
+  const nextBtn    = document.getElementById('nextBtn');
+
+  function show(el)  { el.style.display = 'flex'; }
+  function hide(el)  { el.style.display = 'none'; }
+
+  function goHome() {
+    hide(quizSec); hide(resSec);
+    heroSec.style.display = '';
+    cur = 0; ans = {}; sel = null;
+  }
+
+  window.goHome = goHome;
+
+  document.getElementById('startBtn').addEventListener('click', () => {
+    hide(heroSec); show(quizSec); render();
+  });
+  document.getElementById('restartBtn').addEventListener('click', goHome);
+
+  function render() {
+    const q = QS[cur];
+    const prev = ans[q.id];
+    sel = prev ? q.opts.findIndex(o => o.v === prev.v) : null;
+
+    const pct = Math.round((cur / QS.length) * 100);
+    progFill.style.width = pct + '%';
+    progLabel.textContent = 'Question ' + (cur + 1) + ' of ' + QS.length;
+    progPct.textContent   = pct + '%';
+    qNum.textContent      = 'Step ' + (cur + 1) + ' of ' + QS.length;
+    qMain.textContent     = q.q;
+    qHint.textContent     = q.hint;
+
+    optsEl.innerHTML = '';
+    q.opts.forEach((o, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'opt' + (i === sel ? ' picked' : '');
+      btn.innerHTML = `<span class="opt-dot"></span>${o.t}`;
+      btn.addEventListener('click', () => pick(i));
+      optsEl.appendChild(btn);
+    });
+
+    backBtn.disabled = cur === 0;
+    nextBtn.disabled = sel === null;
+    nextBtn.textContent = cur === QS.length - 1 ? 'See My Results' : 'Continue';
+  }
+
+  function pick(i) {
+    sel = i;
+    const q = QS[cur];
+    ans[q.id] = { v: q.opts[i].v, w: q.opts[i].w };
+    document.querySelectorAll('.opt').forEach((b, idx) => b.classList.toggle('picked', idx === i));
+    nextBtn.disabled = false;
+  }
+
+  backBtn.addEventListener('click', () => { if (cur > 0) { cur--; render(); } });
+  nextBtn.addEventListener('click', () => {
+    if (sel === null) return;
+    if (cur < QS.length - 1) { cur++; render(); }
+    else results();
+  });
+
+  /* ── RESULTS ── */
+  function score() { return Object.values(ans).reduce((s, a) => s + a.w, 0); }
+
+  function fmt(n) {
+    if (n >= 1000000) return '$' + (n / 1000000).toFixed(1) + 'M';
+    if (n >= 1000)    return '$' + Math.round(n / 1000) + 'k';
+    return '$' + n;
+  }
+
+  function countUp(el, target, dur) {
+    const start = performance.now();
+    const raw = target >= 1000 ? Math.round(target / 1000) : target;
+    const suffix = target >= 1000000 ? 'M' : target >= 1000 ? 'k' : '';
+    function step(now) {
+      const p = Math.min((now - start) / dur, 1);
+      const ease = 1 - Math.pow(1 - p, 3);
+      const v = Math.round(ease * raw);
+      el.textContent = '$' + v + suffix;
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = fmt(target);
+    }
+    requestAnimationFrame(step);
+  }
+
+  function results() {
+    hide(quizSec);
+    show(resSec);
+
+    const sc   = score();
+    const tier = sc >= 15 ? 'likely' : sc >= 10 ? 'possible' : 'unlikely';
+    const rdv  = SPEND[ans.rdspend?.v] || 100000;
+    const lo   = Math.round(rdv * 0.05);
+    const hi   = Math.round(rdv * 0.10);
+
+    const badge = document.getElementById('tierBadge');
+    badge.textContent = tier === 'likely' ? 'Likely Qualified' : tier === 'possible' ? 'Possibly Qualified' : 'Low Match';
+    badge.className   = 'tier-badge ' + tier;
+
+    const headlineEl = document.getElementById('resHeadline');
+    if (tier === 'likely'  ) headlineEl.textContent = "Strong match. Your business is likely sitting on unclaimed money.";
+    else if (tier === 'possible') headlineEl.textContent = "There's a real chance you're leaving money behind.";
+    else headlineEl.textContent = "Low match — but a specialist call might still surface something.";
+
+    const row = document.getElementById('creditRow');
+    row.innerHTML = '';
+    if (tier === 'unlikely') {
+      const span = document.createElement('span');
+      span.className   = 'cnum';
+      span.style.color = 'var(--text-dim)';
+      span.style.fontSize = '34px';
+      span.textContent = 'Low match';
+      row.appendChild(span);
+      document.getElementById('creditCaption').textContent = "Based on what you've told us, qualifying activities appear limited. Read the breakdown below — and consider a free call to confirm.";
+    } else {
+      const loEl  = document.createElement('span'); loEl.className  = 'cnum';      loEl.textContent = '$0';
+      const sep   = document.createElement('span'); sep.className   = 'csep';      sep.textContent  = '–';
+      const hiEl  = document.createElement('span'); hiEl.className  = 'cnum-high'; hiEl.textContent = '$0';
+      row.appendChild(loEl); row.appendChild(sep); row.appendChild(hiEl);
+      setTimeout(() => countUp(loEl, lo, 1200), 120);
+      setTimeout(() => countUp(hiEl, hi, 1500), 220);
+      document.getElementById('creditCaption').textContent = "Estimated annual credit range based on your R&D spend. Specialist reviews typically recover 20–40% more than self-calculated figures.";
+    }
+
+    buildFactors();
+    buildTimeline(tier);
+    buildCTA(tier);
+  }
+
+  function buildFactors() {
+    const el   = document.getElementById('factorsList');
+    el.innerHTML = '';
+    const ind  = ans.industry?.v;
+    const act  = ans.activities?.v;
+    const emp  = ans.employees?.v;
+    const su   = ans.startup?.v;
+    const pr   = ans.prior?.v;
+    const list = [];
+
+    const indLabel = { software:'Software/tech', mfg:'Manufacturing', biotech:'Life sciences', arch:'Architecture', food:'Food & beverage' };
+    if (['software','mfg','biotech'].includes(ind)) {
+      list.push({ c:'g', t: indLabel[ind] + ' is one of the strongest-qualifying sectors — well-established IRS precedent here.' });
+    } else if (ind === 'arch' || ind === 'food') {
+      list.push({ c:'y', t: indLabel[ind] + ' businesses can qualify when improving processes or developing new formulations. Worth checking.' });
+    } else {
+      list.push({ c:'y', t: "What matters is the nature of the work, not the industry label. Many businesses are surprised they qualify." });
+    }
+
+    if (act === 'yes')      list.push({ c:'g', t: "Regularly improving products or processes is the core of a qualifying claim — strong signal." });
+    else if (act === 'sometimes') list.push({ c:'y', t: "Even occasional projects count. Specialists often find qualifying work businesses dismissed as routine." });
+    else if (act === 'unsure')    list.push({ c:'y', t: "Standard engineering or software iteration qualifies more often than people expect. A free review takes 15 minutes." });
+    else                          list.push({ c:'r', t: "Without development activities, qualification is unlikely. Revisit this if your business expands in that direction." });
+
+    if (['mid','large','xlarge'].includes(emp)) list.push({ c:'g', t: "Your team size means meaningful qualifying wages — that's the biggest driver of credit size." });
+    else if (emp === 'small')                   list.push({ c:'y', t: "Small teams still generate real credits, especially in software and biotech." });
+
+    if (su === 'startup') list.push({ c:'g', t: "As an early-stage company, you can apply up to $500,000 against payroll taxes — a cash benefit even before profitability." });
+
+    if (pr === 'never')  list.push({ c:'g', t: "Prior unclaimed years can often be recovered retroactively, sometimes adding significantly to your first recovery." });
+    if (pr === 'denied') list.push({ c:'y', t: "A general CPA saying no isn't always final. R&D credits need a specialist — the IRS four-part test is frequently misapplied." });
+
+    list.forEach(f => {
+      const row = document.createElement('div');
+      row.className = 'factor';
+      row.innerHTML = `<span class="fdot ${f.c}"></span><span>${f.t}</span>`;
+      el.appendChild(row);
+    });
+  }
+
+  function buildTimeline(tier) {
+    const el = document.getElementById('timelineBlock');
+    if (tier === 'unlikely') { el.innerHTML = ''; return; }
+    el.innerHTML = `
+      <p class="section-label">What happens after you connect with a specialist</p>
+      <div class="timeline">
+        <div class="tl">
+          <div class="tl-spine"><div class="tl-circle">1</div><div class="tl-line"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">Free review — about 15 minutes</div>
+            <div class="tl-desc">A tax credit specialist goes through your activities and confirms what qualifies. No charge, no commitment.</div>
+          </div>
+        </div>
+        <div class="tl">
+          <div class="tl-spine"><div class="tl-circle">2</div><div class="tl-line"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">Documentation — they do the heavy lifting</div>
+            <div class="tl-desc">They gather payroll data, contractor invoices and project notes. You share what you have — they handle the rest.</div>
+          </div>
+        </div>
+        <div class="tl">
+          <div class="tl-spine"><div class="tl-circle">3</div></div>
+          <div class="tl-content" style="padding-bottom:0">
+            <div class="tl-title">Credit applied — dollar for dollar</div>
+            <div class="tl-desc">Reduces your tax bill directly or your payroll taxes if you're a startup. Most businesses see results within 60 days of filing.</div>
+          </div>
+        </div>
+      </div>
+      <div class="rule"></div>`;
+  }
+
+  function buildCTA(tier) {
+    const title = document.getElementById('ctaTitle');
+    const p     = document.getElementById('ctaP');
+    const btn   = document.getElementById('ctaBtn');
+    if (tier === 'unlikely') {
+      title.textContent = 'Worth a second opinion';
+      p.textContent     = "A quiz can't catch everything. A 15-minute call with a specialist has turned 'no' into real money for businesses that looked similar to yours.";
+      btn.textContent   = 'Book a Free Call';
+    } else {
+      title.textContent = "Don't leave it on the table";
+      p.textContent     = "Specialists only charge if they recover money for you. The free review takes 15 minutes. The average first-year recovery for qualifying businesses is over $50,000.";
+      btn.textContent   = 'Get My Free Review — No Cost';
+    }
+  }
+
+})();
+</script>
+
+</body>
+</html>
