@@ -6,7 +6,7 @@
 <title>Owedco — Find Out What Your Business Is Owed</title>
 <meta name="description" content="Most businesses that qualify for the federal R&D tax credit have never claimed it. Find out in two minutes if yours is one of them.">
 <meta property="og:title" content="Owedco — Your business may be owed real money">
-<meta property="og:description" content="The R&D tax credit gives businesses cash back for development work, Most never claim it. Find out where you stand.">
+<meta property="og:description" content="The R&D tax credit gives businesses cash back for development work. Most never claim it. Find out where you stand.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://owedco.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -516,7 +516,7 @@
   .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,168,76,0.3); }
 
   /* Ad slot */
-  .ad-slot {
+  .ad-slot { display: none;
     margin-top: 22px;
     min-height: 90px;
     border-radius: var(--radius);
@@ -622,7 +622,7 @@
     </h1>
 
     <p class="hero-p">
-      The federal R&D tax credit hands businesses real cash back for development work they're already doing. Most never collect a dollar of it, not because they don't qualify — but because nobody told them they did.
+      The federal R&D tax credit hands businesses real cash back for development work they're already doing. Most never collect a dollar of it — not because they don't qualify, but because nobody told them they did.
     </p>
 
     <div class="stats-row">
@@ -641,7 +641,7 @@
     </div>
 
     <button class="btn-hero" id="startBtn">Find Out What You're Owed</button>
-    <p class="hero-caption">Six questions and two minutes is all it takes. We don't ask for your email, your card or anything else.</p>
+    <p class="hero-caption">Six questions — takes about two minutes. We don't ask for your email, your card, or anything else.</p>
   </div>
 </section>
 
@@ -694,7 +694,7 @@
     <div class="cta-card">
       <div class="cta-title" id="ctaTitle"></div>
       <p class="cta-p" id="ctaP"></p>
-      <a href="https://omega-accounting.com/r-d-tax-credits-referral-team-partner/"
+      <a href="https://www.taxtaker.com/partner"
          target="_blank" rel="noopener sponsored"
          class="btn-cta" id="ctaBtn"></a>
     </div>
@@ -713,7 +713,7 @@
         3. Add this script once to your page footer:
            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       -->
-      <div class="ad-placeholder">Business finance ads will appear here once AdSense is approved</div>
+      <!-- AdSense slot — paste your ins tag here after approval. Remove this comment too. -->
     </div>
 
     <p class="disclaimer">
@@ -728,9 +728,9 @@
 <footer class="site-footer">
   <span class="footer-copy">&copy; 2026 Owedco. All rights reserved.</span>
   <div class="footer-links">
-    <a href="mailto:hello@owedco.com">Send us feedback</a>
-    <a href="#" onclick="alert('We collect no personal data. Nothing you enter here is stored or shared.'); return false;">Privacy</a>
-    <a href="#" onclick="alert('This tool gives estimates only — not tax advice. Talk to a professional before filing any claim.'); return false;">Disclaimer</a>
+    <a href="mailto:hello@owedco.com?subject=Owedco Feedback">Send us feedback</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/disclaimer.html">Disclaimer</a>
   </div>
 </footer>
 
@@ -824,7 +824,7 @@
     {
       id: 'industry',
       q: 'What industry is your business in?',
-      hint: 'The R&D credit covers far more than labs and biotech — software, manufacturing, food science and architecture all qualify regularly.',
+      hint: 'The R&D credit covers far more than labs and biotech — software, manufacturing, food science, and architecture all qualify regularly.',
       opts: [
         { t: 'Software, SaaS or tech',              v: 'software', w: 3 },
         { t: 'Manufacturing or engineering',         v: 'mfg',      w: 3 },
@@ -1092,14 +1092,14 @@
           <div class="tl-spine"><div class="tl-circle">2</div><div class="tl-line"></div></div>
           <div class="tl-content">
             <div class="tl-title">Documentation — they do the heavy lifting</div>
-            <div class="tl-desc">They gather payroll data, contractor invoices and project notes. You share what you have — they handle the rest.</div>
+            <div class="tl-desc">They gather payroll data, contractor invoices, and project notes. You share what you have — they handle the rest.</div>
           </div>
         </div>
         <div class="tl">
           <div class="tl-spine"><div class="tl-circle">3</div></div>
           <div class="tl-content" style="padding-bottom:0">
             <div class="tl-title">Credit applied — dollar for dollar</div>
-            <div class="tl-desc">Reduces your tax bill directly or your payroll taxes if you're a startup. Most businesses see results within 60 days of filing.</div>
+            <div class="tl-desc">Reduces your tax bill directly, or your payroll taxes if you're a startup. Most businesses see results within 60 days of filing.</div>
           </div>
         </div>
       </div>
@@ -1112,12 +1112,12 @@
     const btn   = document.getElementById('ctaBtn');
     if (tier === 'unlikely') {
       title.textContent = 'Worth a second opinion';
-      p.textContent     = "A quiz can't catch everything. A 15-minute call with a specialist has turned 'no' into real money for businesses that looked similar to yours.";
+      p.textContent     = "A few questions may not catch everything but a 15-minute call with a specialist has turned 'no' into real money for businesses that looked similar to yours.";
       btn.textContent   = 'Book a Free Call';
     } else {
       title.textContent = "Don't leave it on the table";
       p.textContent     = "Specialists only charge if they recover money for you. The free review takes 15 minutes. The average first-year recovery for qualifying businesses is over $50,000.";
-      btn.textContent   = 'Get My Free Review — No Cost';
+      btn.textContent   = 'Get My Free Review at No Cost';
     }
   }
 
