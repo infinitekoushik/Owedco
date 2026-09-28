@@ -4,18 +4,36 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy</title>
 <meta name="description" content="How Owedco handles your data. Short version: we collect almost nothing and sell nothing.">
-<link rel="canonical" href="https://owedco.com/privacy">
+<link rel="canonical" href="https://owedco.com/privacy.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/logo.png">
 <style>
-:root{--navy:#090E1A;--navy-card:#111827;--navy-edge:#1C2A3E;--gold:#C9A84C;--white:#FFFFFF;--text-dim:#6B7E96;--text-body:#A8BCCE;}
+:root{--navy:#090E1A;--navy-card:#111827;--navy-edge:#1C2A3E;--gold:#C9A84C;--gold-lt:#E2C06A;--white:#FFFFFF;--text-dim:#6B7E96;--text-body:#A8BCCE;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html,body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;}
-body{display:flex;flex-direction:column;align-items:center;padding:0 24px 80px;}
-.site-nav{width:100%;max-width:700px;display:flex;justify-content:space-between;align-items:center;padding:24px 0;margin-bottom:12px;}
-.logo{font-family:'DM Serif Display',serif;font-size:20px;color:var(--gold);text-decoration:none;}
-.nav-cta{background:var(--gold);color:#160F00;font-family:'Inter',sans-serif;font-weight:600;font-size:13px;padding:9px 18px;border-radius:8px;text-decoration:none;transition:transform 0.15s;}
-.nav-cta:hover{transform:translateY(-1px);}
+html{-webkit-text-size-adjust:100%;}
+body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column;}
+
+/* NAV */
+.site-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(9,14,26,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--navy-edge);display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:58px;}
+.logo{font-family:'DM Serif Display',serif;font-size:21px;color:var(--gold);text-decoration:none;flex-shrink:0;}
+.nav-links{display:flex;align-items:center;gap:6px;}
+.nav-links a{font-size:13px;font-weight:500;color:var(--text-dim);text-decoration:none;padding:6px 12px;border-radius:7px;transition:color 0.15s,background 0.15s;white-space:nowrap;}
+.nav-links a:hover{color:var(--white);background:rgba(255,255,255,0.05);}
+.nav-links a.active{color:var(--white);}
+.nav-cta{font-size:13px!important;font-weight:600!important;color:#160F00!important;background:var(--gold)!important;padding:7px 16px!important;border-radius:7px;}
+.nav-cta:hover{background:var(--gold-lt)!important;}
+.nav-hamburger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:6px;}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--text-dim);border-radius:2px;}
+.mobile-menu{display:none;position:fixed;top:58px;left:0;right:0;background:var(--navy-card);border-bottom:1px solid var(--navy-edge);padding:12px 0;z-index:99;flex-direction:column;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-size:15px;color:var(--text-body);text-decoration:none;padding:12px 28px;border-bottom:1px solid var(--navy-edge);transition:color 0.14s;}
+.mobile-menu a:last-child{border-bottom:none;}
+.mobile-menu a:hover{color:var(--white);}
+.mobile-menu a.mcta{color:var(--gold);font-weight:600;}
+
+/* PAGE */
+.page-wrap{flex:1;display:flex;flex-direction:column;align-items:center;padding:90px 24px 80px;}
 article{width:100%;max-width:680px;}
 .page-meta{font-size:12px;color:var(--text-dim);margin-bottom:20px;}
 h1{font-family:'DM Serif Display',serif;font-size:clamp(26px,5vw,38px);line-height:1.15;letter-spacing:-0.02em;color:var(--white);margin-bottom:18px;}
@@ -27,49 +45,94 @@ li{font-size:15px;color:var(--text-body);line-height:1.7;margin-bottom:5px;}
 a{color:var(--gold);text-decoration:none;}
 a:hover{text-decoration:underline;}
 .rule{height:1px;background:var(--navy-edge);margin:30px 0;}
-.site-footer{width:100%;max-width:700px;border-top:1px solid var(--navy-edge);padding:22px 0;margin-top:40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+
+/* FOOTER */
+.site-footer{border-top:1px solid var(--navy-edge);padding:28px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
 .site-footer span{font-size:12px;color:var(--text-dim);}
 .footer-links{display:flex;gap:18px;flex-wrap:wrap;}
 .footer-links a{font-size:12px;color:var(--text-dim);text-decoration:none;transition:color 0.14s;}
 .footer-links a:hover{color:var(--white);}
+
+/* MOBILE */
+@media(max-width:640px){
+  .site-nav{padding:0 16px;}
+  .nav-links{display:none;}
+  .nav-hamburger{display:flex;}
+  .page-wrap{padding:74px 16px 60px;}
+  .site-footer{flex-direction:column;align-items:flex-start;padding:22px 16px;}
+  .footer-links{gap:12px;}
+}
 </style>
-<link rel="icon" type="image/png" href="/logo.png">
 </head>
 <body>
+
 <nav class="site-nav">
   <a class="logo" href="/">Owedco</a>
-  <a class="nav-cta" href="/">Find Out What You're Owed</a>
+  <div class="nav-links">
+    <a href="/about.html">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy.html" class="active">Privacy</a>
+    <a href="/" class="nav-cta">Check Eligibility</a>
+  </div>
+  <button class="nav-hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
-<article>
-  <p class="page-meta">Last updated: January 2026</p>
-  <h1>Privacy Policy</h1>
-  <p class="lede">Short version: we collect almost nothing, store nothing about you personally and sell nothing to anyone. Here is the full detail.</p>
 
-  <h2>What we collect</h2>
-  <p>When you use the Owedco eligibility checker, your quiz answers are processed entirely in your browser. They are not sent to our servers, not stored in a database and not linked to any identity. We never ask for your name, email, phone number or any identifying information.</p>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a>
+  <a href="/about.html">About</a>
+  <a href="/blog/">Blog</a>
+  <a href="/contact.html">Contact</a>
+  <a href="/privacy.html">Privacy</a>
+  <a href="/terms.html">Terms</a>
+  <a href="/disclaimer.html">Disclaimer</a>
+  <a href="/support.html">☕ Support Us</a>
+  <a href="/" class="mcta">Check My Eligibility →</a>
+</div>
 
-  <h2>Cookies and analytics</h2>
-  <p>We use Google Analytics to understand general traffic patterns — page visits, device types, and similar aggregate data. This is anonymous and tells us nothing about you individually.</p>
-  <p>If Google AdSense ads are displayed, Google may use cookies to serve relevant ads. This is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. You can opt out of personalised ads at <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>.</p>
+<div class="page-wrap">
+  <article>
+    <p class="page-meta">Last updated: January 2026</p>
+    <h1>Privacy Policy</h1>
+    <p class="lede">Short version: we collect almost nothing, store nothing about you personally and sell nothing to anyone. Here is the full detail.</p>
 
-  <h2>Third-party links</h2>
-  <p>Owedco links to specialist tax firms as part of our referral service. When you click through to those sites, their own privacy policies apply. We are not responsible for the privacy practices of any third-party site we link to.</p>
+    <h2>What we collect</h2>
+    <p>When you use the Owedco eligibility checker, your quiz answers are processed entirely in your browser. They are not sent to our servers, not stored in a database and not linked to any identity. We never ask for your name, email, phone number or any identifying information.</p>
 
-  <h2>Children</h2>
-  <p>Owedco is intended for business owners and professionals. We do not knowingly collect information from anyone under 18.</p>
+    <h2>Cookies and analytics</h2>
+    <p>We use Google Analytics to understand general traffic patterns — page visits, device types, and similar aggregate data. This is anonymous and tells us nothing about you individually.</p>
+    <p>If Google AdSense ads are displayed, Google may use cookies to serve relevant ads. This is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. You can opt out of personalised ads at <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>.</p>
 
-  <h2>Changes</h2>
-  <p>If we change how we handle data, we will update this page and the date above. We will not change our practices in ways that are less protective without notice.</p>
+    <h2>Third-party links</h2>
+    <p>Owedco links to specialist tax firms as part of our referral service. When you click through to those sites, their own privacy policies apply. We are not responsible for the privacy practices of any third-party site we link to.</p>
 
-  <h2>Contact us</h2>
-  <p>Questions about privacy? Email <a href="mailto:hello@owedco.com">hello@owedco.com</a> and we will respond within one business day.</p>
+    <h2>Children</h2>
+    <p>Owedco is intended for business owners and professionals. We do not knowingly collect information from anyone under 18.</p>
+
+    <h2>Changes</h2>
+    <p>If we change how we handle data, we will update this page and the date above. We will not change our practices in ways that are less protective without notice.</p>
+
+    <h2>Contact us</h2>
+    <p>Questions about privacy? Email <a href="mailto:hello@owedco.com">hello@owedco.com</a> and we will respond within one business day.</p>
+  </article>
+</div>
 
 <footer class="site-footer">
   <span>&copy; 2026 Owedco. All rights reserved.</span>
   <div class="footer-links">
-    <a href="/">Home</a><a href="/about">About</a><a href="/contact">Contact</a>
-    <a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/privacy">Privacy</a><a href="/support.html">☕ Support Us</a>
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/terms.html">Terms</a>
+    <a href="/disclaimer.html">Disclaimer</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/support.html">☕ Support Us</a>
   </div>
 </footer>
+
+<script>function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}</script>
 </body>
 </html>
