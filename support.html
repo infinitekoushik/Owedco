@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support Owedco</title>
+<meta name="description" content="Owedco is forever free to use. If it helped you find money your business was owed, consider buying us a coffee.">
+<link rel="canonical" href="https://owedco.com/support.html">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:      #090E1A;
+    --navy-card: #111827;
+    --navy-edge: #1C2A3E;
+    --gold:      #C9A84C;
+    --gold-lt:   #E2C06A;
+    --white:     #FFFFFF;
+    --text-dim:  #6B7E96;
+    --text-body: #A8BCCE;
+    --good:      #3DB87A;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ══ NAV ══ */
+  .site-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(9,14,26,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--navy-edge);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 58px;
+  }
+
+  .logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 21px;
+    color: var(--gold);
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-dim);
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 7px;
+    transition: color 0.15s, background 0.15s;
+    white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+
+  .nav-cta {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #160F00 !important;
+    background: var(--gold) !important;
+    padding: 7px 16px !important;
+    border-radius: 7px;
+  }
+  .nav-cta:hover { background: var(--gold-lt) !important; }
+
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 22px; height: 2px;
+    background: var(--text-dim);
+    border-radius: 2px;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 58px; left: 0; right: 0;
+    background: var(--navy-card);
+    border-bottom: 1px solid var(--navy-edge);
+    padding: 12px 0;
+    z-index: 99;
+    flex-direction: column;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-size: 15px;
+    color: var(--text-body);
+    text-decoration: none;
+    padding: 12px 28px;
+    border-bottom: 1px solid var(--navy-edge);
+    transition: color 0.14s;
+  }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu a:hover { color: var(--white); }
+  .mobile-menu a.mcta { color: var(--gold); font-weight: 600; }
+
+  /* ══ PAGE ══ */
+  .page-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 24px 80px;
+    text-align: center;
+  }
+
+  .coffee-icon {
+    font-size: 56px;
+    margin-bottom: 24px;
+    display: block;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .coffee-icon { animation: none; }
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(28px, 5vw, 42px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    margin-bottom: 16px;
+    max-width: 540px;
+  }
+
+  .sub {
+    font-size: 16px;
+    color: var(--text-body);
+    line-height: 1.75;
+    max-width: 480px;
+    margin: 0 auto 40px;
+  }
+
+  /* ══ CARD ══ */
+  .support-card {
+    background: var(--navy-card);
+    border: 1px solid var(--navy-edge);
+    border-radius: 16px;
+    padding: 36px 32px;
+    max-width: 460px;
+    width: 100%;
+    margin: 0 auto 40px;
+  }
+
+  .card-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 20px;
+  }
+
+  .amounts {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+
+  .amount-btn {
+    flex: 1;
+    background: transparent;
+    border: 1px solid var(--navy-edge);
+    border-radius: 9px;
+    padding: 12px 8px;
+    color: var(--text-body);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s, color 0.15s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .amount-btn:hover   { border-color: var(--gold); color: var(--white); background: rgba(201,168,76,0.06); }
+  .amount-btn.active  { border-color: var(--gold); background: rgba(201,168,76,0.1); color: var(--white); }
+
+  .amount-note {
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-bottom: 20px;
+  }
+
+  .btn-coffee {
+    display: block;
+    width: 100%;
+    background: var(--gold);
+    color: #160F00;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 15px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.15s;
+    box-shadow: 0 4px 24px rgba(201,168,76,0.2);
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn-coffee:hover { background: var(--gold-lt); transform: translateY(-2px); }
+
+  .or-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 18px 0;
+    color: var(--text-dim);
+    font-size: 12px;
+  }
+  .or-row::before, .or-row::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--navy-edge);
+  }
+
+  .btn-bmc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background: #FFDD00;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.15s, transform 0.15s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn-bmc:hover { background: #ffe94d; transform: translateY(-2px); }
+  .btn-bmc img {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+
+  /* ══ WHAT IT FUNDS ══ */
+  .funds-section {
+    max-width: 460px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .funds-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  .fund-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--navy-edge);
+    font-size: 14px;
+    color: var(--text-body);
+    line-height: 1.5;
+  }
+  .fund-item:last-child { border-bottom: none; }
+
+  .fund-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ══ FOOTER ══ */
+  .site-footer {
+    border-top: 1px solid var(--navy-edge);
+    padding: 28px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 100%;
+  }
+
+  .site-footer span { font-size: 12px; color: var(--text-dim); }
+
+  .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+  .footer-links a {
+    font-size: 12px;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.14s;
+  }
+  .footer-links a:hover { color: var(--white); }
+
+  /* ══ MOBILE ══ */
+  @media (max-width: 640px) {
+    .site-nav { padding: 0 16px; }
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+
+    .page-wrap { padding: 80px 16px 60px; }
+
+    .coffee-icon { font-size: 44px; }
+    h1 { font-size: 26px; }
+    .sub { font-size: 15px; margin-bottom: 32px; }
+
+    .support-card { padding: 24px 18px; }
+    .amounts { gap: 8px; }
+    .amount-btn { font-size: 13px; padding: 11px 6px; }
+
+    .site-footer { flex-direction: column; align-items: flex-start; padding: 22px 16px; }
+    .footer-links { gap: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="site-nav">
+  <a class="logo" href="/">Owedco</a>
+  <div class="nav-links">
+    <a href="/about.html">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/" class="nav-cta">Check Eligibility</a>
+  </div>
+  <button class="nav-hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a>
+  <a href="/about.html">About</a>
+  <a href="/blog/">Blog</a>
+  <a href="/contact.html">Contact</a>
+  <a href="/privacy.html">Privacy</a>
+  <a href="/terms.html">Terms</a>
+  <a href="/disclaimer.html">Disclaimer</a>
+  <a href="/" class="mcta">Check My Eligibility →</a>
+</div>
+
+<!-- ══ CONTENT ══ -->
+<div class="page-wrap">
+
+  <span class="coffee-icon">☕</span>
+
+  <h1>Owedco is free.<br>It stays that way.</h1>
+
+  <p class="sub">
+    If the checker helped you find money your business was owed, buying us a coffee keeps the lights on and the tool running.
+  </p>
+
+  <div class="support-card">
+    <div class="card-label">Choose an amount</div>
+
+    <div class="amounts">
+      <button class="amount-btn" onclick="setAmount(this, 3)">☕ $3</button>
+      <button class="amount-btn active" onclick="setAmount(this, 5)">☕☕ $5</button>
+      <button class="amount-btn" onclick="setAmount(this, 10)">☕☕☕ $10</button>
+    </div>
+
+    <p class="amount-note">Goes directly to hosting, domain and keeping this tool free forever.</p>
+
+    <a href="https://buymeacoffee.com/infinitekoushik" target="_blank" rel="noopener"
+       class="btn-coffee" id="coffeeBtn">
+      ☕ Buy Us a Coffee — $5
+    </a>
+
+    <div class="or-row">or go directly</div>
+
+    <a href="https://buymeacoffee.com/infinitekoushik" target="_blank" rel="noopener"
+       class="btn-bmc">
+      <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy Me a Coffee" />
+      buymeacoffee.com/infinitekoushik
+    </a>
+  </div>
+
+  <div class="funds-section">
+    <div class="funds-label">What your support covers</div>
+    <div class="fund-item">
+      <span class="fund-icon">🌐</span>
+      <span>Domain registration and Cloudflare hosting — keeping owedco.com live and fast</span>
+    </div>
+    <div class="fund-item">
+      <span class="fund-icon">✍️</span>
+      <span>Research and writing for new blog posts that help small businesses understand tax credits they're owed</span>
+    </div>
+    <div class="fund-item">
+      <span class="fund-icon">🔧</span>
+      <span>Time spent maintaining, improving and expanding the eligibility checker tool</span>
+    </div>
+    <div class="fund-item">
+      <span class="fund-icon">🆓</span>
+      <span>Keeping everything permanently free</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer class="site-footer">
+  <span>&copy; 2026 Owedco. All rights reserved.</span>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/terms.html">Terms</a>
+    <a href="/disclaimer.html">Disclaimer</a>
+    <a href="/privacy.html">Privacy</a>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  function setAmount(btn, amount) {
+    document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('coffeeBtn').textContent = '☕ Buy Us a Coffee — $' + amount;
+  }
+</script>
+
+</body>
+</html>
