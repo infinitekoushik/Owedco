@@ -1,91 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog — R&D Tax Credit Guides for Business Owners — Owedco</title>
-<meta name="description" content="Free guides on the federal R&D tax credit — who qualifies, how much you can claim, and how to get it back.">
-<link rel="canonical" href="https://owedco.com/blog">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog</title>
+<meta name="description" content="Free guides on the federal R&D tax credit — who qualifies, how much you can claim and how to get it back.">
+<link rel="canonical" href="https://owedco.com/blog/">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#090E1A;--navy-card:#111827;--navy-edge:#1C2A3E;--gold:#C9A84C;--white:#FFFFFF;--text-dim:#6B7E96;--text-body:#A8BCCE;}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html,body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;}
-body{display:flex;flex-direction:column;align-items:center;padding:0 24px 80px;}
-.site-nav{width:100%;max-width:700px;display:flex;justify-content:space-between;align-items:center;padding:24px 0;margin-bottom:12px;}
-.logo{font-family:'DM Serif Display',serif;font-size:20px;color:var(--gold);text-decoration:none;}
-.nav-cta{background:var(--gold);color:#160F00;font-family:'Inter',sans-serif;font-weight:600;font-size:13px;padding:9px 18px;border-radius:8px;text-decoration:none;transition:transform 0.15s;}
-.nav-cta:hover{transform:translateY(-1px);}
-.wrap{width:100%;max-width:700px;}
-h1{font-family:'DM Serif Display',serif;font-size:clamp(26px,5vw,38px);line-height:1.15;letter-spacing:-0.02em;color:var(--white);margin-bottom:10px;}
-.sub{font-size:15px;color:var(--text-dim);margin-bottom:40px;line-height:1.6;}
-.posts{display:flex;flex-direction:column;gap:16px;}
-.post-card{background:var(--navy-card);border:1px solid var(--navy-edge);border-radius:12px;padding:24px 26px;text-decoration:none;transition:border-color 0.15s,background 0.15s;display:block;}
-.post-card:hover{border-color:var(--gold);background:rgba(201,168,76,0.04);}
-.post-tag{font-size:11px;font-weight:600;color:var(--gold);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:8px;}
-.post-title{font-family:'DM Serif Display',serif;font-size:20px;color:var(--white);line-height:1.3;margin-bottom:8px;}
-.post-desc{font-size:14px;color:var(--text-dim);line-height:1.6;margin-bottom:10px;}
-.post-meta{font-size:12px;color:var(--text-dim);}
-.rule{height:1px;background:var(--navy-edge);margin:40px 0;}
-.cta-strip{background:linear-gradient(135deg,rgba(201,168,76,0.1),rgba(201,168,76,0.03));border:1px solid rgba(201,168,76,0.28);border-radius:12px;padding:24px;text-align:center;margin-top:8px;}
-.cta-strip h3{font-family:'DM Serif Display',serif;font-size:20px;color:var(--white);margin-bottom:8px;}
-.cta-strip p{font-size:14px;color:var(--text-dim);margin-bottom:16px;}
-.cta-strip a{display:inline-block;background:var(--gold);color:#160F00;font-family:'Inter',sans-serif;font-weight:600;font-size:14px;padding:11px 24px;border-radius:9px;text-decoration:none;transition:transform 0.15s;}
-.cta-strip a:hover{transform:translateY(-1px);}
-.site-footer{width:100%;max-width:700px;border-top:1px solid var(--navy-edge);padding:22px 0;margin-top:40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
-.site-footer span{font-size:12px;color:var(--text-dim);}
-.footer-links{display:flex;gap:18px;flex-wrap:wrap;}
-.footer-links a{font-size:12px;color:var(--text-dim);text-decoration:none;transition:color 0.14s;}
-.footer-links a:hover{color:var(--white);}
+  :root {
+    --navy:#090E1A;--navy-card:#111827;--navy-edge:#1C2A3E;
+    --gold:#C9A84C;--gold-lt:#E2C06A;--white:#FFFFFF;
+    --text-dim:#6B7E96;--text-body:#A8BCCE;--radius:13px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+  body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;}
+
+  /* NAV */
+  .site-nav{position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(9,14,26,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--navy-edge);display:flex;align-items:center;
+    justify-content:space-between;padding:0 32px;height:58px;}
+  .logo{font-family:'DM Serif Display',serif;font-size:21px;color:var(--gold);text-decoration:none;flex-shrink:0;}
+  .nav-links{display:flex;align-items:center;gap:6px;}
+  .nav-links a{font-size:13px;font-weight:500;color:var(--text-dim);text-decoration:none;
+    padding:6px 12px;border-radius:7px;transition:color 0.15s,background 0.15s;white-space:nowrap;}
+  .nav-links a:hover{color:var(--white);background:rgba(255,255,255,0.05);}
+  .nav-links a.active{color:var(--white);}
+  .nav-cta{font-size:13px!important;font-weight:600!important;color:#160F00!important;
+    background:var(--gold)!important;padding:7px 16px!important;border-radius:7px;transition:background 0.15s!important;}
+  .nav-cta:hover{background:var(--gold-lt)!important;}
+  .nav-hamburger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:6px;}
+  .nav-hamburger span{display:block;width:22px;height:2px;background:var(--text-dim);border-radius:2px;transition:background 0.15s;}
+  .nav-hamburger:hover span{background:var(--white);}
+  .mobile-menu{display:none;position:fixed;top:58px;left:0;right:0;background:var(--navy-card);
+    border-bottom:1px solid var(--navy-edge);padding:12px 0;z-index:99;flex-direction:column;}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{font-size:15px;color:var(--text-body);text-decoration:none;padding:12px 28px;
+    border-bottom:1px solid var(--navy-edge);transition:color 0.14s,background 0.14s;}
+  .mobile-menu a:last-child{border-bottom:none;}
+  .mobile-menu a:hover{color:var(--white);background:rgba(255,255,255,0.03);}
+  .mobile-menu a.mcta{color:var(--gold);font-weight:600;}
+
+  /* PAGE */
+  .page-wrap{max-width:740px;margin:0 auto;padding:90px 24px 80px;}
+  h1{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,40px);
+    line-height:1.15;letter-spacing:-0.02em;color:var(--white);margin-bottom:10px;}
+  .sub{font-size:15px;color:var(--text-dim);margin-bottom:40px;line-height:1.65;max-width:560px;}
+
+  /* POSTS */
+  .posts{display:flex;flex-direction:column;gap:14px;}
+  .post-card{background:var(--navy-card);border:1px solid var(--navy-edge);border-radius:12px;
+    padding:24px 26px;text-decoration:none;display:block;
+    transition:border-color 0.15s,background 0.15s,transform 0.15s;
+    -webkit-tap-highlight-color:transparent;}
+  .post-card:hover{border-color:var(--gold);background:rgba(201,168,76,0.04);transform:translateY(-1px);}
+  .post-tag{font-size:11px;font-weight:600;color:var(--gold);letter-spacing:0.07em;
+    text-transform:uppercase;margin-bottom:8px;}
+  .post-title{font-family:'DM Serif Display',serif;font-size:20px;color:var(--white);
+    line-height:1.3;margin-bottom:8px;}
+  .post-desc{font-size:14px;color:var(--text-dim);line-height:1.65;margin-bottom:12px;}
+  .post-meta{font-size:12px;color:var(--text-dim);opacity:0.7;}
+
+  /* CTA */
+  .rule{height:1px;background:var(--navy-edge);margin:40px 0;}
+  .cta-strip{background:linear-gradient(135deg,rgba(201,168,76,0.1),rgba(201,168,76,0.03));
+    border:1px solid rgba(201,168,76,0.28);border-radius:var(--radius);padding:28px 24px;text-align:center;}
+  .cta-strip h3{font-family:'DM Serif Display',serif;font-size:21px;color:var(--white);margin-bottom:8px;}
+  .cta-strip p{font-size:14px;color:var(--text-dim);margin-bottom:18px;line-height:1.6;}
+  .cta-strip a{display:inline-block;background:var(--gold);color:#160F00;font-family:'Inter',sans-serif;
+    font-weight:600;font-size:14px;padding:12px 28px;border-radius:9px;text-decoration:none;
+    transition:transform 0.15s,background 0.15s;-webkit-tap-highlight-color:transparent;}
+  .cta-strip a:hover{transform:translateY(-1px);background:var(--gold-lt);}
+
+  /* FOOTER */
+  .site-footer{border-top:1px solid var(--navy-edge);padding:28px 24px;max-width:740px;
+    margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  .site-footer span{font-size:12px;color:var(--text-dim);}
+  .footer-links{display:flex;gap:18px;flex-wrap:wrap;}
+  .footer-links a{font-size:12px;color:var(--text-dim);text-decoration:none;transition:color 0.14s;}
+  .footer-links a:hover{color:var(--white);}
+
+  /* MOBILE */
+  @media(max-width:640px){
+    .site-nav{padding:0 16px;}
+    .nav-links{display:none;}
+    .nav-hamburger{display:flex;}
+    .page-wrap{padding:74px 16px 60px;}
+    h1{font-size:26px;}
+    .sub{font-size:14px;margin-bottom:28px;}
+    .post-card{padding:18px 16px;}
+    .post-title{font-size:18px;}
+    .post-desc{font-size:13px;}
+    .cta-strip{padding:22px 16px;}
+    .cta-strip a{width:100%;text-align:center;}
+    .site-footer{flex-direction:column;align-items:flex-start;padding:22px 16px;}
+    .footer-links{gap:12px;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .post-card,.cta-strip a{transition:none;transform:none!important;}
+  }
 </style>
-<link rel="icon" type="image/png" href="/logo.png">
 </head>
 <body>
+
 <nav class="site-nav">
   <a class="logo" href="/">Owedco</a>
-  <a class="nav-cta" href="/">Find Out What You're Owed</a>
+  <div class="nav-links">
+    <a href="/about.html">About</a>
+    <a href="/blog/" class="active">Blog</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/" class="nav-cta">Check Eligibility</a>
+  </div>
+  <button class="nav-hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
-<div class="wrap">
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a>
+  <a href="/about.html">About</a>
+  <a href="/blog/">Blog</a>
+  <a href="/contact.html">Contact</a>
+  <a href="/privacy.html">Privacy</a>
+  <a href="/terms.html">Terms</a>
+  <a href="/disclaimer.html">Disclaimer</a>
+  <a href="/" class="mcta">Check My Eligibility →</a>
+</div>
+
+<div class="page-wrap">
   <h1>R&D Tax Credit Guides</h1>
   <p class="sub">Plain-English guides on who qualifies, how the credit is calculated and how to claim what your business is owed.</p>
 
   <div class="posts">
-    <a class="post-card" href="/blog/software-company-rd-tax-credit">
-      <div class="post-tag">Software & Tech</div>
-      <div class="post-title">Does My Software Company Qualify for the R&D Tax Credit?</div>
-      <div class="post-desc">Most software founders assume this credit is for labs and pharma. It isn't. Here's what actually qualifies — and what doesn't.</div>
-      <div class="post-meta">6 min read · Updated January 2026</div>
+
+    <a class="post-card" href="/blog/software-company-rd-tax-credit.html">
+      <div class="post-tag">Software &amp; Tech</div>
+      <div class="post-title">Does My Software Company Qualify for the R&amp;D Tax Credit?</div>
+      <div class="post-desc">Most software founders assume this credit is for labs and pharma. It isn't. Here's what actually qualifies and what doesn't.</div>
+      <div class="post-meta">6 min read &nbsp;·&nbsp; September 2026</div>
     </a>
 
-    <a class="post-card" href="/blog/manufacturing-company-rd-tax-credit">
+    <a class="post-card" href="/blog/manufacturing-company-rd-tax-credit.html">
       <div class="post-tag">Manufacturing</div>
-      <div class="post-title">Does My Manufacturing Company Qualify for the R&D Tax Credit?</div>
+      <div class="post-title">Does My Manufacturing Company Qualify for the R&amp;D Tax Credit?</div>
       <div class="post-desc">Manufacturing is one of the top three qualifying industries. Most manufacturers have never filed a claim. Here's the honest picture.</div>
-      <div class="post-meta">6 min read · Updated January 2026</div>
+      <div class="post-meta">6 min read &nbsp;·&nbsp; September 2026</div>
     </a>
 
-    <a class="post-card" href="/blog/rd-tax-credit-startups-payroll-taxes">
+    <a class="post-card" href="/blog/rd-tax-credit-startups-payroll-taxes.html">
       <div class="post-tag">Startups</div>
-      <div class="post-title">R&D Tax Credit for Startups — How to Apply It Against Payroll Taxes</div>
-      <div class="post-desc">Not profitable yet? There's a version of the credit designed specifically for early-stage companies — and almost no one uses it.</div>
-      <div class="post-meta">7 min read · Updated January 2026</div>
+      <div class="post-title">R&amp;D Tax Credit for Startups — How to Apply It Against Payroll Taxes</div>
+      <div class="post-desc">Not profitable yet? There's a version of the credit designed specifically for early-stage companies  and almost no one uses it.</div>
+      <div class="post-meta">7 min read &nbsp;·&nbsp; September 2026</div>
     </a>
+
+    <a class="post-card" href="/blog/biotech-pharma-rd-tax-credit.html">
+      <div class="post-tag">Biotech &amp; Pharma</div>
+      <div class="post-title">R&amp;D Tax Credit for Biotech &amp; Pharma Companies: The 2026 Complete Guide</div>
+      <div class="post-desc">Biotech and pharma companies qualify for some of the largest R&amp;D credits available. Here's what expenses qualify, how much you can claim and how to document it.</div>
+      <div class="post-meta">12 min read &nbsp;·&nbsp; September 2026</div>
+    </a>
+
+    <a class="post-card" href="/blog/rd-tax-credit-vs-rd-deduction-2026.html">
+      <div class="post-tag">Tax Strategy</div>
+      <div class="post-title">R&amp;D Tax Credit vs R&amp;D Deduction: Which Is Worth More in 2026?</div>
+      <div class="post-desc">The credit and the deduction are not the same thing  and the difference could be worth tens of thousands of dollars. Here's how to choose the right strategy.</div>
+      <div class="post-meta">10 min read &nbsp;·&nbsp; September 2026</div>
+    </a>
+
   </div>
 
   <div class="rule"></div>
 
   <div class="cta-strip">
     <h3>Find out what your business is owed</h3>
-    <p>Six questions and two minutes is all it takes. No personal details required from you.</p>
+    <p>Six questions and 90 seconds is all it takes. No email, no card, nothing else required.</p>
     <a href="/">Run the free checker</a>
   </div>
 </div>
+
 <footer class="site-footer">
-  <span>&copy; 2026 Owedco</span>
+  <span>&copy; 2026 Owedco. All rights reserved.</span>
   <div class="footer-links">
-    <a href="/">Home</a><a href="/about">About</a><a href="/contact">Contact</a>
-    <a href="/terms">Terms</a><a href="/disclaimer">Disclaimer</a><a href="/privacy">Privacy</a>
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/terms.html">Terms</a>
+    <a href="/disclaimer.html">Disclaimer</a>
+    <a href="/privacy.html">Privacy</a>
   </div>
 </footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+</script>
+
 </body>
 </html>
