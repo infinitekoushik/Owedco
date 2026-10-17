@@ -9,10 +9,19 @@
 <meta property="og:description" content="The R&D tax credit gives businesses cash back for development work. Most never claim it because they dont know they are qualified. Find out if you are eligible in 90 seconds.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://owedco.com">
+<meta property="og:image" content="https://owedco.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://owedco.com/og-image.jpg">
 <link rel="canonical" href="https://owedco.com/">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="shortcut icon" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- WebSite schema: tells Google to show "Owedco" not "owedco.com" in search -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Owedco","url":"https://owedco.com"}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -50,7 +59,6 @@
     overflow-x: hidden;
   }
 
-  /* ══ SITE NAV (always visible — critical for AdSense approval) ══ */
   .site-nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -104,7 +112,6 @@
   }
   .site-nav-cta:hover { background: var(--gold-lt) !important; transform: none !important; }
 
-  /* mobile hamburger */
   .nav-hamburger {
     display: none;
     flex-direction: column;
@@ -144,10 +151,7 @@
   }
   .mobile-menu a:last-child { border-bottom: none; }
   .mobile-menu a:hover { color: var(--white); background: rgba(255,255,255,0.03); }
-  .mobile-menu a.mcta {
-    color: var(--gold);
-    font-weight: 600;
-  }
+  .mobile-menu a.mcta { color: var(--gold); font-weight: 600; }
 
   /* ══ HERO ══ */
   .hero {
@@ -226,10 +230,7 @@
     margin-bottom: 20px;
   }
 
-  h1 em {
-    font-style: italic;
-    color: var(--gold);
-  }
+  h1 em { font-style: italic; color: var(--gold); }
 
   .hero-p {
     font-size: 16px;
@@ -266,11 +267,7 @@
     line-height: 1;
     margin-bottom: 5px;
   }
-  .stat-l {
-    font-size: 11px;
-    color: var(--text-dim);
-    line-height: 1.4;
-  }
+  .stat-l { font-size: 11px; color: var(--text-dim); line-height: 1.4; }
 
   .btn-hero {
     display: inline-block;
@@ -294,7 +291,6 @@
     box-shadow: 0 8px 36px rgba(201,168,76,0.32);
     background: var(--gold-lt);
   }
-  /* macOS: prevent blue tap highlight */
   .btn-hero:focus { outline: 3px solid rgba(201,168,76,0.5); outline-offset: 2px; }
 
   .hero-caption {
@@ -484,34 +480,38 @@
     margin-bottom: 24px;
   }
 
+  /* FIX: credit row stays horizontal on mobile, never stacks */
   .credit-row {
     display: flex;
     align-items: baseline;
     gap: 8px;
     margin-bottom: 8px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   .cnum {
     font-family: 'DM Serif Display', serif;
-    font-size: clamp(42px, 7vw, 68px);
+    font-size: clamp(36px, 7vw, 68px);
     line-height: 1;
     color: var(--gold);
     letter-spacing: -0.025em;
+    white-space: nowrap;
   }
 
   .cnum-high {
     font-family: 'DM Serif Display', serif;
-    font-size: clamp(42px, 7vw, 68px);
+    font-size: clamp(36px, 7vw, 68px);
     line-height: 1;
     color: var(--gold-lt);
     letter-spacing: -0.025em;
+    white-space: nowrap;
   }
 
   .csep {
     font-family: 'DM Serif Display', serif;
-    font-size: 28px;
+    font-size: clamp(20px, 4vw, 28px);
     color: var(--text-dim);
+    flex-shrink: 0;
   }
 
   .credit-caption {
@@ -610,7 +610,6 @@
   }
   .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,168,76,0.3); background: var(--gold-lt); }
 
-  /* Ad slot — hidden until AdSense live */
   .ad-slot {
     display: none;
     margin-top: 22px;
@@ -671,13 +670,10 @@
 
   /* ══ MOBILE ══ */
   @media (max-width: 640px) {
-
-    /* Nav */
     .site-nav { padding: 0 16px; }
     .site-nav-links { display: none; }
     .nav-hamburger { display: flex; }
 
-    /* Hero — coin must NOT overflow on mobile */
     .hero { padding: 70px 16px 48px; min-height: 100svh; }
     #canvas3d { height: 100%; max-height: 100svh; }
 
@@ -685,7 +681,6 @@
     .hero-p { font-size: 14.5px; margin-bottom: 28px; }
     .badge { font-size: 11px; margin-bottom: 20px; }
 
-    /* Stats — stack as 3 items side by side, smaller */
     .stats-row { margin-bottom: 28px; }
     .stat { padding: 14px 6px; }
     .stat-n { font-size: 22px; }
@@ -694,7 +689,6 @@
     .btn-hero { font-size: 15px; padding: 15px 24px; max-width: 100%; }
     .hero-caption { font-size: 11.5px; }
 
-    /* Quiz */
     #quizSection { padding: 70px 14px 60px; }
     .card { padding: 20px 16px; }
     .q-main { font-size: 18px; }
@@ -704,24 +698,21 @@
     .btn-back { padding: 10px 14px; font-size: 12px; }
     .btn-next { padding: 11px 20px; font-size: 13px; }
 
-    /* Results */
+    /* Results — keep numbers on ONE line, just smaller */
     #resultsSection { padding: 70px 16px 60px; }
-    .credit-row { flex-direction: column; gap: 2px; }
-    .csep { display: none; }
-    .cnum { font-size: 38px; }
-    .cnum-high { font-size: 38px; }
-    .cnum-high::before { content: '– '; font-size: 20px; color: var(--text-dim); }
+    .credit-row { flex-wrap: nowrap; gap: 6px; }
+    .cnum { font-size: 32px; }
+    .cnum-high { font-size: 32px; }
+    .csep { font-size: 18px; }
     .res-headline { font-size: 21px; }
     .cta-card { padding: 20px 16px; }
     .btn-cta { font-size: 14px; padding: 14px 16px; }
     .tl-title { font-size: 13px; }
     .tl-desc { font-size: 12px; }
 
-    /* Footer */
     .site-footer { flex-direction: column; align-items: flex-start; padding: 24px 16px; gap: 10px; }
   }
 
-  /* ══ macOS / large screens ══ */
   @media (min-width: 1280px) {
     .hero-body { max-width: 640px; }
     h1 { font-size: 64px; }
@@ -729,7 +720,6 @@
     .stats-row { max-width: 500px; margin-left: auto; margin-right: auto; }
   }
 
-  /* Reduced motion */
   @media (prefers-reduced-motion: reduce) {
     .badge-dot { animation: none; opacity: 1; }
     .btn-hero, .btn-next, .btn-cta { transition: none; }
@@ -850,7 +840,8 @@
     <div class="cta-card">
       <div class="cta-title" id="ctaTitle"></div>
       <p class="cta-p" id="ctaP"></p>
-      <a href="https://www.taxtaker.com/partner"
+      <!-- FIX: updated to correct TaxTaker R&D credit URL, not /partner -->
+      <a href="https://www.taxtaker.com/rd-tax-credit"
          target="_blank" rel="noopener sponsored"
          class="btn-cta" id="ctaBtn"></a>
     </div>
@@ -885,7 +876,6 @@
 <script>
 (function () {
 
-  /* ── MOBILE MENU ── */
   window.toggleMenu = function() {
     const m = document.getElementById('mobileMenu');
     m.classList.toggle('open');
@@ -901,7 +891,6 @@
     const canvas = document.getElementById('canvas3d');
     if (!canvas) return;
 
-    // Detect mobile to scale coin down
     const isMobile = window.innerWidth < 640;
     const coinRadius = isMobile ? 0.85 : 1.45;
     const camZ       = isMobile ? 5.8  : 5.2;
@@ -936,7 +925,6 @@
     const back = new THREE.DirectionalLight(0xFFCC50, 1.0);
     back.position.set(0, -3, -4); scene.add(back);
 
-    // Fewer particles on mobile
     const pCount = isMobile ? 45 : 90;
     const pos = new Float32Array(pCount * 3);
     for (let i = 0; i < pCount * 3; i++) pos[i] = (Math.random() - 0.5) * 14;
@@ -956,7 +944,6 @@
     window.addEventListener('mousemove', onMove);
     window.addEventListener('touchmove', onMove, { passive: true });
 
-    // Respect reduced motion
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     (function loop() {
@@ -1054,10 +1041,10 @@
       q: 'Have you ever claimed the R&D credit before?',
       hint: 'Most businesses that qualify have never claimed it. If you have prior unclaimed years, those can often be recovered retroactively.',
       opts: [
-        { t: 'Never, first time hearing about it', v: 'never',     w: 3 },
-        { t: 'Once or twice',                       v: 'sometimes', w: 2 },
-        { t: 'Every year already',                  v: 'regular',   w: 1 },
-        { t: "We tried but were told we don't qualify", v: 'denied', w: 2 },
+        { t: 'Never, first time hearing about it',      v: 'never',     w: 3 },
+        { t: 'Once or twice',                           v: 'sometimes', w: 2 },
+        { t: 'Every year already',                      v: 'regular',   w: 1 },
+        { t: "We tried but were told we don't qualify", v: 'denied',    w: 2 },
       ]
     },
   ];
@@ -1087,7 +1074,6 @@
     heroSec.style.display = '';
     cur = 0; ans = {}; sel = null;
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    // Close mobile menu if open
     document.getElementById('mobileMenu').classList.remove('open');
   }
   window.goHome = goHome;
@@ -1144,7 +1130,6 @@
     else results();
   });
 
-  /* ── RESULTS ── */
   function score() { return Object.values(ans).reduce((s, a) => s + a.w, 0); }
 
   function fmt(n) {
@@ -1185,7 +1170,7 @@
     const headlineEl = document.getElementById('resHeadline');
     if (tier === 'likely')        headlineEl.textContent = "Strong match. Your business is likely sitting on unclaimed money.";
     else if (tier === 'possible') headlineEl.textContent = "There's a real chance you're leaving money behind.";
-    else                          headlineEl.textContent = "Low match  but a specialist call might still surface something.";
+    else                          headlineEl.textContent = "Low match — but a specialist call might still surface something.";
 
     const row = document.getElementById('creditRow');
     row.innerHTML = '';
