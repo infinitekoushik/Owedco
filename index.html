@@ -22,6 +22,16 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"Owedco","url":"https://owedco.com"}
 </script>
+
+<!-- Google Analytics GA4 — replace G-XXXXXXXXXX with your real Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -840,14 +850,15 @@
     <div class="cta-card">
       <div class="cta-title" id="ctaTitle"></div>
       <p class="cta-p" id="ctaP"></p>
-      <!-- FIX: updated to correct TaxTaker R&D credit URL, not /partner -->
-      <a href="https://www.taxtaker.com/rd-tax-credit"
+      <!-- FIXED: correct TaxTaker URL with hyphens -->
+      <a href="https://www.taxtaker.com/r-d-tax-credits"
          target="_blank" rel="noopener sponsored"
          class="btn-cta" id="ctaBtn"></a>
     </div>
 
     <div class="ad-slot">
-      <!-- AdSense: paste your ins tag here after approval -->
+      <!-- AdSense: replace pub-0000000000000000 with your real pub ID when approved -->
+      <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="pub-0000000000000000" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
     </div>
 
     <p class="disclaimer">
