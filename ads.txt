@@ -1,4 +1,3 @@
 # ads.txt for owedco.com
-# Replace pub-0000000000000000 with your real AdSense Publisher ID when approved
-# Format: google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
-google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+# Uncomment and replace with your real Publisher ID when AdSense approves you:
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
