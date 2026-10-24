@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Page Not Found</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found | Owedco</title>
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L8QNJVR2MM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L8QNJVR2MM');
+</script>
 <style>
 :root{--navy:#090E1A;--navy-edge:#1C2A3E;--gold:#C9A84C;--white:#FFFFFF;--text-dim:#6B7E96;--text-body:#A8BCCE;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -18,18 +30,22 @@ p{font-size:15px;color:var(--text-dim);line-height:1.65;max-width:360px;margin-b
 .links{margin-top:24px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap;}
 .links a{font-size:13px;color:var(--text-dim);text-decoration:none;transition:color 0.14s;}
 .links a:hover{color:var(--white);}
+@media(max-width:480px){
+  .num{font-size:72px;}
+  h1{font-size:22px;}
+  .links{gap:14px;}
+}
 </style>
-<link rel="icon" type="image/png" href="/logo.png">
 </head>
 <body>
   <div class="num">404</div>
   <h1>This page doesn't exist</h1>
-  <p>The page you're looking for isn't here but your R&D Tax Credit might does.</p>
+  <p>The page you're looking for isn't here but your R&amp;D tax credit might be.</p>
   <a class="btn" href="/">Go back home</a>
   <div class="links">
-    <a href="/blog">Read our guides</a>
-    <a href="/contact">Contact us</a>
-    <a href="/about">About Owedco</a>
+    <a href="/blog/">Read our guides</a>
+    <a href="/contact.html">Contact us</a>
+    <a href="/about.html">About Owedco</a>
   </div>
 </body>
 </html>
