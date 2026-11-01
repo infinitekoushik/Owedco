@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My R&D Tax Credit Eligibility Result | Owedco</title>
+<meta name="description" content="I just checked my R&D tax credit eligibility on Owedco. Find out where your business stands in 90 seconds.">
+
+<!-- OG tags are set dynamically by JS below for social sharing -->
+<meta property="og:site_name" content="Owedco">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://owedco.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://owedco.com/og-image.jpg">
+
+<link rel="canonical" href="https://owedco.com/share.html">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L8QNJVR2MM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L8QNJVR2MM');
+</script>
+<style>
+:root{
+  --navy:#090E1A;--navy-card:#111827;--navy-edge:#1C2A3E;
+  --gold:#C9A84C;--gold-lt:#E2C06A;
+  --white:#FFFFFF;--text-dim:#6B7E96;--text-body:#A8BCCE;
+  --good:#3DB87A;--bad:#E05C5C;--radius:13px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:24px 16px 48px;}
+
+/* NAV */
+.top-bar{width:100%;max-width:520px;display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;padding-top:8px;}
+.logo{font-family:'DM Serif Display',serif;font-size:21px;color:var(--gold);text-decoration:none;}
+.top-cta{font-size:13px;font-weight:600;color:#160F00;background:var(--gold);padding:7px 16px;border-radius:7px;text-decoration:none;white-space:nowrap;}
+.top-cta:hover{background:var(--gold-lt);color:#160F00;text-decoration:none;}
+
+/* CARD */
+.share-card{width:100%;max-width:520px;background:var(--navy-card);border:1px solid var(--navy-edge);border-radius:18px;overflow:hidden;margin-bottom:20px;}
+
+.card-header{padding:28px 28px 20px;}
+.card-from{font-size:11px;font-weight:600;color:var(--text-dim);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px;}
+
+.tier-pill{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:5px 14px;border-radius:99px;margin-bottom:16px;}
+.tier-pill.likely{background:rgba(61,184,122,0.12);color:var(--good);border:1px solid rgba(61,184,122,0.3);}
+.tier-pill.possible{background:rgba(201,168,76,0.12);color:var(--gold);border:1px solid rgba(201,168,76,0.3);}
+.tier-pill.unlikely{background:rgba(224,92,92,0.08);color:var(--bad);border:1px solid rgba(224,92,92,0.22);}
+.tier-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.tier-dot.likely{background:var(--good);}
+.tier-dot.possible{background:var(--gold);}
+.tier-dot.unlikely{background:var(--bad);}
+
+.card-headline{font-family:'DM Serif Display',serif;font-size:clamp(20px,5vw,28px);line-height:1.2;color:var(--white);margin-bottom:6px;}
+
+.card-sub{font-size:14px;color:var(--text-dim);line-height:1.6;}
+
+.card-divider{height:1px;background:var(--navy-edge);margin:0 28px;}
+
+.card-credit{padding:20px 28px;}
+.credit-label{font-size:11px;font-weight:600;color:var(--text-dim);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:10px;}
+.credit-range{display:flex;align-items:baseline;gap:8px;flex-wrap:nowrap;}
+.credit-lo{font-family:'DM Serif Display',serif;font-size:clamp(32px,8vw,52px);color:var(--gold);line-height:1;letter-spacing:-0.02em;white-space:nowrap;}
+.credit-sep{font-family:'DM Serif Display',serif;font-size:clamp(18px,4vw,26px);color:var(--text-dim);padding:0 4px;white-space:nowrap;}
+.credit-hi{font-family:'DM Serif Display',serif;font-size:clamp(32px,8vw,52px);color:var(--gold-lt);line-height:1;letter-spacing:-0.02em;white-space:nowrap;}
+.credit-note{font-size:12px;color:var(--text-dim);margin-top:6px;line-height:1.5;}
+.credit-low-match{font-family:'DM Serif Display',serif;font-size:28px;color:var(--text-dim);}
+
+.card-footer-strip{background:linear-gradient(135deg,rgba(201,168,76,0.07),rgba(201,168,76,0.02));border-top:1px solid rgba(201,168,76,0.15);padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.card-footer-text{font-size:12px;color:var(--text-dim);line-height:1.4;}
+.card-footer-text strong{color:var(--gold);display:block;font-size:13px;}
+.card-footer-logo{font-family:'DM Serif Display',serif;font-size:16px;color:var(--gold);opacity:0.6;flex-shrink:0;}
+
+/* NOTICE */
+.not-tax-notice{width:100%;max-width:520px;background:rgba(28,42,62,0.5);border:1px solid var(--navy-edge);border-left:3px solid var(--gold-lt);border-radius:9px;padding:12px 16px;font-size:12px;color:var(--text-dim);line-height:1.6;margin-bottom:20px;}
+
+/* ACTIONS */
+.actions{width:100%;max-width:520px;display:flex;flex-direction:column;gap:10px;margin-bottom:28px;}
+.btn-primary{display:block;width:100%;text-align:center;background:var(--gold);color:#160F00;font-family:'Inter',sans-serif;font-weight:600;font-size:15px;padding:15px;border-radius:10px;text-decoration:none;border:none;cursor:pointer;transition:background 0.15s;-webkit-tap-highlight-color:transparent;}
+.btn-primary:hover{background:var(--gold-lt);color:#160F00;text-decoration:none;}
+.btn-secondary-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.btn-secondary{display:block;width:100%;text-align:center;background:var(--navy-card);color:var(--text-body);font-family:'Inter',sans-serif;font-weight:500;font-size:13px;padding:12px;border-radius:10px;text-decoration:none;border:1px solid var(--navy-edge);cursor:pointer;transition:border-color 0.15s,color 0.15s;-webkit-tap-highlight-color:transparent;}
+.btn-secondary:hover{border-color:var(--gold);color:var(--white);text-decoration:none;}
+
+/* COPY LINK */
+.copy-row{display:flex;gap:8px;width:100%;max-width:520px;margin-bottom:28px;}
+.copy-input{flex:1;background:#0D1625;border:1px solid var(--navy-edge);border-radius:8px;padding:11px 14px;font-size:12px;font-family:'Inter',sans-serif;color:var(--text-dim);outline:none;min-width:0;}
+.copy-btn{background:var(--navy-card);border:1px solid var(--navy-edge);color:var(--text-body);font-family:'Inter',sans-serif;font-weight:500;font-size:13px;padding:11px 18px;border-radius:8px;cursor:pointer;white-space:nowrap;transition:all 0.15s;-webkit-tap-highlight-color:transparent;flex-shrink:0;}
+.copy-btn:hover{border-color:var(--gold);color:var(--white);}
+.copy-btn.copied{border-color:var(--good);color:var(--good);}
+
+/* HOW label */
+.how-label{width:100%;max-width:520px;font-size:11px;font-weight:600;color:var(--text-dim);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:12px;}
+.how-card{width:100%;max-width:520px;background:var(--navy-card);border:1px solid var(--navy-edge);border-radius:12px;padding:18px 20px;}
+.how-item{display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--navy-edge);font-size:13px;color:var(--text-body);line-height:1.55;}
+.how-item:last-child{border-bottom:none;padding-bottom:0;}
+.how-num{font-family:'DM Serif Display',serif;font-size:18px;color:rgba(201,168,76,0.3);line-height:1;flex-shrink:0;width:20px;}
+
+@media(max-width:380px){
+  .btn-secondary-row{grid-template-columns:1fr;}
+  .card-header{padding:20px 18px 16px;}
+  .card-credit{padding:16px 18px;}
+  .card-footer-strip{padding:14px 18px;}
+  .card-divider{margin:0 18px;}
+}
+@media(prefers-reduced-motion:reduce){
+  .btn-primary,.btn-secondary,.copy-btn{transition:none;}
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <a class="logo" href="/">Owedco</a>
+  <a class="top-cta" href="/">Check Your Business</a>
+</div>
+
+<div class="share-card" id="shareCard">
+  <div class="card-header">
+    <div class="card-from">R&amp;D Tax Credit Eligibility Result</div>
+    <div class="tier-pill" id="tierPill">
+      <span class="tier-dot" id="tierDot"></span>
+      <span id="tierLabel"></span>
+    </div>
+    <div class="card-headline" id="cardHeadline"></div>
+    <div class="card-sub" id="cardSub"></div>
+  </div>
+  <div class="card-divider"></div>
+  <div class="card-credit" id="cardCredit"></div>
+  <div class="card-footer-strip">
+    <div class="card-footer-text">
+      <strong>Check yours free</strong>
+      owedco.com &nbsp;&#183;&nbsp; 90 seconds &nbsp;&#183;&nbsp; No email required
+    </div>
+    <div class="card-footer-logo">Owedco</div>
+  </div>
+</div>
+
+<div class="not-tax-notice">
+  This is an estimate only. Not tax advice. Actual credit amounts depend on qualified research expenses, payroll records and IRS guidelines. Always work with a qualified tax professional before filing any claim.
+</div>
+
+<div class="actions">
+  <a href="/" class="btn-primary" id="ctaBtn">Get My Free Eligibility Check</a>
+  <div class="btn-secondary-row">
+    <button class="btn-secondary" onclick="shareNative()" id="shareBtn">Share this result</button>
+    <a href="/blog/do-i-qualify-for-rd-tax-credit.html" class="btn-secondary">Learn more</a>
+  </div>
+</div>
+
+<div class="copy-row">
+  <input class="copy-input" id="copyInput" readonly>
+  <button class="copy-btn" id="copyBtn" onclick="copyLink()">Copy link</button>
+</div>
+
+<div class="how-label">How the eligibility checker works</div>
+<div class="how-card">
+  <div class="how-item"><span class="how-num">1</span><span>Answer 6 questions about your industry, development activities, team size and R&amp;D spend. Takes 90 seconds.</span></div>
+  <div class="how-item"><span class="how-num">2</span><span>Get a personalised eligibility tier (Likely Qualified, Possibly Qualified or Low Match) plus an estimated annual credit range.</span></div>
+  <div class="how-item"><span class="how-num">3</span><span>Strong matches are referred to R&amp;D tax credit specialists who work on contingency. Free review, no upfront cost.</span></div>
+</div>
+
+<script>
+/* ---- READ URL PARAMS ---- */
+function getParam(name){
+  var url = window.location.href;
+  name = name.replace(/[\[\]]/g, '\\$&');
+  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+  var results = regex.exec(url);
+  if(!results) return null;
+  if(!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g,' '));
+}
+
+function fmtMoney(n){
+  n = parseInt(n, 10);
+  if(isNaN(n)) return null;
+  if(n >= 1000000) return '$' + (n/1000000).toFixed(1) + 'M';
+  if(n >= 1000) return '$' + Math.round(n/1000) + 'k';
+  return '$' + n;
+}
+
+var tier = getParam('tier') || 'possible';
+var lo   = getParam('lo');
+var hi   = getParam('hi');
+var ind  = getParam('ind') || '';
+
+// Sanitise tier
+if(tier !== 'likely' && tier !== 'possible' && tier !== 'unlikely') tier = 'possible';
+
+/* ---- POPULATE CARD ---- */
+var tierConfigs = {
+  likely: {
+    label: 'Likely Qualified',
+    headline: 'Strong match. Your business is likely sitting on unclaimed money.',
+    sub: 'The federal R&D tax credit hands businesses real cash back for development work they are already doing. Based on your answers, yours looks like a strong match.'
+  },
+  possible: {
+    label: 'Possibly Qualified',
+    headline: "There's a real chance you're leaving money on the table.",
+    sub: 'Your business shows qualifying signals for the federal R&D tax credit. A free specialist review would confirm whether and how much you can claim.'
+  },
+  unlikely: {
+    label: 'Low Match',
+    headline: 'Low match, but a specialist call might still turn something up.',
+    sub: 'Based on the answers given, qualifying activities appear limited. A 15-minute free call with a specialist has turned similar situations into real recoveries before.'
+  }
+};
+
+var cfg = tierConfigs[tier];
+
+var pill = document.getElementById('tierPill');
+pill.classList.add(tier);
+document.getElementById('tierDot').classList.add(tier);
+document.getElementById('tierLabel').textContent = cfg.label;
+document.getElementById('cardHeadline').textContent = cfg.headline;
+document.getElementById('cardSub').textContent = cfg.sub;
+
+// Credit range
+var creditEl = document.getElementById('cardCredit');
+if(tier === 'unlikely'){
+  creditEl.innerHTML = '<div class="credit-label">Eligibility estimate</div><div class="credit-low-match">Low match</div><p class="credit-note">Qualifying activities appear limited based on answers provided.</p>';
+} else if(lo && hi){
+  var loFmt = fmtMoney(lo);
+  var hiFmt = fmtMoney(hi);
+  if(loFmt && hiFmt){
+    var creditHTML = '<div class="credit-label">Estimated annual federal credit</div>';
+    creditHTML += '<div class="credit-range">';
+    creditHTML += '<span class="credit-lo">' + loFmt + '</span>';
+    creditHTML += '<span class="credit-sep">to</span>';
+    creditHTML += '<span class="credit-hi">' + hiFmt + '</span>';
+    creditHTML += '</div>';
+    creditHTML += '<p class="credit-note">Based on self-reported R&amp;D spend. Specialists typically recover 20 to 40% more. Not a guarantee.</p>';
+    creditEl.innerHTML = creditHTML;
+  } else {
+    creditEl.innerHTML = '<div class="credit-label">Eligibility estimate</div><div class="credit-note">Run the full checker to get your credit range estimate.</div>';
+  }
+} else {
+  creditEl.innerHTML = '<div class="credit-label">Want your credit estimate?</div><p class="credit-note" style="font-size:14px;color:var(--text-body);margin-top:6px;">Run the full 6-question checker to see your estimated annual credit range.</p>';
+}
+
+/* ---- SET PAGE URL for copy ---- */
+var pageURL = window.location.href;
+document.getElementById('copyInput').value = pageURL;
+
+/* ---- UPDATE PAGE TITLE dynamically ---- */
+document.title = cfg.label + ' for R&D Tax Credit | Owedco';
+
+/* ---- CTA button ---- */
+document.getElementById('ctaBtn').href = '/';
+
+/* ---- COPY LINK ---- */
+function copyLink(){
+  var input = document.getElementById('copyInput');
+  var btn   = document.getElementById('copyBtn');
+  try {
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(input.value).then(function(){
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(function(){ btn.textContent = 'Copy link'; btn.classList.remove('copied'); }, 2000);
+      });
+    } else {
+      input.select();
+      document.execCommand('copy');
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(function(){ btn.textContent = 'Copy link'; btn.classList.remove('copied'); }, 2000);
+    }
+  } catch(e){
+    input.select();
+  }
+}
+
+/* ---- NATIVE SHARE (mobile) ---- */
+function shareNative(){
+  var shareText = 'I just checked my R&D tax credit eligibility on Owedco. Result: ' + cfg.label + '. Check yours free in 90 seconds.';
+  if(navigator.share){
+    navigator.share({
+      title: 'My R&D Tax Credit Result: ' + cfg.label,
+      text: shareText,
+      url: pageURL
+    }).catch(function(){});
+  } else {
+    // Fallback: open Twitter
+    var tweetURL = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent(pageURL);
+    window.open(tweetURL, '_blank', 'width=600,height=400');
+  }
+}
+
+/* ---- GA ---- */
+if(typeof gtag !== 'undefined'){
+  gtag('event','share_card_view',{event_category:'share',event_label:tier});
+}
+</script>
+</body>
+</html>
