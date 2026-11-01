@@ -155,6 +155,25 @@ h1 em{font-style:italic;color:var(--gold);}
 .btn-cta{display:block;width:100%;text-align:center;background:var(--gold);color:#160F00;font-family:'Inter',sans-serif;font-weight:600;font-size:15px;padding:14px 28px;border-radius:10px;text-decoration:none;border:none;cursor:pointer;transition:transform 0.15s,box-shadow 0.15s,background 0.15s;box-shadow:0 4px 20px rgba(201,168,76,0.18);-webkit-tap-highlight-color:transparent;}
 .btn-cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,0.3);background:var(--gold-lt);}
 .disclaimer{margin-top:20px;font-size:11px;color:var(--text-dim);line-height:1.65;}
+/* SHARE BUTTON */
+.btn-share{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:var(--navy-card);border:1px solid var(--navy-edge);color:var(--text-body);font-family:'Inter',sans-serif;font-weight:500;font-size:13px;padding:12px;border-radius:9px;cursor:pointer;transition:border-color 0.15s,color 0.15s;margin-top:10px;-webkit-tap-highlight-color:transparent;text-decoration:none;}
+.btn-share:hover{border-color:var(--gold);color:var(--white);}
+.btn-share-icon{font-size:15px;}
+
+/* EMAIL CAPTURE */
+.email-capture{background:var(--navy-card);border:1px solid var(--navy-edge);border-radius:12px;padding:22px;margin-top:20px;margin-bottom:4px;}
+.email-cap-label{font-size:12px;font-weight:600;color:var(--gold);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:6px;}
+.email-cap-sub{font-size:13px;color:var(--text-dim);line-height:1.55;margin-bottom:14px;}
+.email-cap-row{display:flex;gap:8px;margin-bottom:6px;}
+.email-cap-input{flex:1;background:#0D1625;border:1px solid var(--navy-edge);border-radius:8px;padding:11px 14px;font-size:14px;font-family:'Inter',sans-serif;color:var(--white);outline:none;transition:border-color 0.15s;min-width:0;}
+.email-cap-input:focus{border-color:var(--gold);}
+.email-cap-input::placeholder{color:var(--text-dim);}
+.email-cap-btn{background:var(--gold);color:#160F00;font-family:'Inter',sans-serif;font-weight:600;font-size:13px;padding:11px 18px;border:none;border-radius:8px;cursor:pointer;white-space:nowrap;transition:background 0.15s;-webkit-tap-highlight-color:transparent;flex-shrink:0;}
+.email-cap-btn:hover{background:var(--gold-lt);}
+.email-cap-sent{font-size:13px;color:var(--good);font-weight:600;padding:6px 0;}
+.email-sent-check{font-size:15px;}
+.email-cap-note{font-size:11px;color:var(--text-dim);margin-top:4px;}
+
 .btn-restart{background:transparent;border:none;color:var(--text-dim);font-family:'Inter',sans-serif;font-size:12.5px;cursor:pointer;text-decoration:underline;margin-top:16px;display:block;text-align:center;padding:0;-webkit-tap-highlight-color:transparent;}
 .btn-restart:hover{color:var(--white);}
 
@@ -167,7 +186,6 @@ h1 em{font-style:italic;color:var(--gold);}
 
 /* MOBILE */
 @media(max-width:640px){
-  #quizSection{padding:70px 14px 60px; min-height:100svh;}
   .site-nav{padding:0 16px;}
   .nav-links{display:none;}
   .nav-hamburger{display:flex;}
@@ -196,6 +214,8 @@ h1 em{font-style:italic;color:var(--gold);}
   .res-headline{font-size:21px;}
   .cta-card{padding:20px 16px;}
   .btn-cta{font-size:14px;padding:14px 16px;}
+  .email-cap-row{flex-direction:column;}
+  .email-cap-btn{width:100%;padding:13px;}
   .site-footer{flex-direction:column;align-items:flex-start;padding:24px 16px;gap:10px;}
 }
 
@@ -228,6 +248,7 @@ h1 em{font-style:italic;color:var(--gold);}
     <a href="/contact.html">Contact</a>
     <a href="/privacy.html">Privacy</a>
     <a href="/support.html">Support Us</a>
+    <a href="/partners.html">Partners</a>
     <a href="#" onclick="startQuiz();return false;" class="nav-cta">Check Eligibility</a>
   </div>
   <button class="nav-hamburger" aria-label="Open menu" onclick="toggleMenu()">
@@ -243,6 +264,7 @@ h1 em{font-style:italic;color:var(--gold);}
   <a href="/terms.html">Terms</a>
   <a href="/disclaimer.html">Disclaimer</a>
   <a href="/support.html">Support Us</a>
+  <a href="/partners.html">Partner Program</a>
   <a href="#" onclick="startQuiz();toggleMenu();return false;" class="mcta">Check My Eligibility</a>
 </div>
 
@@ -253,7 +275,7 @@ h1 em{font-style:italic;color:var(--gold);}
   <div class="hero-body">
     <div class="badge">
       <span class="badge-dot"></span>
-      2026 tax year - New deduction rules now in effect.
+      2026 tax year. New deduction rules now in effect.
     </div>
     <h1>Your business is<br>probably <em>owed money</em><br>right now</h1>
     <p class="hero-p">
@@ -275,7 +297,7 @@ h1 em{font-style:italic;color:var(--gold);}
       </div>
     </div>
     <button class="btn-hero" id="startBtn">Find Out What You're Owed</button>
-    <p class="hero-caption">Six questions and 90 seconds. No email, no credit card, nothing else required.</p>
+    <p class="hero-caption">Six questions and 90 seconds. No email, no card, nothing else required.</p>
   </div>
 </section>
 
@@ -320,9 +342,28 @@ h1 em{font-style:italic;color:var(--gold);}
     <div class="cta-card">
       <div class="cta-title" id="ctaTitle"></div>
       <p class="cta-p" id="ctaP"></p>
-      <p class="affiliate-note">Affiliate disclosure: if you become a client of any trusted, qualified specialist firm through this link, Owedco earns a small referral fee. The specialist review is free to you.</p>
+      <p class="affiliate-note">Affiliate disclosure: if you become a client of TaxTaker through this link, Owedco earns a referral fee. The specialist review is free to you.</p>
       <a href="https://www.taxtaker.com/r-d-tax-credits" target="_blank" rel="noopener sponsored" class="btn-cta" id="ctaBtn"></a>
     </div>
+    <!-- SHARE -->
+    <button class="btn-share" id="shareBtn" onclick="shareResult()">
+      <span class="btn-share-icon">&#8599;</span> Share my result
+    </button>
+
+    <!-- EMAIL CAPTURE -->
+    <div class="email-capture" id="emailCapture">
+      <div class="email-cap-label">Get your results by email</div>
+      <p class="email-cap-sub">We will send you a copy of your eligibility result and credit estimate. No spam, no sales calls. One email, that is it.</p>
+      <div class="email-cap-row">
+        <input type="email" id="captureEmail" class="email-cap-input" placeholder="your@email.com" autocomplete="email">
+        <button class="email-cap-btn" onclick="submitEmail()">Send My Results</button>
+      </div>
+      <div class="email-cap-sent" id="emailSent" style="display:none;">
+        <span class="email-sent-check">&#10003;</span> Sent. Check your inbox.
+      </div>
+      <p class="email-cap-note">We never share your email. Unsubscribe any time.</p>
+    </div>
+
     <p class="disclaimer">
       Owedco provides estimates for informational purposes only. Nothing on this site is tax or legal advice.
       Actual credit amounts depend on qualified research expenses, payroll records and IRS guidelines.
@@ -338,6 +379,8 @@ h1 em{font-style:italic;color:var(--gold);}
   <div class="footer-links">
     <a href="/about.html">About</a>
     <a href="/blog/">Blog</a>
+    <a href="/activity-checker.html">Activity Checker</a>
+    <a href="/partners.html">Partners</a>
     <a href="/contact.html">Contact</a>
     <a href="mailto:hello@owedco.com?subject=Owedco Feedback">Feedback</a>
     <a href="/privacy.html">Privacy</a>
@@ -758,6 +801,80 @@ h1 em{font-style:italic;color:var(--gold);}
     var r=document.createElement('div'); r.className='rule';
     el.appendChild(r);
   }
+
+  function shareResult(){
+    var sc   = totalScore();
+    var tier = sc>=15?'likely':sc>=10?'possible':'unlikely';
+    var rdv  = (ans.rdspend && SPEND[ans.rdspend.v]) || 100000;
+    var lo   = Math.round(rdv * 0.05);
+    var hi   = Math.round(rdv * 0.10);
+    var ind  = (ans.industry && ans.industry.v) || '';
+
+    var url = '/share.html?tier=' + tier + '&lo=' + lo + '&hi=' + hi + '&ind=' + encodeURIComponent(ind);
+
+    if(typeof gtag !== 'undefined'){
+      gtag('event','share_click',{event_category:'results',event_label:tier});
+    }
+
+    // Try native share first on mobile
+    if(navigator.share){
+      var labels = {likely:'Likely Qualified',possible:'Possibly Qualified',unlikely:'Low Match'};
+      navigator.share({
+        title: 'My R&D Tax Credit Result: ' + (labels[tier] || tier),
+        text: 'I just checked my R&D tax credit eligibility on Owedco. Find out where your business stands in 90 seconds.',
+        url: 'https://owedco.com' + url
+      }).catch(function(){
+        window.open(url, '_blank');
+      });
+    } else {
+      window.open(url, '_blank');
+    }
+  }
+  window.shareResult = shareResult;
+
+  function submitEmail(){
+    var input = document.getElementById('captureEmail');
+    var email = input.value.trim();
+    if(!email || email.indexOf('@') < 1){
+      input.focus();
+      input.style.borderColor = 'var(--bad)';
+      setTimeout(function(){ input.style.borderColor = ''; }, 1500);
+      return;
+    }
+
+    // Build result summary from current answers
+    var sc = totalScore();
+    var tier = sc>=15?'Likely Qualified':sc>=10?'Possibly Qualified':'Low Match';
+    var rdv = (ans.rdspend && SPEND[ans.rdspend.v]) || 100000;
+    var lo = Math.round(rdv * 0.05);
+    var hi = Math.round(rdv * 0.10);
+
+    // Fire GA event
+    if(typeof gtag !== 'undefined'){
+      gtag('event', 'email_capture', {event_category:'results', event_label: tier});
+    }
+
+    // mailto fallback — swap for Formspree/EmailJS endpoint when ready
+    var subject = 'Your Owedco R&D Credit Eligibility Result';
+    var body = 'Hi,\n\nHere is a copy of your Owedco eligibility result:\n\n'
+      + 'Result: ' + tier + '\n'
+      + 'Estimated annual credit range: $' + lo + ' to $' + hi + '\n\n'
+      + 'These are rough estimates only. Not tax advice.\n\n'
+      + 'To get a free professional review with no upfront cost:\n'
+      + 'https://www.taxtaker.com/r-d-tax-credits\n\n'
+      + 'Questions? Email us at hello@owedco.com\n\n'
+      + '-- Owedco\nhttps://owedco.com';
+
+    window.location.href = 'mailto:' + encodeURIComponent(email)
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+
+    // Show sent confirmation
+    document.getElementById('captureEmail').style.display = 'none';
+    document.querySelector('.email-cap-btn').style.display = 'none';
+    document.getElementById('emailSent').style.display = 'block';
+  }
+  window.submitEmail = submitEmail;
 
   function buildCTA(tier){
     var title=document.getElementById('ctaTitle');
