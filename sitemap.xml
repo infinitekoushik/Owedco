@@ -4,27 +4,49 @@
   <!-- Core pages -->
   <url>
     <loc>https://owedco.com/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://owedco.com/about.html</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://owedco.com/contact.html</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+
+  <!-- Tools and partner pages -->
+  <url>
+    <loc>https://owedco.com/activity-checker.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://owedco.com/partners.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Share card - low priority, dynamic content -->
+  <url>
+    <loc>https://owedco.com/share.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
 
   <!-- Blog index -->
   <url>
     <loc>https://owedco.com/blog/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -32,43 +54,49 @@
   <!-- Blog posts — highest value pages -->
   <url>
     <loc>https://owedco.com/blog/do-i-qualify-for-rd-tax-credit.html</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://owedco.com/blog/rd-tax-credit-calculator.html</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://owedco.com/blog/architecture-construction-rd-tax-credit.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://owedco.com/blog/rd-tax-credit-vs-rd-deduction-2026.html</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://owedco.com/blog/software-company-rd-tax-credit.html</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://owedco.com/blog/manufacturing-company-rd-tax-credit.html</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://owedco.com/blog/rd-tax-credit-startups-payroll-taxes.html</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://owedco.com/blog/biotech-pharma-rd-tax-credit.html</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -76,19 +104,19 @@
   <!-- Legal — indexed but low priority -->
   <url>
     <loc>https://owedco.com/privacy.html</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://owedco.com/terms.html</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://owedco.com/disclaimer.html</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
