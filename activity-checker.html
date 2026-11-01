@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Does My Business Activity Qualify for the R&D Tax Credit? | Owedco</title>
+<meta name="description" content="Type in what your team does and find out instantly whether it qualifies for the federal R&D tax credit. Free, no signup, no AI fees — runs entirely in your browser.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://owedco.com/activity-checker.html">
+<meta property="og:title" content="Does My Business Activity Qualify for the R&D Tax Credit?">
+<meta property="og:description" content="Type in what your team does and find out instantly whether it qualifies for the federal R&D tax credit. Free, instant, no signup.">
+<meta property="og:url" content="https://owedco.com/activity-checker.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://owedco.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Owedco">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Does My Business Activity Qualify for the R&D Tax Credit?">
+<meta name="twitter:description" content="Type in what your team does and find out instantly if it qualifies for the R&D tax credit. Free, instant, no signup.">
+<meta name="twitter:image" content="https://owedco.com/og-image.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L8QNJVR2MM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L8QNJVR2MM');
+</script>
+<style>
+:root{
+  --navy:#090E1A;--navy-card:#111827;--navy-edge:#1C2A3E;
+  --gold:#C9A84C;--gold-lt:#E2C06A;--gold-dim:#7A6030;
+  --white:#FFFFFF;--text-dim:#6B7E96;--text-body:#A8BCCE;
+  --good:#3DB87A;--bad:#E05C5C;--maybe:#C9A84C;--radius:13px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column;}
+
+.site-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(9,14,26,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--navy-edge);display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:58px;}
+.logo{font-family:'DM Serif Display',serif;font-size:21px;color:var(--gold);text-decoration:none;flex-shrink:0;}
+.nav-links{display:flex;align-items:center;gap:6px;}
+.nav-links a{font-size:13px;font-weight:500;color:var(--text-dim);text-decoration:none;padding:6px 12px;border-radius:7px;transition:color 0.15s,background 0.15s;white-space:nowrap;}
+.nav-links a:hover{color:var(--white);background:rgba(255,255,255,0.05);}
+.nav-cta{font-size:13px!important;font-weight:600!important;color:#160F00!important;background:var(--gold)!important;padding:7px 16px!important;border-radius:7px;}
+.nav-cta:hover{background:var(--gold-lt)!important;}
+.nav-hamburger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:6px;}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--text-dim);border-radius:2px;}
+.mobile-menu{display:none;position:fixed;top:58px;left:0;right:0;background:var(--navy-card);border-bottom:1px solid var(--navy-edge);padding:12px 0;z-index:99;flex-direction:column;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-size:15px;color:var(--text-body);text-decoration:none;padding:12px 28px;border-bottom:1px solid var(--navy-edge);transition:color 0.14s;}
+.mobile-menu a:last-child{border-bottom:none;}
+.mobile-menu a:hover{color:var(--white);}
+.mobile-menu a.mcta{color:var(--gold);font-weight:600;}
+
+.page-wrap{flex:1;max-width:680px;margin:0 auto;padding:90px 24px 80px;width:100%;}
+
+/* HERO */
+.tool-hero{text-align:center;margin-bottom:36px;}
+.tool-tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.2);padding:4px 14px;border-radius:99px;margin-bottom:18px;}
+.tool-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(26px,5vw,40px);line-height:1.15;letter-spacing:-0.02em;color:var(--white);margin-bottom:12px;}
+.tool-hero p{font-size:15px;color:var(--text-dim);line-height:1.65;max-width:480px;margin:0 auto;}
+
+/* INPUT BOX */
+.checker-box{background:var(--navy-card);border:1px solid var(--navy-edge);border-radius:var(--radius);padding:28px;margin-bottom:24px;}
+.checker-label{font-size:13px;font-weight:600;color:var(--text-body);margin-bottom:8px;display:block;}
+.checker-hint{font-size:12px;color:var(--text-dim);margin-bottom:14px;line-height:1.5;}
+.input-wrap{display:flex;gap:10px;align-items:flex-start;}
+.checker-textarea{flex:1;background:#0D1625;border:1px solid var(--navy-edge);border-radius:9px;padding:13px 15px;font-size:14px;font-family:'Inter',sans-serif;color:var(--white);outline:none;resize:none;height:80px;transition:border-color 0.15s;line-height:1.55;}
+.checker-textarea:focus{border-color:var(--gold);}
+.checker-textarea::placeholder{color:var(--text-dim);}
+.checker-btn{background:var(--gold);color:#160F00;font-family:'Inter',sans-serif;font-weight:600;font-size:14px;padding:13px 20px;border:none;border-radius:9px;cursor:pointer;transition:background 0.15s;white-space:nowrap;flex-shrink:0;-webkit-tap-highlight-color:transparent;align-self:flex-end;}
+.checker-btn:hover{background:var(--gold-lt);}
+
+/* EXAMPLES */
+.examples-label{font-size:11px;font-weight:600;color:var(--text-dim);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:10px;margin-top:18px;}
+.examples{display:flex;flex-wrap:wrap;gap:7px;}
+.example-chip{background:rgba(28,42,62,0.7);border:1px solid var(--navy-edge);border-radius:99px;padding:5px 13px;font-size:12px;color:var(--text-dim);cursor:pointer;transition:all 0.14s;-webkit-tap-highlight-color:transparent;}
+.example-chip:hover{border-color:var(--gold);color:var(--white);background:rgba(201,168,76,0.08);}
+
+/* RESULT */
+.result-box{border-radius:var(--radius);overflow:hidden;margin-bottom:20px;display:none;}
+.result-box.show{display:block;}
+
+.result-header{padding:20px 22px 16px;}
+.result-header.yes{background:rgba(61,184,122,0.08);border:1px solid rgba(61,184,122,0.2);border-radius:var(--radius) var(--radius) 0 0;}
+.result-header.no{background:rgba(224,92,92,0.06);border:1px solid rgba(224,92,92,0.18);border-radius:var(--radius) var(--radius) 0 0;}
+.result-header.maybe{background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.22);border-radius:var(--radius) var(--radius) 0 0;}
+
+.result-badge{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:10px;}
+.badge-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.badge-dot.yes{background:var(--good);}
+.badge-dot.no{background:var(--bad);}
+.badge-dot.maybe{background:var(--gold);}
+.badge-text.yes{color:var(--good);}
+.badge-text.no{color:var(--bad);}
+.badge-text.maybe{color:var(--gold);}
+
+.result-verdict{font-family:'DM Serif Display',serif;font-size:22px;color:var(--white);line-height:1.25;margin-bottom:8px;}
+.result-explanation{font-size:14px;color:var(--text-body);line-height:1.65;}
+
+.result-body{background:var(--navy-card);padding:18px 22px;}
+.result-body.yes{border:1px solid rgba(61,184,122,0.2);border-top:none;border-radius:0 0 var(--radius) var(--radius);}
+.result-body.no{border:1px solid rgba(224,92,92,0.18);border-top:none;border-radius:0 0 var(--radius) var(--radius);}
+.result-body.maybe{border:1px solid rgba(201,168,76,0.22);border-top:none;border-radius:0 0 var(--radius) var(--radius);}
+
+.result-rules-label{font-size:11px;font-weight:600;color:var(--text-dim);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:12px;}
+.rule-items{display:flex;flex-direction:column;gap:8px;margin-bottom:18px;}
+.rule-item{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text-body);line-height:1.55;}
+.rule-icon{font-size:13px;flex-shrink:0;margin-top:1px;width:16px;}
+
+.result-cta-row{display:flex;gap:10px;margin-top:4px;flex-wrap:wrap;}
+.btn-result-primary{flex:1;min-width:160px;text-align:center;background:var(--gold);color:#160F00;font-family:'Inter',sans-serif;font-weight:600;font-size:13px;padding:12px 16px;border-radius:9px;text-decoration:none;transition:background 0.15s;border:none;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.btn-result-primary:hover{background:var(--gold-lt);color:#160F00;text-decoration:none;}
+.btn-result-secondary{flex:1;min-width:140px;text-align:center;background:transparent;color:var(--gold);font-family:'Inter',sans-serif;font-weight:600;font-size:13px;padding:12px 16px;border-radius:9px;text-decoration:none;border:1px solid rgba(201,168,76,0.3);transition:background 0.15s;-webkit-tap-highlight-color:transparent;}
+.btn-result-secondary:hover{background:rgba(201,168,76,0.08);text-decoration:none;}
+
+/* HISTORY */
+.history-label{font-size:11px;font-weight:600;color:var(--text-dim);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:12px;}
+.history-list{display:flex;flex-direction:column;gap:8px;margin-bottom:28px;}
+.history-item{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--navy-card);border:1px solid var(--navy-edge);border-radius:9px;padding:11px 14px;cursor:pointer;transition:border-color 0.14s;-webkit-tap-highlight-color:transparent;}
+.history-item:hover{border-color:var(--gold-dim);}
+.history-text{font-size:13px;color:var(--text-body);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.history-pill{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;flex-shrink:0;}
+.history-pill.yes{background:rgba(61,184,122,0.12);color:var(--good);}
+.history-pill.no{background:rgba(224,92,92,0.1);color:var(--bad);}
+.history-pill.maybe{background:rgba(201,168,76,0.12);color:var(--gold);}
+
+/* BOTTOM CTA */
+.bottom-cta{background:linear-gradient(135deg,rgba(201,168,76,0.09),rgba(201,168,76,0.02));border:1px solid rgba(201,168,76,0.25);border-radius:var(--radius);padding:26px;text-align:center;}
+.bottom-cta h3{font-family:'DM Serif Display',serif;font-size:20px;color:var(--white);margin-bottom:8px;}
+.bottom-cta p{font-size:13px;color:var(--text-dim);margin-bottom:18px;line-height:1.6;}
+.bottom-cta a{display:inline-block;background:var(--gold);color:#160F00;font-family:'Inter',sans-serif;font-weight:600;font-size:14px;padding:12px 28px;border-radius:9px;text-decoration:none;transition:background 0.15s;}
+.bottom-cta a:hover{background:var(--gold-lt);color:#160F00;text-decoration:none;}
+
+.disclaimer-text{font-size:11px;color:var(--text-dim);text-align:center;margin-top:20px;line-height:1.6;}
+
+.site-footer{border-top:1px solid var(--navy-edge);padding:28px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.site-footer span{font-size:12px;color:var(--text-dim);}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap;}
+.footer-links a{font-size:12px;color:var(--text-dim);text-decoration:none;transition:color 0.14s;}
+.footer-links a:hover{color:var(--white);}
+
+@media(max-width:640px){
+  .site-nav{padding:0 16px;}
+  .nav-links{display:none;}
+  .nav-hamburger{display:flex;}
+  .page-wrap{padding:74px 16px 60px;}
+  .input-wrap{flex-direction:column;}
+  .checker-btn{width:100%;}
+  .result-cta-row{flex-direction:column;}
+  .btn-result-primary,.btn-result-secondary{min-width:unset;}
+  .site-footer{flex-direction:column;align-items:flex-start;padding:22px 16px;}
+  .footer-links{gap:12px;}
+}
+@media(prefers-reduced-motion:reduce){
+  .checker-btn,.btn-result-primary,.bottom-cta a{transition:none;}
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="logo" href="/">Owedco</a>
+  <div class="nav-links">
+    <a href="/about.html">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/partners.html">Partners</a>
+    <a href="/" class="nav-cta">Check Eligibility</a>
+  </div>
+  <button class="nav-hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a>
+  <a href="/about.html">About</a>
+  <a href="/blog/">Blog</a>
+  <a href="/contact.html">Contact</a>
+  <a href="/privacy.html">Privacy</a>
+  <a href="/terms.html">Terms</a>
+  <a href="/disclaimer.html">Disclaimer</a>
+  <a href="/support.html">Support Us</a>
+  <a href="/partners.html">Partner Program</a>
+  <a href="/" class="mcta">Check My Eligibility</a>
+</div>
+
+<div class="page-wrap">
+
+  <div class="tool-hero">
+    <div class="tool-tag">Free Instant Checker</div>
+    <h1>Does this activity qualify<br>for the R&amp;D tax credit?</h1>
+    <p>Describe what your team does and get an instant answer. Covers software, manufacturing, biotech, construction and more. Runs entirely in your browser, no signup needed.</p>
+  </div>
+
+  <div class="checker-box">
+    <label class="checker-label">Describe the activity</label>
+    <div class="checker-hint">Be specific. "We build custom software" is vague. "We developed a machine learning model to detect defects in PCB boards" gives a clear answer.</div>
+    <div class="input-wrap">
+      <textarea class="checker-textarea" id="activityInput" placeholder="e.g. We built a custom API that connects our ERP to our warehouse management system and had to solve a lot of data sync issues..." oninput="onInputChange()"></textarea>
+      <button class="checker-btn" onclick="checkActivity()">Check It</button>
+    </div>
+
+    <div class="examples-label">Try an example</div>
+    <div class="examples" id="exampleChips"></div>
+  </div>
+
+  <div class="result-box" id="resultBox">
+    <div class="result-header" id="resultHeader">
+      <div class="result-badge">
+        <span class="badge-dot" id="badgeDot"></span>
+        <span class="badge-text" id="badgeText"></span>
+      </div>
+      <div class="result-verdict" id="resultVerdict"></div>
+      <div class="result-explanation" id="resultExplanation"></div>
+    </div>
+    <div class="result-body" id="resultBody">
+      <div class="result-rules-label">Why this result</div>
+      <div class="rule-items" id="ruleItems"></div>
+      <div class="result-cta-row">
+        <a href="/" class="btn-result-primary">Get Full Eligibility Check</a>
+        <a href="/blog/do-i-qualify-for-rd-tax-credit.html" class="btn-result-secondary">Read the Full Guide</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="historySection" style="display:none;">
+    <div class="history-label">Recent checks</div>
+    <div class="history-list" id="historyList"></div>
+  </div>
+
+  <div class="bottom-cta">
+    <h3>Want a full eligibility picture?</h3>
+    <p>The activity checker covers single activities. The full 6-question checker looks at your whole business: industry, team size, spend, prior claims and more. Takes 90 seconds.</p>
+    <a href="/">Run the Full Checker</a>
+  </div>
+
+  <p class="disclaimer-text">This tool provides general guidance only and is not tax advice. Activity-level assessments cannot replace a full professional review. Always consult a qualified tax professional before filing any R&amp;D credit claim.</p>
+
+</div>
+
+<footer class="site-footer">
+  <span>&copy; 2026 Owedco. All rights reserved.</span>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/terms.html">Terms</a>
+    <a href="/disclaimer.html">Disclaimer</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/support.html">Support Us</a>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+
+/* ====================================================
+   ACTIVITY KNOWLEDGE BASE
+   Structure: { keywords[], antiKeywords[], verdict, explanation, rules[], outcome }
+   outcome: 'yes' | 'no' | 'maybe'
+   ==================================================== */
+var KB = [
+
+  /* ---- DEFINITE YES ---- */
+  {
+    keywords:['machine learning','ml model','neural network','deep learning','ai model','train','training data','inference','natural language','nlp','computer vision','object detection','classification model','regression model','reinforcement learning'],
+    antiKeywords:['use existing','off the shelf','openai api','third party api'],
+    outcome:'yes',
+    verdict:'This very likely qualifies.',
+    explanation:'Building, training or fine-tuning machine learning models is one of the clearest qualifying activities in software. The process involves genuine technical uncertainty, experimentation across architectures and hyperparameters, and iterative testing. The IRS has well-established precedent here.',
+    rules:['Technological in nature: relies on computer science and mathematics','Technical uncertainty present: model architecture, training approach and performance are not known in advance','Process of experimentation: you iterate, test and adjust','Permitted purpose: improving a product, process or system']
+  },
+  {
+    keywords:['algorithm','algorithms','custom algorithm','sorting','optimisation','optimization','pathfinding','search algorithm','graph algorithm','scheduling algorithm','combinatorial'],
+    antiKeywords:['off the shelf','existing library','using numpy','using scipy','standard library'],
+    outcome:'yes',
+    verdict:'This likely qualifies.',
+    explanation:'Developing novel algorithms involves computer science principles and genuine technical uncertainty about whether your approach will perform as needed. Iterative testing and refinement is inherent to the work.',
+    rules:['Technological in nature: computer science','Technical uncertainty: performance and correctness are not guaranteed upfront','Experimentation: you test, benchmark and refine','Permitted purpose: process or software improvement']
+  },
+  {
+    keywords:['new drug','drug discovery','lead compound','molecule','compound','synthesis','formulation','drug candidate','pharmacology','biologics','antibody','protein','peptide','clinical trial','phase i','phase ii','assay','in vitro','in vivo','cell line','reagent'],
+    antiKeywords:['routine quality control','post-approval','funded by grant','nih funded','grant funded'],
+    outcome:'yes',
+    verdict:'This very likely qualifies.',
+    explanation:'Drug discovery, compound development, biologics and clinical research are among the strongest-qualifying activities under IRC Section 41. Biotech and pharma companies routinely claim the R&D credit on these exact activities.',
+    rules:['Technological in nature: chemistry, biology, pharmacology','Technical uncertainty: whether the compound will work is the central question','Experimentation: hypothesis testing is the core of the process','Permitted purpose: developing a new drug, treatment or biological product']
+  },
+  {
+    keywords:['prototype','prototyping','proof of concept','poc','mvp','minimum viable','new product','product development','hardware development','pcb','circuit board','embedded','firmware','microcontroller','iot device','sensor','actuator','industrial design','mechanical design','enclosure design'],
+    antiKeywords:['using off the shelf','standard product','existing design','catalogue'],
+    outcome:'yes',
+    verdict:'This likely qualifies.',
+    explanation:'Developing new hardware, prototypes or embedded systems involves engineering principles, technical uncertainty about whether the design will perform, and iterative testing and revision. These are textbook qualifying activities.',
+    rules:['Technological in nature: engineering, electronics, computer science','Technical uncertainty: will this design work as needed?','Experimentation: build, test, revise cycle','Permitted purpose: new or improved product development']
+  },
+  {
+    keywords:['new feature','build a feature','build feature','develop feature','custom software','bespoke software','build from scratch','rewrite','rebuild','new system','new platform','core product','product engineering','backend','api development','microservices','distributed system','real time','scalability','concurrency','multithreading','database design','schema design'],
+    antiKeywords:['bug fix','fixing a bug','maintenance','updating content','cms update','wordpress update'],
+    outcome:'yes',
+    verdict:'This likely qualifies.',
+    explanation:'Building new software features, systems or platforms that require technical problem-solving qualifies when technical uncertainty was involved. Standard software development where the approach is novel to your team is exactly what the IRS intended.',
+    rules:['Technological in nature: computer science and engineering','Technical uncertainty: how to build it was not known before you started','Experimentation: you iterated on approaches, architectures or implementations','Permitted purpose: improving or creating a product or process']
+  },
+  {
+    keywords:['process improvement','manufacturing process','production process','yield improvement','reduce defects','defect reduction','tolerance','materials testing','alloy','heat treatment','surface treatment','coating','welding process','injection moulding','injection molding','tooling','fixture','jig','cnc programming','automation','robotic','production line','lean','kaizen'],
+    antiKeywords:['standard process','routine production','following specification','existing method'],
+    outcome:'yes',
+    verdict:'This likely qualifies.',
+    explanation:'Manufacturing process development and improvement is one of the top qualifying categories. When your engineers had to figure out how to achieve a result that standard methods could not deliver, that is qualifying work.',
+    rules:['Technological in nature: engineering, materials science, chemistry','Technical uncertainty: whether the improved process would work','Experimentation: testing, measurement and iteration','Permitted purpose: improving a manufacturing process']
+  },
+  {
+    keywords:['structural engineering','structural design','custom structure','novel structure','seismic','load analysis','finite element','fea','buckling','dynamic analysis','foundation design','geotechnical','soil investigation','retaining wall','bridge','tunnel','custom connection','steel connection','concrete design','post tensioned','prestressed'],
+    antiKeywords:['standard detail','catalogue','off the shelf','routine','standard beam'],
+    outcome:'yes',
+    verdict:'This likely qualifies.',
+    explanation:'Custom structural engineering that goes beyond standard code application qualifies when technical uncertainty was present. Developing novel connection details, non-standard structural systems or site-specific foundation solutions are all established qualifying activities.',
+    rules:['Technological in nature: structural and civil engineering','Technical uncertainty: whether the design would perform as required','Experimentation: analysis, calculation, testing and revision','Permitted purpose: developing or improving a structure or process']
+  },
+  {
+    keywords:['new material','materials research','material properties','composite','advanced material','ceramic','polymer','nanomaterial','material characterisation','characterization','material testing','tensile strength','fatigue','wear resistance','corrosion','thermal conductivity','material failure'],
+    outcome:'yes',
+    verdict:'This very likely qualifies.',
+    explanation:'Materials research and development, including testing new compositions, characterising performance and developing new applications for existing materials, is core qualifying research.',
+    rules:['Technological in nature: materials science, chemistry, physics','Technical uncertainty: will this material perform as needed in this application?','Experimentation: test, characterise, modify and retest','Permitted purpose: new or improved product, process or material']
+  },
+  {
+    keywords:['automation','automate','workflow automation','robotic process','rpa','custom integration','system integration','middleware','etl','data pipeline','data engineering','data warehouse','real time processing','stream processing','kafka','event driven'],
+    antiKeywords:['zapier template','off the shelf automation','using existing tool','no code','low code tool'],
+    outcome:'yes',
+    verdict:'This likely qualifies.',
+    explanation:'Custom automation and integration work that required engineering problem-solving qualifies. When connecting systems that were not designed to talk to each other, or building data pipelines that required novel approaches, the technical uncertainty and experimentation are present.',
+    rules:['Technological in nature: software engineering','Technical uncertainty: how to reliably connect or process these systems','Experimentation: iterative development and testing','Permitted purpose: improving a business process']
+  },
+  {
+    keywords:['clinical trial','phase 1','phase 2','phase i','phase ii','clinical study','investigational','ind submission','nda','510k','medical device','device development','implant','surgical instrument','diagnostic','in vitro diagnostic','ivd','biomarker','medical imaging'],
+    antiKeywords:['post approval','routine','standard of care','phase iii','phase 3','post market'],
+    outcome:'yes',
+    verdict:'This very likely qualifies.',
+    explanation:'Pre-clinical and early-phase clinical work, medical device development and diagnostic development are core qualifying activities. The IRS has well-established guidance on this.',
+    rules:['Technological in nature: biology, chemistry, biomedical engineering','Technical uncertainty: will this device or drug perform safely and effectively?','Experimentation: the trial is literally the experiment','Permitted purpose: developing a new medical product']
+  },
+  {
+    keywords:['bim','revit','dynamo','grasshopper','parametric','computational design','custom script','generative design','rhino','building performance','energy model','energy simulation','daylighting simulation','shadow analysis','custom plugin','custom addin','facade engineering','curtain wall','building envelope','acoustic model','computational fluid','cfd'],
+    antiKeywords:['standard template','existing plugin','off the shelf'],
+    outcome:'yes',
+    verdict:'This likely qualifies.',
+    explanation:'Computational design, parametric modelling, custom BIM scripting and building performance simulation work qualifies both as software development and as engineering development. This is a frequently overlooked qualifying category in architecture.',
+    rules:['Technological in nature: computer science and engineering','Technical uncertainty: whether the script, model or simulation will produce the needed result','Experimentation: iteration on parameters, logic and design','Permitted purpose: improving a design process or product']
+  },
+  {
+    keywords:['food formulation','new recipe','food product development','shelf life','texture','viscosity','emulsification','fermentation','food science','flavour development','flavor development','nutraceutical','functional food','food safety','pathogen','preservation','clean label'],
+    antiKeywords:['standard recipe','existing formulation','routine production'],
+    outcome:'yes',
+    verdict:'This likely qualifies.',
+    explanation:'Food and beverage formulation work, especially developing new products or improving existing ones for performance, safety or shelf life, qualifies when technical uncertainty was involved.',
+    rules:['Technological in nature: food science, chemistry, microbiology','Technical uncertainty: will this formulation achieve the target properties?','Experimentation: iteration on ingredients, ratios and processes','Permitted purpose: developing or improving a food product']
+  },
+  {
+    keywords:['new crop variety','plant breeding','precision agriculture','crop science','soil science','agrochemical','pest resistance','yield improvement','crop protection','agtech','drone monitoring','soil sensor','irrigation system','hydroponic','vertical farm'],
+    outcome:'yes',
+    verdict:'This likely qualifies.',
+    explanation:'Agricultural science and agtech development qualifies when technical uncertainty and experimentation are present. Crop improvement, precision agriculture systems and novel growing methods are established qualifying activities.',
+    rules:['Technological in nature: biology, chemistry, engineering','Technical uncertainty: will this variety, method or system perform as needed?','Experimentation: trial plots, sensor testing, system iteration','Permitted purpose: new or improved agricultural product or process']
+  },
+
+  /* ---- MAYBE / PARTIAL ---- */
+  {
+    keywords:['bug fix','fixing bug','fix a bug','debug','debugging','patch','hotfix'],
+    antiKeywords:['new approach','rewrite','architectural change','performance investigation','root cause unknown'],
+    outcome:'maybe',
+    verdict:'This may partially qualify, depending on the nature of the fix.',
+    explanation:'Routine bug fixing does not qualify. However, debugging a complex issue where the root cause was genuinely unknown and required investigation and experimentation can qualify. The line is technical uncertainty: if you knew roughly how to fix it, it does not qualify. If you spent significant time figuring out why something was happening, it may.',
+    rules:['Fails "elimination of uncertainty" if the fix was obvious or routine','May pass if the root cause was unknown and required systematic investigation','Time spent on genuine investigation is separable from time spent on the fix itself','Document what you investigated and what alternatives you ruled out']
+  },
+  {
+    keywords:['migration','data migration','cloud migration','moving to cloud','lift and shift','replatform','upgrade','version upgrade','platform upgrade'],
+    antiKeywords:['custom','novel','new approach','bespoke','significant engineering'],
+    outcome:'maybe',
+    verdict:'Migration work partially qualifies in some situations.',
+    explanation:'A straightforward lift-and-shift migration using vendor documentation does not qualify. But migrations that required significant custom engineering, solving data compatibility problems that had no standard solution, or developing new approaches to move complex legacy systems, can qualify for the portion that involved genuine technical problem-solving.',
+    rules:['Standard migration following vendor guides: does not qualify','Custom engineering required for non-standard systems: may qualify','Data transformation work that required novel approaches: may qualify','Document specifically what problems were non-standard and how you solved them']
+  },
+  {
+    keywords:['integration','integrating','connect systems','api integration','third party integration','webhook','connector'],
+    antiKeywords:['standard api','documented api','rest api with documentation','simple integration','plug and play'],
+    outcome:'maybe',
+    verdict:'Integration work qualifies when it required genuine engineering problem-solving.',
+    explanation:'Using a well-documented API is not qualifying. But integrating systems that were not designed to work together, solving data mapping or synchronisation problems with no established solution, or reverse-engineering undocumented interfaces are all potentially qualifying activities.',
+    rules:['Standard API integration following documentation: does not qualify','Custom middleware or transformation logic developed from scratch: may qualify','Solving synchronisation or data integrity problems that had no obvious solution: may qualify','Document specifically what was non-standard about the integration challenge']
+  },
+  {
+    keywords:['performance','optimise','optimize','speed up','latency','throughput','bottleneck','profiling','benchmark'],
+    antiKeywords:['standard caching','cdn','obvious fix','simple optimisation'],
+    outcome:'maybe',
+    verdict:'Performance work qualifies when technical uncertainty was genuinely involved.',
+    explanation:'Simply adding a cache or a CDN does not qualify. But investigating a non-obvious performance problem, developing new approaches to reduce latency in a system that standard methods could not improve, or optimising an algorithm where the solution was not known before you started, qualifies when you can show the problem was technically uncertain.',
+    rules:['Clear, well-known performance fix: does not qualify','Non-obvious investigation with uncertain solution: may qualify','Novel algorithmic or architectural approach to performance: likely qualifies','Document what approaches you tried and why the solution was not obvious']
+  },
+  {
+    keywords:['renovation','refurbishment','retrofit','adaptive reuse','historic','listed building','existing building','upgrade existing'],
+    antiKeywords:['standard renovation','like for like','routine maintenance'],
+    outcome:'maybe',
+    verdict:'Renovation work partially qualifies in specific situations.',
+    explanation:'Standard renovation using established methods does not qualify. But adaptive reuse of unusual structures, retrofitting buildings for new performance standards where no established method exists, or solving structural or mechanical problems in existing buildings that required genuine engineering investigation, can qualify for the technical development portion.',
+    rules:['Routine renovation following standard methods: does not qualify','Novel structural or MEP solution for existing building constraints: may qualify','Performance-based approach required because prescriptive code did not apply: may qualify','Isolate the technical development work from the standard construction work in time records']
+  },
+  {
+    keywords:['using ai','using chatgpt','using claude','using openai','gpt','llm api','calling api','ai tool','ai assistant'],
+    antiKeywords:['fine tuning','training','developing','building model','custom model'],
+    outcome:'maybe',
+    verdict:'Using existing AI tools does not qualify. Building with them might.',
+    explanation:'Simply using ChatGPT, Claude or any other AI API in your product does not qualify. The API provider did the R&D, not you. However, if you built a novel system around these tools, developed custom prompting frameworks, fine-tuned models, or created something technically non-obvious using these as components, the engineering work you did may qualify.',
+    rules:['Calling an existing AI API: does not qualify','Building a novel system architecture that required technical problem-solving: may qualify','Fine-tuning or adapting a model: likely qualifies','Custom evaluation, grounding or retrieval systems developed from scratch: may qualify']
+  },
+
+  /* ---- DEFINITE NO ---- */
+  {
+    keywords:['market research','customer survey','focus group','user interview','ab test','a/b test','split test','conversion optimisation','conversion optimization','seo','content marketing','social media','copywriting','logo','branding','graphic design','ui design','ux design','wireframe','mockup'],
+    antiKeywords:['algorithm','automation','software','technical'],
+    outcome:'no',
+    verdict:'This does not qualify.',
+    explanation:'Market research, customer surveys, A/B testing for conversion, SEO, content marketing and design work do not meet the IRS four-part test. They are commercial activities, not technological research. The uncertainty involved is business uncertainty (will customers respond well?) rather than technical uncertainty (can we build this?).',
+    rules:['Fails "technological in nature": marketing and design are not hard science','Fails "elimination of technical uncertainty": the question is commercial, not technical','Fails "process of experimentation": customer testing is market validation, not technical experimentation']
+  },
+  {
+    keywords:['sales','crm','lead generation','cold email','outreach','pipeline','revenue','pricing strategy','business plan','financial model','cash flow','accounting','bookkeeping','payroll','hr','hiring','recruiting','onboarding','training staff'],
+    outcome:'no',
+    verdict:'This does not qualify.',
+    explanation:'Sales, marketing, HR, finance and general business operations do not qualify. The R&D credit is for technical development work, not business or administrative activities. None of these activities involve the elimination of technical uncertainty through a process of scientific experimentation.',
+    rules:['Fails "technological in nature": these are business and administrative activities','Fails "elimination of technical uncertainty": no technical question to answer','Not aimed at developing or improving a product, process or technique through science']
+  },
+  {
+    keywords:['routine maintenance','routine quality control','quality inspection','standard inspection','standard test','off the shelf','buy software','software subscription','saas tool','existing software','wordpress','shopify','wix','squarespace','using excel','spreadsheet'],
+    outcome:'no',
+    verdict:'This does not qualify.',
+    explanation:'Routine maintenance, standard quality control and using existing off-the-shelf software do not qualify. There is no technical uncertainty when executing a known process or using a tool someone else built. The credit requires you to be developing or improving something, not operating or maintaining what already exists.',
+    rules:['Fails "elimination of technical uncertainty": the process is known and established','Fails "process of experimentation": no experimentation occurs when following a standard procedure','Using someone else\'s software means someone else did the qualifying R&D, not you']
+  },
+  {
+    keywords:['funded by grant','government funded','nih grant','sbir','nsf grant','funded research','contract research for client','work for hire','client funded','client owns the ip'],
+    outcome:'no',
+    verdict:'Funded research does not qualify.',
+    explanation:'If someone else is funding your research and they bear the financial risk of it failing, the R&D credit cannot be claimed on that work. You must bear the financial risk yourself. This excludes NIH grants, SBIR awards, government contracts where the government owns the results, and work-for-hire arrangements where the client owns the IP.',
+    rules:['Must bear financial risk of the research yourself','Grant-funded work: the grantor bears the risk, not you','Government-funded research: generally excluded','Work-for-hire where client owns IP: you do not bear the risk']
+  },
+  {
+    keywords:['foreign','overseas','offshore','india','vietnam','ukraine','outsource offshore','remote team abroad'],
+    antiKeywords:['us team','american','united states','domestic','us based','in the us'],
+    outcome:'no',
+    verdict:'Foreign research does not qualify for the federal credit.',
+    explanation:'The federal R&D tax credit only covers research conducted in the United States. Work done by offshore teams, foreign subsidiaries or overseas contractors does not qualify, regardless of how technically sophisticated it is. Some US states have their own credits with different rules, but the federal credit is US-only.',
+    rules:['Federal credit covers US-based research only','Work by offshore or foreign teams: does not qualify','Foreign contractor payments: not includable in QREs','US employees managing offshore work: their US-based management time may qualify separately']
+  }
+];
+
+/* EXAMPLE CHIPS */
+var EXAMPLES = [
+  'We built a custom recommendation engine for our ecommerce platform',
+  'We developed a new extrusion process to reduce material waste by 30%',
+  'We wrote custom Dynamo scripts to automate structural calculations in Revit',
+  'We ran A/B tests on our landing page to improve conversions',
+  'We trained a computer vision model to detect weld defects on our production line',
+  'We formulated a new plant-based protein bar with 18 month shelf life',
+  'We designed a novel curtain wall system for a curved facade',
+  'Our team fixed bugs in our existing mobile app',
+  'We developed a Phase II clinical trial protocol for our lead compound',
+  'We migrated our monolith to microservices using Kubernetes',
+  'We created social media content for our product launch',
+  'We built a custom ETL pipeline to sync data between our ERP and CRM'
+];
+
+var checkHistory = [];
+
+function onInputChange(){
+  // Live check after 600ms pause
+  clearTimeout(window._liveTimer);
+  var val = document.getElementById('activityInput').value.trim();
+  if(val.length > 20){
+    window._liveTimer = setTimeout(function(){ checkActivity(true); }, 600);
+  }
+}
+
+function normalize(str){
+  return str.toLowerCase().replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();
+}
+
+function scoreEntry(text, entry){
+  var norm = normalize(text);
+  var score = 0;
+  for(var i=0;i<entry.keywords.length;i++){
+    if(norm.indexOf(entry.keywords[i]) >= 0) score++;
+  }
+  if(score === 0) return 0;
+  // Check anti-keywords
+  if(entry.antiKeywords){
+    for(var j=0;j<entry.antiKeywords.length;j++){
+      if(norm.indexOf(entry.antiKeywords[j]) >= 0) score -= 2;
+    }
+  }
+  return score;
+}
+
+function checkActivity(silent){
+  var input = document.getElementById('activityInput').value.trim();
+  if(input.length < 8){
+    if(!silent){
+      document.getElementById('activityInput').focus();
+      document.getElementById('activityInput').style.borderColor='var(--bad)';
+      setTimeout(function(){document.getElementById('activityInput').style.borderColor='';},1500);
+    }
+    return;
+  }
+
+  // Score all KB entries
+  var best = null;
+  var bestScore = 0;
+  for(var i=0;i<KB.length;i++){
+    var s = scoreEntry(input, KB[i]);
+    if(s > bestScore){
+      bestScore = s;
+      best = KB[i];
+    }
+  }
+
+  // Fallback if no match
+  if(!best || bestScore <= 0){
+    best = {
+      outcome:'maybe',
+      verdict:'We need more detail to give a clear answer.',
+      explanation:'Your description does not clearly match known qualifying or non-qualifying patterns. This does not mean it does not qualify. It means we need more specifics. Try describing the technical challenge your team faced, what was uncertain before you started, and how you worked through different approaches.',
+      rules:[
+        'Did your team face a technical question they did not know the answer to upfront?',
+        'Did you try different approaches before finding one that worked?',
+        'Is the work based on engineering, computer science, biology or another hard science?',
+        'Was the work aimed at improving or creating a product or process?'
+      ]
+    };
+  }
+
+  // Fire GA event
+  if(typeof gtag !== 'undefined'){
+    gtag('event','activity_check',{event_category:'checker',event_label:best.outcome,event_value:bestScore});
+  }
+
+  showResult(best, input);
+
+  // Add to history
+  var shortText = input.length > 60 ? input.substring(0,60)+'...' : input;
+  checkHistory.unshift({text: shortText, outcome: best.outcome});
+  if(checkHistory.length > 5) checkHistory.pop();
+  renderHistory();
+}
+
+function showResult(entry, input){
+  var box    = document.getElementById('resultBox');
+  var header = document.getElementById('resultHeader');
+  var body   = document.getElementById('resultBody');
+  var dot    = document.getElementById('badgeDot');
+  var badge  = document.getElementById('badgeText');
+  var verdict= document.getElementById('resultVerdict');
+  var expl   = document.getElementById('resultExplanation');
+  var rules  = document.getElementById('ruleItems');
+
+  // Clear old classes
+  header.className = 'result-header ' + entry.outcome;
+  body.className   = 'result-body ' + entry.outcome;
+  dot.className    = 'badge-dot ' + entry.outcome;
+  badge.className  = 'badge-text ' + entry.outcome;
+
+  var labels = {yes:'Likely Qualifies', no:'Does Not Qualify', maybe:'Needs More Context'};
+  badge.textContent   = labels[entry.outcome] || 'Review Needed';
+  verdict.textContent = entry.verdict;
+  expl.textContent    = entry.explanation;
+
+  var iconChars = {yes:'\u2713', no:'\u2717', maybe:'\u24d8'};
+  rules.innerHTML = '';
+  for(var i=0;i<entry.rules.length;i++){
+    var ruleDiv = document.createElement('div');
+    ruleDiv.className = 'rule-item';
+    var iconSpan = document.createElement('span');
+    iconSpan.className = 'rule-icon';
+    iconSpan.textContent = iconChars[entry.outcome] || '\u24d8';
+    var textSpan = document.createElement('span');
+    textSpan.textContent = entry.rules[i];
+    ruleDiv.appendChild(iconSpan);
+    ruleDiv.appendChild(textSpan);
+    rules.appendChild(ruleDiv);
+  }
+
+  box.className = 'result-box show';
+  box.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+function renderHistory(){
+  if(checkHistory.length === 0) return;
+  var sec  = document.getElementById('historySection');
+  var list = document.getElementById('historyList');
+  sec.style.display = 'block';
+  list.innerHTML = '';
+  var labels = {yes:'Qualifies', no:'Does Not Qualify', maybe:'Needs Review'};
+  for(var i=0;i<checkHistory.length;i++){
+    (function(item){
+      var div = document.createElement('div');
+      div.className = 'history-item';
+
+      var textSpan = document.createElement('span');
+      textSpan.className = 'history-text';
+      textSpan.textContent = item.text;
+
+      var pill = document.createElement('span');
+      pill.className = 'history-pill ' + item.outcome;
+      pill.textContent = labels[item.outcome] || 'Review';
+
+      div.appendChild(textSpan);
+      div.appendChild(pill);
+
+      div.onclick = function(){
+        document.getElementById('activityInput').value = item.text.replace(/\.\.\.$/,'');
+        checkActivity();
+        window.scrollTo({top:0,behavior:'smooth'});
+      };
+      list.appendChild(div);
+    })(checkHistory[i]);
+  }
+}
+
+/* RENDER EXAMPLE CHIPS */
+(function(){
+  var container = document.getElementById('exampleChips');
+  for(var i=0;i<EXAMPLES.length;i++){
+    (function(ex){
+      var chip = document.createElement('div');
+      chip.className = 'example-chip';
+      chip.textContent = ex;
+      chip.onclick = function(){
+        document.getElementById('activityInput').value = ex;
+        checkActivity();
+      };
+      container.appendChild(chip);
+    })(EXAMPLES[i]);
+  }
+})();
+</script>
+</body>
+</html>
