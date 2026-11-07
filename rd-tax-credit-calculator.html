@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>R&D Tax Credit Calculator (2026) — Free Federal + State Estimator | Owedco</title>
-  <meta name="description" content="Free R&D tax credit calculator for US businesses. Wages, supplies, contractors, cloud costs, 14 states, ASC and Regular Credit, prior 3-year base period, multi-year totals. No email required." />
+  <title>R&D Tax Credit Calculator (2026) | Free Federal and State Estimator | Owedco</title>
+  <meta name="description" content="Free R&D tax credit calculator for US businesses. Wages, supplies, contractors, cloud costs, 20 states, ASC and Regular Credit, prior 3-year base period, multi-year totals. No email required." />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="R&D Tax Credit Calculator (2026) — Free Federal + State Estimator" />
-  <meta property="og:description" content="The most complete free R&D tax credit calculator online. Federal ASC and Regular Credit, 14 states, startup payroll offset, prior year base period, multi-year totals. No email gate." />
+  <meta property="og:title" content="R&D Tax Credit Calculator (2026) | Free Federal and State Estimator" />
+  <meta property="og:description" content="The most complete free R&D tax credit calculator online. Federal ASC and Regular Credit, 20 states, startup payroll offset, prior year base period, multi-year totals. No email gate." />
   <meta property="og:url" content="https://owedco.com/rd-tax-credit-calculator.html" />
   <meta property="og:image" content="https://owedco.com/og-default.png" />
   <meta property="og:site_name" content="Owedco" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="R&D Tax Credit Calculator (2026) — Free Federal + State Estimator" />
-  <meta name="twitter:description" content="The most complete free R&D tax credit calculator online. No email gate." />
+  <meta name="twitter:title" content="R&D Tax Credit Calculator (2026) | Free Federal and State Estimator" />
+  <meta name="twitter:description" content="Free R&D tax credit calculator. 20 states, ASC and Regular Credit, no email gate." />
   <meta name="twitter:image" content="https://owedco.com/og-default.png" />
 
   <link rel="canonical" href="https://owedco.com/rd-tax-credit-calculator.html" />
@@ -27,7 +27,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-L8QNJVR2MM"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L8QNJVR2MM');</script>
 
@@ -51,20 +50,17 @@
     .nav-cta:hover{background:var(--gold-light);color:#090E1A;}
     @media(max-width:680px){.nav-links{display:none;}}
 
-    /* HERO */
     .hero{max-width:900px;margin:0 auto;padding:2.5rem 1.5rem 1.5rem;text-align:center;}
     .hero-pill{display:inline-block;background:rgba(201,168,76,0.1);color:var(--gold);font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.28rem 0.85rem;border-radius:20px;margin-bottom:1rem;border:1px solid rgba(201,168,76,0.22);}
     .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(1.9rem,4.5vw,3rem);color:var(--white);line-height:1.15;margin-bottom:0.9rem;}
-    .hero p{color:var(--text);font-size:1rem;max-width:560px;margin:0 auto 1.25rem;}
+    .hero p{color:var(--text);font-size:1rem;max-width:580px;margin:0 auto 1.25rem;}
     .badges{display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;}
     .badge{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:16px;padding:0.22rem 0.75rem;font-size:0.74rem;color:var(--dim);}
     .badge b{color:var(--green);}
 
-    /* LAYOUT */
-    .main{max-width:1080px;margin:0 auto;padding:1.25rem 1.5rem 2rem;display:grid;grid-template-columns:1fr 360px;gap:1.25rem;align-items:start;}
-    @media(max-width:860px){.main{grid-template-columns:1fr;}}
+    .main{max-width:1100px;margin:0 auto;padding:1.25rem 1.5rem 2rem;display:grid;grid-template-columns:1fr 370px;gap:1.25rem;align-items:start;}
+    @media(max-width:880px){.main{grid-template-columns:1fr;}}
 
-    /* INPUT PANEL */
     .inp{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.75rem;}
     .inp-title{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--white);margin-bottom:1.5rem;}
     .sec{margin-bottom:1.5rem;}
@@ -78,18 +74,15 @@
     .f input::placeholder{color:var(--dim);}
     .f-row{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;}
 
-    /* TABS */
     .tabs{display:flex;gap:0.4rem;margin-bottom:1rem;}
     .tab{flex:1;padding:0.55rem;border:1px solid var(--border);border-radius:7px;background:var(--bg);color:var(--dim);font-size:0.78rem;font-weight:600;cursor:pointer;text-align:center;transition:all 0.15s;user-select:none;}
     .tab.on{background:rgba(201,168,76,0.1);border-color:var(--gold);color:var(--gold);}
     .tab:hover:not(.on){border-color:var(--dim);color:var(--text);}
 
-    /* YEAR TABS */
     .year-tabs{display:flex;gap:0.4rem;margin-bottom:1rem;flex-wrap:wrap;}
     .ytab{padding:0.4rem 0.75rem;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--dim);font-size:0.76rem;font-weight:600;cursor:pointer;transition:all 0.15s;user-select:none;}
     .ytab.on{background:rgba(61,184,122,0.1);border-color:var(--green);color:var(--green);}
 
-    /* TOGGLE */
     .tog{display:flex;align-items:center;justify-content:space-between;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:0.7rem 1rem;margin-bottom:0.6rem;cursor:pointer;user-select:none;}
     .tog:hover{border-color:var(--gold);}
     .tog-lbl{font-size:0.82rem;color:var(--white);font-weight:500;}
@@ -99,75 +92,56 @@
     .sw::after{content:'';position:absolute;width:14px;height:14px;background:white;border-radius:50%;top:3px;left:3px;transition:transform 0.2s;}
     .sw.on::after{transform:translateX(16px);}
 
-    /* PRIOR YEARS */
     .py{display:none;}
     .py.show{display:block;}
     .py-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.6rem;}
 
-    /* RESULTS PANEL */
     .res{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;position:sticky;top:76px;}
     .res-hd{background:linear-gradient(135deg,rgba(201,168,76,0.1) 0%,transparent 100%);border-bottom:1px solid var(--border);padding:1.25rem 1.5rem;}
     .res-hd h3{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--white);margin-bottom:0.2rem;}
     .res-hd p{font-size:0.75rem;color:var(--dim);}
-
     .res-main{padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);}
     .rlbl{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--dim);margin-bottom:0.35rem;}
     .rnum{font-family:'DM Serif Display',serif;font-size:2.4rem;color:var(--gold);line-height:1;margin-bottom:0.25rem;}
     .rsub{font-size:0.78rem;color:var(--dim);}
-
     .breakdown{padding:1rem 1.5rem;border-bottom:1px solid var(--border);}
     .brow{display:flex;justify-content:space-between;align-items:center;padding:0.42rem 0;border-bottom:1px solid rgba(28,42,62,0.5);font-size:0.82rem;}
     .brow:last-child{border-bottom:none;}
     .blbl{color:var(--dim);}
     .bval{color:var(--white);font-weight:600;font-variant-numeric:tabular-nums;}
-    .bval.g{color:var(--green);}
     .bval.gold{color:var(--gold);}
-
-    /* STATE BLOCK */
     .state-blk{padding:1rem 1.5rem;border-bottom:1px solid var(--border);}
     .state-inner{background:rgba(61,184,122,0.07);border:1px solid rgba(61,184,122,0.2);border-radius:8px;padding:0.9rem;}
     .state-inner.none{background:rgba(107,126,150,0.06);border-color:var(--border);}
     .sname{font-weight:700;color:var(--white);font-size:0.875rem;margin-bottom:0.2rem;}
     .scval{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--green);}
     .snote{font-size:0.72rem;color:var(--dim);margin-top:0.2rem;}
-
-    /* PAYROLL */
     .pay-blk{padding:1rem 1.5rem;border-bottom:1px solid var(--border);display:none;}
     .pay-blk.show{display:block;}
     .pay-inner{background:rgba(74,158,219,0.07);border:1px solid rgba(74,158,219,0.22);border-radius:8px;padding:0.9rem;}
     .plbl{font-size:0.68rem;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.3rem;}
     .pval{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--blue);}
     .pnote{font-size:0.72rem;color:var(--dim);margin-top:0.2rem;}
-
-    /* MULTI YEAR */
     .multi-blk{padding:1rem 1.5rem;border-bottom:1px solid var(--border);}
     .multi-inner{background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.2);border-radius:8px;padding:0.9rem;}
     .mlbl{font-size:0.68rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.5rem;}
     .mrow{display:flex;justify-content:space-between;font-size:0.8rem;padding:0.3rem 0;border-bottom:1px solid rgba(28,42,62,0.4);}
-    .mrow:last-child{border-bottom:none;font-weight:700;color:var(--gold-light);}
+    .mrow:last-child{border-bottom:none;font-weight:700;}
     .mrow span:last-child{color:var(--white);font-weight:600;}
-
-    /* TOTAL */
+    .mrow.total-row span{color:var(--gold-light);}
     .total-blk{padding:1.25rem 1.5rem;}
     .tvlbl{font-size:0.68rem;font-weight:700;color:var(--dim);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.35rem;}
     .tvval{font-family:'DM Serif Display',serif;font-size:1.9rem;color:var(--gold-light);margin-bottom:0.25rem;}
     .tvnote{font-size:0.72rem;color:var(--dim);}
-
-    /* ACTIONS */
     .actions{padding:1rem 1.5rem;border-top:1px solid var(--border);display:flex;gap:0.6rem;}
-    .btn-print{flex:1;background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--text);padding:0.6rem;border-radius:7px;font-size:0.8rem;font-weight:600;cursor:pointer;text-align:center;}
-    .btn-print:hover{border-color:var(--gold);color:var(--gold);}
-    .btn-copy{flex:1;background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--text);padding:0.6rem;border-radius:7px;font-size:0.8rem;font-weight:600;cursor:pointer;text-align:center;}
-    .btn-copy:hover{border-color:var(--gold);color:var(--gold);}
-
-    /* CTA */
+    .btn-action{flex:1;background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--text);padding:0.6rem;border-radius:7px;font-size:0.8rem;font-weight:600;cursor:pointer;text-align:center;user-select:none;}
+    .btn-action:hover{border-color:var(--gold);color:var(--gold);}
     .res-cta{padding:1.1rem 1.5rem;border-top:1px solid var(--border);background:rgba(201,168,76,0.03);}
     .res-cta p{font-size:0.78rem;color:var(--dim);margin-bottom:0.75rem;line-height:1.5;}
     .res-cta a.cta-btn{display:block;background:var(--gold);color:#090E1A;font-weight:700;text-align:center;padding:0.7rem;border-radius:8px;font-size:0.875rem;margin-bottom:0.4rem;}
     .res-cta a.cta-btn:hover{background:var(--gold-light);color:#090E1A;}
     .res-cta .aff{font-size:0.68rem;color:var(--dim);text-align:center;}
 
-    /* EXAMPLE TABLE */
     .eg-wrap{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:10px;padding:1.25rem;margin:1.5rem 0;}
     .eg-wrap h4{font-size:0.75rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:1rem;}
     .eg-table{width:100%;border-collapse:collapse;font-size:0.8rem;}
@@ -175,10 +149,9 @@
     .eg-table td{padding:0.45rem 0.6rem;border-bottom:1px solid rgba(28,42,62,0.4);color:var(--text);}
     .eg-table tr:last-child td{border-bottom:none;}
     .eg-table td:last-child{color:var(--gold);font-weight:600;}
-    .eg-link{font-size:0.75rem;color:var(--gold);cursor:pointer;text-decoration:underline;text-underline-offset:3px;}
+    .eg-link{color:var(--gold);cursor:pointer;text-decoration:underline;text-underline-offset:3px;}
     .eg-link:hover{color:var(--gold-light);}
 
-    /* CONTENT */
     .content{max-width:900px;margin:0 auto;padding:1rem 1.5rem 2rem;}
     .content h2{font-family:'DM Serif Display',serif;font-size:1.55rem;color:var(--white);margin:2.5rem 0 0.9rem;}
     .content h3{font-size:0.98rem;font-weight:700;color:var(--white);margin:1.5rem 0 0.5rem;}
@@ -186,29 +159,25 @@
     .content ul{padding-left:1.5rem;margin-bottom:1rem;}
     .content li{margin-bottom:0.4rem;font-size:0.93rem;}
 
-    /* INTERLINK GRID */
-    .il-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.9rem;margin:1.5rem 0;}
+    .il-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:0.9rem;margin:1.5rem 0;}
     .il-card{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:1.1rem;display:block;transition:border-color 0.15s,transform 0.15s;}
     .il-card:hover{border-color:var(--gold);transform:translateY(-2px);color:var(--text);}
     .il-tag{font-size:0.67rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.35rem;}
     .il-card h4{font-size:0.875rem;color:var(--white);line-height:1.35;margin-bottom:0.3rem;}
     .il-card p{font-size:0.78rem;color:var(--dim);margin:0;line-height:1.5;}
 
-    /* METHOD CARDS */
     .method-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.1rem 0;}
     @media(max-width:580px){.method-grid{grid-template-columns:1fr;}}
     .mc{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:1.1rem;}
     .mc h4{color:var(--gold);font-size:0.82rem;font-weight:700;margin-bottom:0.5rem;}
     .mc p{font-size:0.8rem;color:var(--dim);margin:0;line-height:1.55;}
 
-    /* STATE TABLE */
     .stbl{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.82rem;}
     .stbl th{background:var(--card);color:var(--gold);font-weight:600;text-align:left;padding:0.6rem 0.9rem;border-bottom:2px solid var(--border);}
     .stbl td{padding:0.55rem 0.9rem;border-bottom:1px solid var(--border);}
     .stbl tr:last-child td{border-bottom:none;}
     .stbl tr:hover td{background:rgba(255,255,255,0.015);}
 
-    /* FAQ */
     .faq{border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:0.5rem;}
     .faq-q{padding:0.9rem 1.1rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;color:var(--white);font-size:0.875rem;background:var(--card);user-select:none;}
     .faq-q:hover{color:var(--gold-light);}
@@ -234,476 +203,469 @@
 </head>
 <body>
 
-  <nav>
-    <a href="index.html" class="nav-logo">Owedco</a>
-    <ul class="nav-links">
-      <li><a href="index.html">Quiz</a></li>
-      <li><a href="blog/index.html">Blog</a></li>
-      <li><a href="activity-checker.html">Activity Checker</a></li>
-      <li><a href="rd-tax-credit-calculator.html" style="color:var(--gold);">Calculator</a></li>
-      <li><a href="partners.html">Partners</a></li>
-    </ul>
-    <a href="index.html" class="nav-cta">Check Eligibility</a>
-  </nav>
+<nav>
+  <a href="index.html" class="nav-logo">Owedco</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Quiz</a></li>
+    <li><a href="blog/index.html">Blog</a></li>
+    <li><a href="activity-checker.html">Activity Checker</a></li>
+    <li><a href="rd-tax-credit-calculator.html" style="color:var(--gold);">Calculator</a></li>
+    <li><a href="partners.html">Partners</a></li>
+  </ul>
+  <a href="index.html" class="nav-cta">Check Eligibility</a>
+</nav>
 
-  <div class="hero">
-    <div class="hero-pill">Free Tool — No Email Required</div>
-    <h1>R&amp;D Tax Credit Calculator</h1>
-    <p>Wages, supplies, contractors, cloud costs, 14 states, ASC and Regular Credit, prior 3-year base, multi-year totals. Everything. Instant. Free.</p>
-    <div class="badges">
-      <div class="badge"><b>Federal</b> ASC + Regular Credit</div>
-      <div class="badge"><b>14</b> States</div>
-      <div class="badge"><b>Startup</b> Payroll Offset</div>
-      <div class="badge"><b>3-Year</b> Prior Base Period</div>
-      <div class="badge"><b>Multi-Year</b> Totals</div>
-      <div class="badge"><b>80%</b> Substantially All Rule</div>
-      <div class="badge"><b>No</b> Email Gate</div>
-    </div>
+<div class="hero">
+  <div class="hero-pill">Free Tool. No Email Required.</div>
+  <h1>R&amp;D Tax Credit Calculator</h1>
+  <p>Wages, supplies, contractors, cloud costs, 20 states, ASC and Regular Credit, 3-year base period, multi-year totals. Enter your numbers and get your estimate instantly.</p>
+  <div class="badges">
+    <div class="badge"><b>Federal</b> ASC + Regular Credit</div>
+    <div class="badge"><b>20</b> States Covered</div>
+    <div class="badge"><b>Startup</b> Payroll Offset</div>
+    <div class="badge"><b>3-Year</b> Base Period</div>
+    <div class="badge"><b>4-Year</b> Multi-Year Total</div>
+    <div class="badge"><b>80%</b> Substantially All Rule</div>
+    <div class="badge"><b>12</b> Industries</div>
+    <div class="badge"><b>No</b> Email Gate</div>
   </div>
+</div>
 
-  <div class="main">
+<div class="main">
 
-    <!-- INPUT PANEL -->
-    <div class="inp">
-      <div class="inp-title">Enter Your Numbers</div>
+  <!-- INPUTS -->
+  <div class="inp">
+    <div class="inp-title">Enter Your Numbers</div>
 
-      <!-- BUSINESS INFO -->
-      <div class="sec">
-        <div class="sec-hd">Business Info</div>
-        <div class="f-row">
-          <div class="f">
-            <label>Industry</label>
-            <select id="industry">
-              <option value="software">Software / Tech</option>
-              <option value="manufacturing">Manufacturing</option>
-              <option value="biotech">Biotech / Pharma</option>
-              <option value="food">Food and Beverage</option>
-              <option value="aerospace">Aerospace / Defense</option>
-              <option value="architecture">Architecture / Engineering</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div class="f">
-            <label>Entity Type</label>
-            <select id="entity">
-              <option value="ccorp">C-Corporation</option>
-              <option value="scorp">S-Corp / Partnership</option>
-              <option value="llc">LLC (Corp-taxed)</option>
-              <option value="startup">Startup (under 5 yrs)</option>
-            </select>
-          </div>
-        </div>
+    <div class="sec">
+      <div class="sec-hd">Business Info</div>
+      <div class="f-row">
         <div class="f">
-          <label>State</label>
-          <select id="state">
-            <option value="none">No state credit (or not listed)</option>
-            <option value="AZ">Arizona (24%)</option>
-            <option value="VA">Virginia (15%)</option>
-            <option value="CA">California (15%)</option>
-            <option value="MA">Massachusetts (10%)</option>
-            <option value="PA">Pennsylvania (10%)</option>
-            <option value="GA">Georgia (10%)</option>
-            <option value="NJ">New Jersey (10%)</option>
-            <option value="MN">Minnesota (10%)</option>
-            <option value="NY">New York (9%)</option>
-            <option value="OH">Ohio (7%)</option>
-            <option value="IL">Illinois (6.5%)</option>
-            <option value="CT">Connecticut (6%)</option>
-            <option value="TX">Texas (5%)</option>
-            <option value="CO">Colorado (3%)</option>
+          <label>Industry</label>
+          <select id="industry">
+            <option value="software">Software and Technology</option>
+            <option value="manufacturing">Manufacturing</option>
+            <option value="biotech">Biotech and Pharma</option>
+            <option value="food">Food and Beverage</option>
+            <option value="aerospace">Aerospace and Defense</option>
+            <option value="architecture">Architecture and Engineering</option>
+            <option value="agriculture">Agriculture and AgTech</option>
+            <option value="automotive">Automotive and EV</option>
+            <option value="energy">Energy and Cleantech</option>
+            <option value="medical">Medical Devices</option>
+            <option value="chemicals">Chemicals and Materials</option>
+            <option value="other">Other</option>
           </select>
         </div>
         <div class="f">
-          <label>Tax Year</label>
-          <div class="year-tabs">
-            <div class="ytab on" onclick="setYear('2026',this)">2026</div>
-            <div class="ytab" onclick="setYear('2025',this)">2025</div>
-            <div class="ytab" onclick="setYear('2024',this)">2024</div>
-            <div class="ytab" onclick="setYear('2023',this)">2023</div>
-          </div>
+          <label>Entity Type</label>
+          <select id="entity">
+            <option value="ccorp">C-Corporation</option>
+            <option value="scorp">S-Corp or Partnership</option>
+            <option value="llc">LLC (Corp-taxed)</option>
+            <option value="startup">Startup (under 5 yrs)</option>
+          </select>
         </div>
       </div>
-
-      <!-- QREs -->
-      <div class="sec">
-        <div class="sec-hd">Qualified Research Expenses (QREs)</div>
-
-        <div class="f">
-          <label>Total W-2 Wages for R&amp;D Employees</label>
-          <span class="hint">Gross wages for engineers, developers, scientists, R&amp;D managers doing qualifying work.</span>
-          <input type="number" id="wages" placeholder="e.g. 500000" min="0" />
-        </div>
-
-        <div class="f-row">
-          <div class="f">
-            <label>% of Time on R&amp;D</label>
-            <span class="hint">Average across team. 60-80% typical for dedicated R&amp;D staff.</span>
-            <input type="number" id="rdpct" value="70" min="1" max="100" placeholder="70" />
-          </div>
-          <div class="f">
-            <label>Substantially All (80%+)?</label>
-            <span class="hint">If 80%+ time on R&amp;D, IRS allows 100% of wages to count.</span>
-            <select id="substantial">
-              <option value="no">No — use % entered</option>
-              <option value="yes">Yes — use 100% of wages</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="f">
-          <label>Supplies Used in Research</label>
-          <span class="hint">Materials consumed in prototypes, trials, test batches. Not standard production inventory.</span>
-          <input type="number" id="supplies" placeholder="e.g. 50000" min="0" />
-        </div>
-
-        <div class="f">
-          <label>Contract Research Expenses</label>
-          <span class="hint">Paid to outside researchers or firms. Calculator applies 65% IRS rule automatically.</span>
-          <input type="number" id="contractors" placeholder="e.g. 100000" min="0" />
-        </div>
-
-        <div class="f">
-          <label>Cloud / Computing Costs</label>
-          <span class="hint">AWS, Azure, GCP compute directly used in R&amp;D (model training, simulations, etc.).</span>
-          <input type="number" id="computing" placeholder="e.g. 20000" min="0" />
+      <div class="f">
+        <label>State</label>
+        <select id="state">
+          <option value="none">No state credit (or not listed)</option>
+          <option value="AZ">Arizona (24%)</option>
+          <option value="VA">Virginia (15 to 20%)</option>
+          <option value="CA">California (15%)</option>
+          <option value="MA">Massachusetts (10%)</option>
+          <option value="PA">Pennsylvania (10%)</option>
+          <option value="GA">Georgia (10%)</option>
+          <option value="NJ">New Jersey (10%)</option>
+          <option value="MN">Minnesota (10%)</option>
+          <option value="NY">New York (9%)</option>
+          <option value="OR">Oregon (5 to 15%)</option>
+          <option value="WI">Wisconsin (5 to 10%)</option>
+          <option value="MD">Maryland (10%)</option>
+          <option value="SC">South Carolina (5%)</option>
+          <option value="LA">Louisiana (8%)</option>
+          <option value="KS">Kansas (6.5%)</option>
+          <option value="OH">Ohio (7%)</option>
+          <option value="IL">Illinois (6.5%)</option>
+          <option value="CT">Connecticut (6%)</option>
+          <option value="TX">Texas (5%)</option>
+          <option value="CO">Colorado (3%)</option>
+        </select>
+      </div>
+      <div class="f">
+        <label>Tax Year</label>
+        <div class="year-tabs">
+          <div class="ytab on" onclick="setYear('2026',this)">2026</div>
+          <div class="ytab" onclick="setYear('2025',this)">2025</div>
+          <div class="ytab" onclick="setYear('2024',this)">2024</div>
+          <div class="ytab" onclick="setYear('2023',this)">2023</div>
         </div>
       </div>
+    </div>
 
-      <!-- METHOD -->
-      <div class="sec">
-        <div class="sec-hd">Calculation Method</div>
-        <div class="tabs">
-          <div class="tab on" id="tab-asc" onclick="setMethod('asc')">ASC Method</div>
-          <div class="tab" id="tab-rc" onclick="setMethod('rc')">Regular Credit</div>
+    <div class="sec">
+      <div class="sec-hd">Qualified Research Expenses</div>
+      <div class="f">
+        <label>Total W-2 Wages for R&amp;D Employees</label>
+        <span class="hint">Gross wages for engineers, developers, scientists, and R&amp;D managers doing qualifying work.</span>
+        <input type="number" id="wages" placeholder="e.g. 500000" min="0" />
+      </div>
+      <div class="f-row">
+        <div class="f">
+          <label>Percent of Time on R&amp;D</label>
+          <span class="hint">Average across the team. 60 to 80 percent is typical for dedicated R&amp;D staff.</span>
+          <input type="number" id="rdpct" value="70" min="1" max="100" />
         </div>
-
-        <div id="asc-sec">
-          <div class="tog" onclick="togglePY()">
-            <div>
-              <div class="tog-lbl">I have prior 3-year R&amp;D data</div>
-              <div class="tog-sub">Enables accurate base period for ASC 14% rate. Without it: 6% startup rate.</div>
-            </div>
-            <div class="sw" id="pySw"></div>
-          </div>
-          <div class="py" id="pyFields">
-            <div class="py-grid">
-              <div class="f"><label>Year -1 QREs</label><input type="number" id="py1" placeholder="e.g. 300000" min="0"/></div>
-              <div class="f"><label>Year -2 QREs</label><input type="number" id="py2" placeholder="e.g. 280000" min="0"/></div>
-              <div class="f"><label>Year -3 QREs</label><input type="number" id="py3" placeholder="e.g. 260000" min="0"/></div>
-            </div>
-          </div>
-        </div>
-
-        <div id="rc-sec" style="display:none;">
-          <div class="f">
-            <label>Base Amount</label>
-            <span class="hint">Fixed-base % times average gross receipts. If unknown, use 3% of avg annual gross receipts.</span>
-            <input type="number" id="rcBase" placeholder="e.g. 150000" min="0" />
-          </div>
+        <div class="f">
+          <label>Substantially All Rule</label>
+          <span class="hint">If 80 percent or more of time is R&amp;D, IRS allows 100 percent of wages to count.</span>
+          <select id="substantial">
+            <option value="no">No, use percent entered</option>
+            <option value="yes">Yes, use 100 percent of wages</option>
+          </select>
         </div>
       </div>
+      <div class="f">
+        <label>Supplies Used in Research</label>
+        <span class="hint">Materials consumed in prototypes, trials, and test batches. Not standard production inventory.</span>
+        <input type="number" id="supplies" placeholder="e.g. 50000" min="0" />
+      </div>
+      <div class="f">
+        <label>Contract Research Expenses</label>
+        <span class="hint">Paid to outside researchers or firms. The 65 percent IRS rule is applied automatically.</span>
+        <input type="number" id="contractors" placeholder="e.g. 100000" min="0" />
+      </div>
+      <div class="f">
+        <label>Cloud and Computing Costs</label>
+        <span class="hint">AWS, Azure, GCP compute used directly in R&amp;D: model training, simulations, analysis.</span>
+        <input type="number" id="computing" placeholder="e.g. 20000" min="0" />
+      </div>
+    </div>
 
-      <!-- OPTIONS -->
-      <div class="sec">
-        <div class="sec-hd">Options</div>
-        <div class="tog" onclick="toggleStartup()">
+    <div class="sec">
+      <div class="sec-hd">Calculation Method</div>
+      <div class="tabs">
+        <div class="tab on" id="tab-asc" onclick="setMethod('asc')">ASC Method</div>
+        <div class="tab" id="tab-rc" onclick="setMethod('rc')">Regular Credit</div>
+      </div>
+      <div id="asc-sec">
+        <div class="tog" onclick="togglePY()">
           <div>
-            <div class="tog-lbl">Startup payroll tax offset</div>
-            <div class="tog-sub">Under 5 yrs old, under $5M revenue. Apply credit vs payroll tax up to $500K/yr.</div>
+            <div class="tog-lbl">I have prior 3-year R&amp;D data</div>
+            <div class="tog-sub">Unlocks the ASC 14 percent rate. Without it the 6 percent no-history rate applies.</div>
           </div>
-          <div class="sw" id="startupSw"></div>
+          <div class="sw" id="pySw"></div>
         </div>
-        <div class="tog" onclick="toggle280c()">
-          <div>
-            <div class="tog-lbl">Section 280C reduced credit election</div>
-            <div class="tog-sub">Take lower credit rate to avoid reducing your wage deduction. Often simpler.</div>
+        <div class="py" id="pyFields">
+          <div class="py-grid">
+            <div class="f"><label>Year minus 1 QREs</label><input type="number" id="py1" placeholder="e.g. 300000" min="0"/></div>
+            <div class="f"><label>Year minus 2 QREs</label><input type="number" id="py2" placeholder="e.g. 280000" min="0"/></div>
+            <div class="f"><label>Year minus 3 QREs</label><input type="number" id="py3" placeholder="e.g. 260000" min="0"/></div>
           </div>
-          <div class="sw" id="sw280c"></div>
         </div>
       </div>
-
-      <!-- EXAMPLE TEAMS -->
-      <div class="eg-wrap">
-        <h4>Example Teams — Click to Load</h4>
-        <table class="eg-table">
-          <thead><tr><th>Team</th><th>People</th><th>Avg Salary</th><th>R&amp;D %</th><th>Est. Credit</th></tr></thead>
-          <tbody>
-            <tr>
-              <td><span class="eg-link" onclick="loadExample(3,125000,80,0,0,0)">Early SaaS</span></td>
-              <td>3</td><td>$125k</td><td>80%</td><td id="eg1">-</td>
-            </tr>
-            <tr>
-              <td><span class="eg-link" onclick="loadExample(8,150000,70,30000,50000,0)">Seed Product</span></td>
-              <td>8</td><td>$150k</td><td>70%</td><td id="eg2">-</td>
-            </tr>
-            <tr>
-              <td><span class="eg-link" onclick="loadExample(15,175000,65,100000,200000,20000)">Series A Eng</span></td>
-              <td>15</td><td>$175k</td><td>65%</td><td id="eg3">-</td>
-            </tr>
-            <tr>
-              <td><span class="eg-link" onclick="loadExample(5,120000,90,80000,0,0)">Biotech Lab</span></td>
-              <td>5</td><td>$120k</td><td>90%</td><td id="eg4">-</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-    </div><!-- /inp -->
-
-    <!-- RESULTS PANEL -->
-    <div class="res">
-      <div class="res-hd">
-        <h3>Your Estimated Credit</h3>
-        <p id="res-updated">Updates automatically as you type</p>
-      </div>
-
-      <div class="res-main">
-        <div class="rlbl">Federal R&amp;D Tax Credit</div>
-        <div class="rnum" id="fedCredit">$0</div>
-        <div class="rsub" id="fedMethod">Enter your expenses above</div>
-      </div>
-
-      <div class="breakdown">
-        <div class="brow"><span class="blbl">Total QREs</span><span class="bval" id="bQRE">$0</span></div>
-        <div class="brow"><span class="blbl">Qualified Wages</span><span class="bval" id="bWages">$0</span></div>
-        <div class="brow"><span class="blbl">Qualified Supplies</span><span class="bval" id="bSupplies">$0</span></div>
-        <div class="brow"><span class="blbl">Contract Research (65%)</span><span class="bval" id="bContractors">$0</span></div>
-        <div class="brow"><span class="blbl">Computing Costs</span><span class="bval" id="bComputing">$0</span></div>
-        <div class="brow"><span class="blbl">Base Amount</span><span class="bval" id="bBase">$0</span></div>
-        <div class="brow"><span class="blbl">Credit Rate</span><span class="bval gold" id="bRate">-</span></div>
-      </div>
-
-      <div class="state-blk">
-        <div class="rlbl" style="margin-bottom:0.6rem;">State Credit</div>
-        <div class="state-inner none" id="stateInner">
-          <div class="sname" id="stateName">No state selected</div>
-          <div class="snote" id="stateNote">Select your state above to include state credits.</div>
+      <div id="rc-sec" style="display:none;">
+        <div class="f">
+          <label>Base Amount</label>
+          <span class="hint">Fixed-base percentage times average gross receipts. If unknown, use 3 percent of average annual gross receipts.</span>
+          <input type="number" id="rcBase" placeholder="e.g. 150000" min="0" />
         </div>
       </div>
+    </div>
 
-      <div class="pay-blk" id="payBlk">
-        <div class="pay-inner">
-          <div class="plbl">Startup Payroll Tax Offset</div>
-          <div class="pval" id="payVal">$0</div>
-          <div class="pnote">Applied against employer payroll taxes. Capped at $500,000/yr.</div>
+    <div class="sec">
+      <div class="sec-hd">Options</div>
+      <div class="tog" onclick="toggleStartup()">
+        <div>
+          <div class="tog-lbl">Startup payroll tax offset</div>
+          <div class="tog-sub">Under 5 years old and under $5M revenue. Apply credit against payroll tax up to $500K per year.</div>
         </div>
+        <div class="sw" id="startupSw"></div>
       </div>
-
-      <div class="multi-blk">
-        <div class="multi-inner">
-          <div class="mlbl">Multi-Year Recoverable Credits</div>
-          <div class="mrow"><span>2026 (current)</span><span id="m2026">$0</span></div>
-          <div class="mrow"><span>2025 (amendable)</span><span id="m2025">$0</span></div>
-          <div class="mrow"><span>2024 (amendable)</span><span id="m2024">$0</span></div>
-          <div class="mrow"><span>2023 (amendable)</span><span id="m2023">$0</span></div>
-          <div class="mrow"><span>Total 4-Year Opportunity</span><span id="mTotal">$0</span></div>
+      <div class="tog" onclick="toggle280c()">
+        <div>
+          <div class="tog-lbl">Section 280C reduced credit election</div>
+          <div class="tog-sub">Take a lower credit rate to avoid reducing your wage deduction.</div>
         </div>
-      </div>
-
-      <div class="total-blk">
-        <div class="tvlbl">Combined Estimated Benefit</div>
-        <div class="tvval" id="totalVal">$0</div>
-        <div class="tvnote" id="totalNote">Federal + state credit combined. Preliminary estimate only.</div>
-      </div>
-
-      <div class="actions">
-        <div class="btn-print" onclick="window.print()">Print / Save PDF</div>
-        <div class="btn-copy" id="copyBtn" onclick="copyResults()">Copy Summary</div>
-      </div>
-
-      <div class="res-cta">
-        <p>Get a full credit study with documentation. TaxTaker specializes in R&amp;D credits for small businesses.</p>
-        <a href="https://www.taxtaker.com/r-d-tax-credits" target="_blank" rel="noopener" class="cta-btn">Get a Free Credit Review</a>
-        <div class="aff">Owedco may receive a referral fee from TaxTaker. Your cost is not affected.</div>
-      </div>
-    </div><!-- /res -->
-
-  </div><!-- /main -->
-
-  <!-- CONTENT -->
-  <div class="content">
-
-    <h2>Also Check: Related Free Tools</h2>
-    <div class="il-grid">
-      <a href="activity-checker.html" class="il-card">
-        <div class="il-tag">Free Tool</div>
-        <h4>Does This Activity Qualify?</h4>
-        <p>Type in what your team does. Get instant yes, no, or partial answer. 200+ activities covered.</p>
-      </a>
-      <a href="index.html" class="il-card">
-        <div class="il-tag">Free Quiz</div>
-        <h4>R&amp;D Eligibility Quiz</h4>
-        <p>Six questions, two minutes. Find out if your business likely qualifies before running any numbers.</p>
-      </a>
-      <a href="blog/rd-tax-credit-vs-section-179.html" class="il-card">
-        <div class="il-tag">Strategy Guide</div>
-        <h4>R&amp;D Credit vs Section 179</h4>
-        <p>Credits reduce your tax bill dollar for dollar. Deductions reduce income. Know the difference before you file.</p>
-      </a>
-      <a href="blog/rd-credit-audit-non-qualifying-activities.html" class="il-card">
-        <div class="il-tag">Audit Guide</div>
-        <h4>Non-Qualifying Activities to Know</h4>
-        <p>What gets thrown out in audits, what documentation survives, and how to protect your claim.</p>
-      </a>
-    </div>
-
-    <h2>How the Calculator Works</h2>
-    <p>This calculator uses your actual expense inputs to estimate your federal R&amp;D tax credit under IRC Section 41. You enter wages, supplies, contract research, and computing costs. The calculator applies the correct IRS treatment to each category, determines your base amount based on your method and prior year data, and applies the credit rate. No email. No form. No sales call. The number updates as you type.</p>
-    <p>Unlike most calculators you will find, this one handles the 65% contractor rule automatically, applies the 80% substantially-all wage rule when relevant, supports both ASC and Regular Credit methods with live switching, and shows state credits for 14 states stacked on top of the federal result.</p>
-
-    <h2>ASC vs Regular Credit: Which to Use</h2>
-    <div class="method-grid">
-      <div class="mc">
-        <h4>Alternative Simplified Credit (ASC)</h4>
-        <p>14% of QREs above 50% of your three-year average QREs. If no prior R&amp;D history, 6% of current QREs with no base. The most commonly used method. Easier to document and calculate. Use this if you are claiming for the first time or do not have detailed historical data.</p>
-      </div>
-      <div class="mc">
-        <h4>Regular Credit Method</h4>
-        <p>20% of QREs above your base amount. The base amount is your fixed-base percentage times average gross receipts from the prior four years, with a 50% floor. More complex but can produce a higher credit for companies with low historical R&amp;D spending relative to current revenue growth.</p>
+        <div class="sw" id="sw280c"></div>
       </div>
     </div>
-    <p>You can calculate both and choose whichever is higher when you file. Use the method tabs in the calculator to compare them side by side.</p>
 
-    <h2>The 80% Substantially All Rule</h2>
-    <p>If an employee spends 80% or more of their time on qualified research activities during the year, the IRS allows 100% of their wages to count as QREs. You do not have to pro-rate their wages by the actual percentage. This is called the substantially-all rule and it matters most for dedicated R&amp;D staff who are exclusively or almost exclusively doing qualifying work. Toggle the substantially-all selector in the calculator to see the impact on your estimate.</p>
-
-    <h2>State R&amp;D Tax Credits</h2>
-    <p>Fourteen states offer R&amp;D credits that stack directly on top of the federal credit. Select your state in the calculator to see your state credit estimate added to the federal total.</p>
-    <table class="stbl">
-      <thead><tr><th>State</th><th>Rate</th><th>Key Detail</th></tr></thead>
-      <tbody>
-        <tr><td>Arizona</td><td>24%</td><td>Highest rate in the country. Refundable portion available.</td></tr>
-        <tr><td>Virginia</td><td>15%</td><td>15% on first $300K of QREs, 20% above that for small businesses.</td></tr>
-        <tr><td>California</td><td>15%</td><td>No cap. One of the most valuable state credits due to high wage costs.</td></tr>
-        <tr><td>Massachusetts</td><td>10%</td><td>10% of QREs above a base amount.</td></tr>
-        <tr><td>Pennsylvania</td><td>10%</td><td>Applies to increase in QREs over prior year base.</td></tr>
-        <tr><td>Georgia</td><td>10%</td><td>Transferable for startups against payroll tax.</td></tr>
-        <tr><td>New Jersey</td><td>10%</td><td>10% of eligible R&amp;D expenses.</td></tr>
-        <tr><td>Minnesota</td><td>10%</td><td>10% on first $2M, 2.5% above that.</td></tr>
-        <tr><td>New York</td><td>9%</td><td>Partially refundable for qualifying companies.</td></tr>
-        <tr><td>Ohio</td><td>7%</td><td>Nonrefundable, 7-year carryforward.</td></tr>
-        <tr><td>Illinois</td><td>6.5%</td><td>6.5% of Illinois QREs above base amount.</td></tr>
-        <tr><td>Connecticut</td><td>6%</td><td>Partially refundable.</td></tr>
-        <tr><td>Texas</td><td>5%</td><td>Applied against franchise tax.</td></tr>
-        <tr><td>Colorado</td><td>3%</td><td>3% of QREs. Simple, low documentation burden.</td></tr>
-      </tbody>
-    </table>
-
-    <h2>Industry Guides: Does Your Business Qualify?</h2>
-    <div class="il-grid">
-      <a href="blog/software-company-rd-tax-credit.html" class="il-card">
-        <div class="il-tag">Industry Guide</div>
-        <h4>Software Companies</h4>
-        <p>Developer wages, cloud compute, new feature development, algorithm R&amp;D.</p>
-      </a>
-      <a href="blog/manufacturing-company-rd-tax-credit.html" class="il-card">
-        <div class="il-tag">Industry Guide</div>
-        <h4>Manufacturing</h4>
-        <p>Process improvements, tooling, custom equipment, new materials testing.</p>
-      </a>
-      <a href="blog/biotech-pharma-rd-tax-credit.html" class="il-card">
-        <div class="il-tag">Industry Guide</div>
-        <h4>Biotech and Pharma</h4>
-        <p>Clinical trials, compound synthesis, lab supplies, CRO contract research.</p>
-      </a>
-      <a href="blog/food-beverage-rd-tax-credit.html" class="il-card">
-        <div class="il-tag">Industry Guide</div>
-        <h4>Food and Beverage</h4>
-        <p>Recipe development, shelf life testing, packaging innovation, formulation trials.</p>
-      </a>
-      <a href="blog/aerospace-rd-tax-credit.html" class="il-card">
-        <div class="il-tag">Industry Guide</div>
-        <h4>Aerospace</h4>
-        <p>IR&amp;D programs, self-funded development, commercial space, funded research rules.</p>
-      </a>
-      <a href="blog/architecture-construction-rd-tax-credit.html" class="il-card">
-        <div class="il-tag">Industry Guide</div>
-        <h4>Architecture and Construction</h4>
-        <p>Structural engineering, innovative design methods, new materials research.</p>
-      </a>
-    </div>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <div class="faq">
-      <div class="faq-q" onclick="faqToggle(this)">How accurate is this calculator? <span class="faq-arr">&#8964;</span></div>
-      <div class="faq-a">This is a preliminary estimate using the actual IRS formulas for the ASC and Regular Credit methods. The accuracy depends on how accurately you estimate your QREs and R&D time percentages. A formal credit study will produce a more precise number based on your actual payroll records, invoices, and project documentation. Use this to understand the order of magnitude before deciding whether to pursue a full study.</div>
-    </div>
-    <div class="faq">
-      <div class="faq-q" onclick="faqToggle(this)">Can I claim credits for prior years? <span class="faq-arr">&#8964;</span></div>
-      <div class="faq-a">Yes. You can amend returns to claim R&amp;D credits for the prior three years. Use the year tabs in the calculator to switch between years and see what each one may be worth. The multi-year panel in the results shows your four-year total opportunity. Many first-time claimants find their back-year credits are more valuable than the current year.</div>
-    </div>
-    <div class="faq">
-      <div class="faq-q" onclick="faqToggle(this)">What is the 65% contractor rule? <span class="faq-arr">&#8964;</span></div>
-      <div class="faq-a">When you pay outside contractors to perform qualified research, only 65% of what you pay counts as a QRE. The IRS reduces the qualifying amount because the contractor retains some intellectual property rights. Enter the full amount you paid and the calculator applies the 65% automatically.</div>
-    </div>
-    <div class="faq">
-      <div class="faq-q" onclick="faqToggle(this)">My business is not profitable. Can I still get the credit? <span class="faq-arr">&#8964;</span></div>
-      <div class="faq-a">Yes, if you qualify as a startup. Enable the startup payroll offset toggle. If you have been operating for fewer than five years and have under $5 million in gross receipts, you can apply up to $500,000 of the credit against your employer payroll tax liability each year. This converts the credit into real cash savings even with no income tax to offset.</div>
-    </div>
-    <div class="faq">
-      <div class="faq-q" onclick="faqToggle(this)">What is the Section 280C election and should I use it? <span class="faq-arr">&#8964;</span></div>
-      <div class="faq-a">When you claim the R&amp;D credit, the IRS requires you to reduce your wage deduction by the credit amount. The Section 280C(c)(2) election lets you take a reduced credit rate instead, so you keep the full wage deduction. At a 21% corporate tax rate, the reduced credit is roughly 11% under ASC instead of 14%. For some businesses this simplifies the tax return. Toggle it in the calculator to compare both scenarios for your numbers.</div>
-    </div>
-    <div class="faq">
-      <div class="faq-q" onclick="faqToggle(this)">Do I need a specialist to claim the credit? <span class="faq-arr">&#8964;</span></div>
-      <div class="faq-a">Not required, but strongly recommended for claims above $20,000. The calculation is straightforward but the documentation requirements, the four-part test applied to your specific activities, and audit risk all benefit from a specialist. Fees are typically 20-30% of the credit recovered, with no fee if no credit is found. For a $100,000 credit, paying $20,000-$30,000 to a specialist to find and defend it is usually the right economic call.</div>
-    </div>
-
-    <div class="disc">
-      This calculator provides preliminary estimates for informational purposes only. It is not tax advice and does not constitute a formal R&amp;D credit study. Actual credit amounts depend on your specific facts, documentation, and circumstances. Consult a qualified tax professional before filing any credit claim. Owedco is not a tax firm and does not provide tax advice.
+    <div class="eg-wrap">
+      <h4>Example Teams. Click to Load.</h4>
+      <table class="eg-table">
+        <thead><tr><th>Team</th><th>People</th><th>Avg Salary</th><th>R&amp;D %</th><th>Est. Credit</th></tr></thead>
+        <tbody>
+          <tr><td><span class="eg-link" onclick="loadEx(3,125000,80,0,0,0)">Early SaaS</span></td><td>3</td><td>$125k</td><td>80%</td><td id="eg1">-</td></tr>
+          <tr><td><span class="eg-link" onclick="loadEx(8,150000,70,30000,50000,0)">Seed Product</span></td><td>8</td><td>$150k</td><td>70%</td><td id="eg2">-</td></tr>
+          <tr><td><span class="eg-link" onclick="loadEx(15,175000,65,100000,200000,20000)">Series A</span></td><td>15</td><td>$175k</td><td>65%</td><td id="eg3">-</td></tr>
+          <tr><td><span class="eg-link" onclick="loadEx(5,120000,90,80000,0,0)">Biotech Lab</span></td><td>5</td><td>$120k</td><td>90%</td><td id="eg4">-</td></tr>
+          <tr><td><span class="eg-link" onclick="loadEx(20,160000,60,200000,150000,50000)">Manufacturer</span></td><td>20</td><td>$160k</td><td>60%</td><td id="eg5">-</td></tr>
+          <tr><td><span class="eg-link" onclick="loadEx(4,140000,85,50000,30000,10000)">AgTech Startup</span></td><td>4</td><td>$140k</td><td>85%</td><td id="eg6">-</td></tr>
+        </tbody>
+      </table>
     </div>
 
   </div>
 
-  <footer>
-    <div class="fl">
-      <a href="index.html">Quiz</a>
-      <a href="blog/index.html">Blog</a>
-      <a href="activity-checker.html">Activity Checker</a>
-      <a href="rd-tax-credit-calculator.html">Calculator</a>
-      <a href="partners.html">Partners</a>
-      <a href="about.html">About</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="contact.html">Contact</a>
+  <!-- RESULTS -->
+  <div class="res">
+    <div class="res-hd">
+      <h3>Your Estimated Credit</h3>
+      <p id="res-sub">Updates as you type</p>
     </div>
-    <p>2026 Owedco. Not a tax firm. Not tax advice. Just the information you should have had years ago.</p>
-  </footer>
+    <div class="res-main">
+      <div class="rlbl">Federal R&amp;D Tax Credit</div>
+      <div class="rnum" id="fedCredit">$0</div>
+      <div class="rsub" id="fedMethod">Enter your expenses above</div>
+    </div>
+    <div class="breakdown">
+      <div class="brow"><span class="blbl">Total QREs</span><span class="bval" id="bQRE">$0</span></div>
+      <div class="brow"><span class="blbl">Qualified Wages</span><span class="bval" id="bWages">$0</span></div>
+      <div class="brow"><span class="blbl">Supplies</span><span class="bval" id="bSupplies">$0</span></div>
+      <div class="brow"><span class="blbl">Contract Research (65%)</span><span class="bval" id="bContractors">$0</span></div>
+      <div class="brow"><span class="blbl">Computing Costs</span><span class="bval" id="bComputing">$0</span></div>
+      <div class="brow"><span class="blbl">Base Amount</span><span class="bval" id="bBase">$0</span></div>
+      <div class="brow"><span class="blbl">Credit Rate</span><span class="bval gold" id="bRate">-</span></div>
+    </div>
+    <div class="state-blk">
+      <div class="rlbl" style="margin-bottom:0.6rem;">State Credit</div>
+      <div class="state-inner none" id="stateInner">
+        <div class="sname" id="stateName">No state selected</div>
+        <div class="snote" id="stateNote">Select your state above to include state credits.</div>
+      </div>
+    </div>
+    <div class="pay-blk" id="payBlk">
+      <div class="pay-inner">
+        <div class="plbl">Startup Payroll Tax Offset</div>
+        <div class="pval" id="payVal">$0</div>
+        <div class="pnote">Applied against employer payroll taxes. Capped at $500,000 per year.</div>
+      </div>
+    </div>
+    <div class="multi-blk">
+      <div class="multi-inner">
+        <div class="mlbl">4-Year Recoverable Credits</div>
+        <div class="mrow"><span>2026</span><span id="m2026">$0</span></div>
+        <div class="mrow"><span>2025 (amendable)</span><span id="m2025">$0</span></div>
+        <div class="mrow"><span>2024 (amendable)</span><span id="m2024">$0</span></div>
+        <div class="mrow"><span>2023 (amendable)</span><span id="m2023">$0</span></div>
+        <div class="mrow total-row"><span>Total Opportunity</span><span id="mTotal">$0</span></div>
+      </div>
+    </div>
+    <div class="total-blk">
+      <div class="tvlbl">Combined Estimated Benefit</div>
+      <div class="tvval" id="totalVal">$0</div>
+      <div class="tvnote" id="totalNote">Federal plus state credit. Preliminary estimate only.</div>
+    </div>
+    <div class="actions">
+      <div class="btn-action" onclick="window.print()">Print or Save PDF</div>
+      <div class="btn-action" id="copyBtn" onclick="copyResults()">Copy Summary</div>
+    </div>
+    <div class="res-cta">
+      <p>Get a full credit study with documentation support. TaxTaker specializes in R&amp;D credits for small businesses.</p>
+      <a href="https://www.taxtaker.com/r-d-tax-credits" target="_blank" rel="noopener" class="cta-btn">Get a Free Credit Review</a>
+      <div class="aff">Owedco may receive a referral fee from TaxTaker. Your cost is not affected.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <h2>Related Free Tools</h2>
+  <div class="il-grid">
+    <a href="activity-checker.html" class="il-card">
+      <div class="il-tag">Free Tool</div>
+      <h4>Activity Checker</h4>
+      <p>Type in what your team does. Get an instant yes, no, or partial answer. 200 plus activities covered.</p>
+    </a>
+    <a href="index.html" class="il-card">
+      <div class="il-tag">Free Quiz</div>
+      <h4>R&amp;D Eligibility Quiz</h4>
+      <p>Six questions, two minutes. Find out if your business likely qualifies before running any numbers.</p>
+    </a>
+    <a href="blog/rd-tax-credit-vs-section-179.html" class="il-card">
+      <div class="il-tag">Strategy</div>
+      <h4>R&amp;D Credit vs Section 179</h4>
+      <p>Credits reduce your tax bill dollar for dollar. Deductions reduce income. Know the difference before you file.</p>
+    </a>
+    <a href="blog/rd-credit-audit-non-qualifying-activities.html" class="il-card">
+      <div class="il-tag">Audit Guide</div>
+      <h4>Non-Qualifying Activities</h4>
+      <p>What gets disallowed in audits, what documentation holds up, and how to protect your claim.</p>
+    </a>
+  </div>
+
+  <h2>How the Calculator Works</h2>
+  <p>Enter your qualified research expenses across four categories: wages, supplies, contract research, and computing costs. The calculator applies the correct IRS treatment to each one, works out your base amount using your chosen method and prior year data, then applies the credit rate. The number updates as you type. No email, no form, no gated result.</p>
+  <p>Most calculators online take wages only and show a rough range. This one handles the 65 percent contractor rule automatically, applies the 80 percent substantially-all wage rule when it applies, supports both ASC and Regular Credit methods with live switching, shows state credits for 20 states on top of the federal result, and calculates your four-year recoverable total so you know what prior year amendments are worth before you pick up the phone.</p>
+
+  <h2>ASC vs Regular Credit: Which to Use</h2>
+  <div class="method-grid">
+    <div class="mc">
+      <h4>Alternative Simplified Credit (ASC)</h4>
+      <p>14 percent of QREs above 50 percent of your three-year average QREs. No prior R&amp;D history? You get 6 percent of current QREs with no base amount reduction. The most commonly used method because it is easier to document and calculate. Good choice for first-time claimants and businesses without detailed historical data.</p>
+    </div>
+    <div class="mc">
+      <h4>Regular Credit Method</h4>
+      <p>20 percent of QREs above your base amount. The base amount uses your fixed-base percentage times your average gross receipts from the prior four years, with a 50 percent floor. More complex but can produce a higher credit for companies with low historical R&amp;D spending relative to current revenue growth. Worth running both to compare.</p>
+    </div>
+  </div>
+  <p>You can run both methods and pick whichever is higher when you file. Use the method tabs in the calculator to switch between them and see the difference on your numbers.</p>
+
+  <h2>The 80 Percent Substantially All Rule</h2>
+  <p>When an employee spends 80 percent or more of their time on qualified research activities during the year, the IRS allows 100 percent of their wages to count as QREs. No pro-rating required. The substantially-all rule matters most for dedicated R&amp;D staff who spend almost all of their working hours on qualifying work. Toggle the selector in the calculator to see how much it changes your estimate.</p>
+
+  <h2>State R&amp;D Tax Credits: 20 States</h2>
+  <p>Twenty states offer R&amp;D credits that stack directly on top of the federal credit. Select your state in the calculator to add it to your estimate automatically.</p>
+  <table class="stbl">
+    <thead><tr><th>State</th><th>Rate</th><th>Key Detail</th></tr></thead>
+    <tbody>
+      <tr><td>Arizona</td><td>24%</td><td>Highest rate in the country. Refundable portion available for small businesses.</td></tr>
+      <tr><td>Virginia</td><td>15 to 20%</td><td>15% on first $300K of QREs, 20% above that for small businesses.</td></tr>
+      <tr><td>California</td><td>15%</td><td>No cap. Largest dollar-value state credit due to high engineering wages.</td></tr>
+      <tr><td>Massachusetts</td><td>10%</td><td>10% of QREs above a base amount. Strong biotech and software ecosystem.</td></tr>
+      <tr><td>Pennsylvania</td><td>10%</td><td>Applies to increase in QREs over prior year base.</td></tr>
+      <tr><td>Georgia</td><td>10%</td><td>Transferable for startups against payroll tax. Good for pre-revenue companies.</td></tr>
+      <tr><td>New Jersey</td><td>10%</td><td>10% of eligible R&amp;D expenses. Strong pharma and biotech industry presence.</td></tr>
+      <tr><td>Minnesota</td><td>10%</td><td>10% on first $2M of QREs, 2.5% above that.</td></tr>
+      <tr><td>Maryland</td><td>10%</td><td>Basic credit 10%, small business credit up to 15%. Strong defense contractor ecosystem.</td></tr>
+      <tr><td>New York</td><td>9%</td><td>Partially refundable for qualifying companies. Applies statewide.</td></tr>
+      <tr><td>Louisiana</td><td>8%</td><td>8% of QREs. Strong for manufacturing and chemical industry R&amp;D.</td></tr>
+      <tr><td>Ohio</td><td>7%</td><td>Nonrefundable, 7-year carryforward available.</td></tr>
+      <tr><td>Illinois</td><td>6.5%</td><td>6.5% of Illinois QREs above base amount.</td></tr>
+      <tr><td>Connecticut</td><td>6%</td><td>Partially refundable. Strong for biotech, fintech, and insurance tech.</td></tr>
+      <tr><td>Kansas</td><td>6.5%</td><td>6.5% credit on qualifying expenses. Available to businesses of all sizes.</td></tr>
+      <tr><td>Oregon</td><td>5 to 15%</td><td>Sliding scale based on QRE amount. Up to 15% for smaller claims.</td></tr>
+      <tr><td>Wisconsin</td><td>5 to 10%</td><td>5% base credit, 10% for research related to energy and manufacturing.</td></tr>
+      <tr><td>South Carolina</td><td>5%</td><td>5% of QREs. Simple calculation, low documentation burden.</td></tr>
+      <tr><td>Texas</td><td>5%</td><td>Applied against franchise tax. No income tax in Texas so this is the mechanism.</td></tr>
+      <tr><td>Colorado</td><td>3%</td><td>3% of QREs. Straightforward, low documentation requirements.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Industry Guides</h2>
+  <div class="il-grid">
+    <a href="blog/software-company-rd-tax-credit.html" class="il-card">
+      <div class="il-tag">Industry Guide</div>
+      <h4>Software and Tech</h4>
+      <p>Developer wages, cloud compute, new feature development, algorithm R&amp;D.</p>
+    </a>
+    <a href="blog/manufacturing-company-rd-tax-credit.html" class="il-card">
+      <div class="il-tag">Industry Guide</div>
+      <h4>Manufacturing</h4>
+      <p>Process improvements, tooling, custom equipment, new materials testing.</p>
+    </a>
+    <a href="blog/biotech-pharma-rd-tax-credit.html" class="il-card">
+      <div class="il-tag">Industry Guide</div>
+      <h4>Biotech and Pharma</h4>
+      <p>Clinical trials, compound synthesis, lab supplies, CRO contract research.</p>
+    </a>
+    <a href="blog/food-beverage-rd-tax-credit.html" class="il-card">
+      <div class="il-tag">Industry Guide</div>
+      <h4>Food and Beverage</h4>
+      <p>Recipe development, shelf life testing, packaging innovation, formulation trials.</p>
+    </a>
+    <a href="blog/aerospace-rd-tax-credit.html" class="il-card">
+      <div class="il-tag">Industry Guide</div>
+      <h4>Aerospace and Defense</h4>
+      <p>IR&amp;D programs, self-funded development, commercial space, funded research rules.</p>
+    </a>
+    <a href="blog/architecture-construction-rd-tax-credit.html" class="il-card">
+      <div class="il-tag">Industry Guide</div>
+      <h4>Architecture and Construction</h4>
+      <p>Structural engineering, innovative design methods, new materials research.</p>
+    </a>
+    <a href="blog/do-i-qualify-for-rd-tax-credit.html" class="il-card">
+      <div class="il-tag">Eligibility</div>
+      <h4>Do I Qualify?</h4>
+      <p>The four-part IRS test explained in plain English. Find out before you spend anything.</p>
+    </a>
+    <a href="blog/rd-tax-credit-startups-payroll-taxes.html" class="il-card">
+      <div class="il-tag">Startups</div>
+      <h4>Startups and Payroll Offset</h4>
+      <p>Not profitable yet? You can still apply up to $500K per year against payroll taxes.</p>
+    </a>
+  </div>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq">
+    <div class="faq-q" onclick="faqToggle(this)">How accurate is this calculator? <span class="faq-arr">&#8964;</span></div>
+    <div class="faq-a">This is a preliminary estimate using the actual IRS formulas for the ASC and Regular Credit methods. The number depends on how accurately you estimate your QREs and R&amp;D time percentages. A formal credit study will produce a more precise figure based on your actual payroll records, invoices, and project documentation. Use this to understand the order of magnitude before deciding whether to pursue a full study.</div>
+  </div>
+  <div class="faq">
+    <div class="faq-q" onclick="faqToggle(this)">Can I claim credits for prior years? <span class="faq-arr">&#8964;</span></div>
+    <div class="faq-a">Yes. You can amend returns to claim R&amp;D credits for the prior three years. Use the year tabs in the calculator to switch between years and see what each one may be worth. The multi-year panel in the results shows your four-year total. Many first-time claimants find their back-year credits are worth more than the current year because their R&amp;D spending was already happening, they just were not tracking it.</div>
+  </div>
+  <div class="faq">
+    <div class="faq-q" onclick="faqToggle(this)">What is the 65 percent contractor rule? <span class="faq-arr">&#8964;</span></div>
+    <div class="faq-a">When you pay outside contractors to perform qualified research, only 65 percent of what you pay counts as a QRE. The IRS reduces the qualifying amount because the contractor retains some intellectual property rights and does not bear the full financial risk of the research. Enter the full contract amount and the calculator applies the 65 percent rule automatically.</div>
+  </div>
+  <div class="faq">
+    <div class="faq-q" onclick="faqToggle(this)">My business is not profitable. Can I still benefit? <span class="faq-arr">&#8964;</span></div>
+    <div class="faq-a">Yes, if you qualify as a startup. Enable the startup payroll offset toggle. If you have been operating for fewer than five years and have under $5 million in gross receipts, you can apply up to $500,000 of the credit against your employer payroll tax liability each year. No income tax required. The credit comes off your quarterly payroll tax payments instead.</div>
+  </div>
+  <div class="faq">
+    <div class="faq-q" onclick="faqToggle(this)">What is the Section 280C election? <span class="faq-arr">&#8964;</span></div>
+    <div class="faq-a">When you claim the R&amp;D credit, the IRS requires you to reduce your wage deduction by the credit amount. The Section 280C(c)(2) election lets you take a reduced credit rate instead, so you keep the full wage deduction. At a 21 percent corporate tax rate, the reduced credit is roughly 11 percent under ASC instead of 14 percent. Toggle it in the calculator to compare both scenarios on your actual numbers.</div>
+  </div>
+  <div class="faq">
+    <div class="faq-q" onclick="faqToggle(this)">Do I need a specialist to claim the credit? <span class="faq-arr">&#8964;</span></div>
+    <div class="faq-a">Not required, but strongly recommended for claims above $20,000. The calculation is not complicated but the documentation requirements, the four-part test applied to your specific activities, and audit risk all benefit from someone who does this work full time. Fees are typically 20 to 30 percent of the credit recovered, with no fee if no credit is found. For a $100,000 credit, paying a specialist to find and defend it is usually the right call.</div>
+  </div>
+
+  <div class="disc">
+    This calculator provides preliminary estimates for informational purposes only. It is not tax advice and does not constitute a formal R&amp;D credit study. Actual credit amounts depend on your specific facts, documentation, and circumstances. Consult a qualified tax professional before filing any credit claim. Owedco is not a tax firm and does not provide tax advice.
+  </div>
+
+</div>
+
+<footer>
+  <div class="fl">
+    <a href="index.html">Quiz</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="activity-checker.html">Activity Checker</a>
+    <a href="rd-tax-credit-calculator.html">Calculator</a>
+    <a href="partners.html">Partners</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="disclaimer.html">Disclaimer</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p>2026 Owedco. Not a tax firm. Not tax advice. Just the information you should have had years ago.</p>
+</footer>
 
 <script>
-var METHOD = 'asc';
-var PY_OPEN = false;
-var STARTUP = false;
-var S280C = false;
-var CUR_YEAR = '2026';
-
-var STATES = {
-  CA:{name:'California',rate:0.15,note:'No cap. Stacks on federal credit.'},
+var METHOD='asc',PY_OPEN=false,STARTUP=false,S280C=false,CUR_YEAR='2026';
+var STATES={
+  CA:{name:'California',rate:0.15,note:'No cap. Stacks on top of your federal credit.'},
   NY:{name:'New York',rate:0.09,note:'Partially refundable for qualifying companies.'},
   TX:{name:'Texas',rate:0.05,note:'Applied against franchise tax.'},
-  MA:{name:'Massachusetts',rate:0.10,note:'10% of QREs above base amount.'},
-  IL:{name:'Illinois',rate:0.065,note:'6.5% of excess QREs.'},
-  PA:{name:'Pennsylvania',rate:0.10,note:'10% of increase over prior year base.'},
-  GA:{name:'Georgia',rate:0.10,note:'Transferable for startups against payroll.'},
-  OH:{name:'Ohio',rate:0.07,note:'Nonrefundable, 7-year carryforward.'},
-  NJ:{name:'New Jersey',rate:0.10,note:'10% of eligible R&D expenses.'},
-  MN:{name:'Minnesota',rate:0.10,note:'10% on first $2M, 2.5% above.'},
-  AZ:{name:'Arizona',rate:0.24,note:'Highest state rate in the country.'},
-  CO:{name:'Colorado',rate:0.03,note:'3% of QREs. Simple, low documentation.'},
+  MA:{name:'Massachusetts',rate:0.10,note:'10 percent of QREs above a base amount.'},
+  IL:{name:'Illinois',rate:0.065,note:'6.5 percent of excess QREs above base.'},
+  PA:{name:'Pennsylvania',rate:0.10,note:'10 percent of increase over prior year base.'},
+  GA:{name:'Georgia',rate:0.10,note:'Transferable against payroll for startups.'},
+  OH:{name:'Ohio',rate:0.07,note:'Nonrefundable. 7-year carryforward.'},
+  NJ:{name:'New Jersey',rate:0.10,note:'10 percent of eligible R&D expenses.'},
+  MN:{name:'Minnesota',rate:0.10,note:'10 percent on first $2M, 2.5 percent above.'},
+  AZ:{name:'Arizona',rate:0.24,note:'Highest state rate in the country. Refundable portion available.'},
+  CO:{name:'Colorado',rate:0.03,note:'3 percent of QREs. Simple and low burden.'},
   CT:{name:'Connecticut',rate:0.06,note:'Partially refundable.'},
-  VA:{name:'Virginia',rate:0.15,note:'15% on first $300K, 20% above for small biz.'}
+  VA:{name:'Virginia',rate:0.15,note:'15 percent on first $300K, 20 percent above for small biz.'},
+  OR:{name:'Oregon',rate:0.10,note:'Sliding scale 5 to 15 percent based on QRE amount.'},
+  WI:{name:'Wisconsin',rate:0.075,note:'5 to 10 percent depending on research category.'},
+  MD:{name:'Maryland',rate:0.10,note:'Basic 10 percent credit, up to 15 percent for small businesses.'},
+  SC:{name:'South Carolina',rate:0.05,note:'5 percent of QREs. Straightforward calculation.'},
+  LA:{name:'Louisiana',rate:0.08,note:'8 percent of QREs. Strong for manufacturing and chemical R&D.'},
+  KS:{name:'Kansas',rate:0.065,note:'6.5 percent on qualifying expenses. Available to all business sizes.'}
 };
 
-function fmt(n){
-  if(!n||n===0) return '$0';
-  return '$'+Math.round(n).toLocaleString('en-US');
-}
-function v(id){
-  var x=parseFloat(document.getElementById(id).value);
-  return isNaN(x)?0:x;
-}
+function fmt(n){if(!n||n===0)return '$0';return '$'+Math.round(n).toLocaleString('en-US');}
+function v(id){var x=parseFloat(document.getElementById(id).value);return isNaN(x)?0:x;}
 
 function setMethod(m){
   METHOD=m;
@@ -713,35 +675,30 @@ function setMethod(m){
   document.getElementById('rc-sec').style.display=m==='rc'?'block':'none';
   calc();
 }
-
 function togglePY(){
   PY_OPEN=!PY_OPEN;
   document.getElementById('pySw').className='sw'+(PY_OPEN?' on':'');
   document.getElementById('pyFields').className='py'+(PY_OPEN?' show':'');
   calc();
 }
-
 function toggleStartup(){
   STARTUP=!STARTUP;
   document.getElementById('startupSw').className='sw'+(STARTUP?' on':'');
   document.getElementById('payBlk').className='pay-blk'+(STARTUP?' show':'');
   calc();
 }
-
 function toggle280c(){
   S280C=!S280C;
   document.getElementById('sw280c').className='sw'+(S280C?' on':'');
   calc();
 }
-
-function setYear(y, el){
+function setYear(y,el){
   CUR_YEAR=y;
   var tabs=document.querySelectorAll('.ytab');
   for(var i=0;i<tabs.length;i++) tabs[i].className='ytab';
   el.className='ytab on';
   calc();
 }
-
 function faqToggle(el){
   var a=el.nextElementSibling;
   var open=a.classList.contains('open');
@@ -749,29 +706,29 @@ function faqToggle(el){
   a.classList.toggle('open',!open);
 }
 
-function calcCredit(qre, py1, py2, py3, rcBase){
-  var base=0, credit=0, rate='', rateNum=0;
+function calcCredit(qre,py1,py2,py3,rcBase){
+  var base=0,credit=0,rate='';
   if(METHOD==='asc'){
-    if(PY_OPEN && (py1||py2||py3)){
+    if(PY_OPEN&&(py1||py2||py3)){
       var avg=(py1+py2+py3)/3;
       base=avg*0.5;
       var excess=Math.max(0,qre-base);
-      rateNum=S280C?(0.14*(1-0.21)):0.14;
-      credit=excess*rateNum;
-      rate=(S280C?'~11%':'14%')+' ASC (with base period)';
+      var r=S280C?(0.14*(1-0.21)):0.14;
+      credit=excess*r;
+      rate=(S280C?'~11%':'14%')+' ASC with base period';
     } else {
-      rateNum=S280C?(0.06*(1-0.21)):0.06;
-      credit=qre*rateNum;
-      rate=(S280C?'~4.7%':'6%')+' ASC (no prior data)';
+      var r=S280C?(0.06*(1-0.21)):0.06;
+      credit=qre*r;
+      rate=(S280C?'~4.7%':'6%')+' ASC no prior data';
     }
   } else {
     base=rcBase||0;
     var excess=Math.max(0,qre-base);
-    rateNum=S280C?(0.20*(1-0.21)):0.20;
-    credit=excess*rateNum;
+    var r=S280C?(0.20*(1-0.21)):0.20;
+    credit=excess*r;
     rate=(S280C?'~15.8%':'20%')+' Regular Credit';
   }
-  return {credit:credit, base:base, rate:rate};
+  return {credit:credit,base:base,rate:rate};
 }
 
 function calc(){
@@ -781,25 +738,23 @@ function calc(){
   var supplies=v('supplies');
   var contractors=v('contractors');
   var computing=v('computing');
-  var py1=v('py1'), py2=v('py2'), py3=v('py3');
+  var py1=v('py1'),py2=v('py2'),py3=v('py3');
   var rcBase=v('rcBase');
 
-  var qualWages = substantial ? wages : wages*rdpct;
-  var qualSupplies = supplies;
-  var qualContractors = contractors*0.65;
-  var qualComputing = computing;
-  var totalQRE = qualWages+qualSupplies+qualContractors+qualComputing;
+  var qualWages=substantial?wages:wages*rdpct;
+  var qualContractors=contractors*0.65;
+  var totalQRE=qualWages+supplies+qualContractors+computing;
 
-  var r = calcCredit(totalQRE, py1, py2, py3, rcBase);
-  var fedCredit = r.credit;
+  var r=calcCredit(totalQRE,py1,py2,py3,rcBase);
+  var fedCredit=r.credit;
 
   var stateCredit=0;
-  var stateKey=document.getElementById('state').value;
-  if(stateKey!=='none' && STATES[stateKey]){
-    var s=STATES[stateKey];
+  var sk=document.getElementById('state').value;
+  if(sk!=='none'&&STATES[sk]){
+    var s=STATES[sk];
     stateCredit=totalQRE*s.rate;
     document.getElementById('stateInner').className='state-inner';
-    document.getElementById('stateName').textContent=s.name+' — '+fmt(stateCredit);
+    document.getElementById('stateName').textContent=s.name+': '+fmt(stateCredit);
     document.getElementById('stateNote').textContent=s.note;
   } else {
     document.getElementById('stateInner').className='state-inner none';
@@ -807,74 +762,65 @@ function calc(){
     document.getElementById('stateNote').textContent='Select your state above to include state credits.';
   }
 
-  var payrollOffset=0;
   if(STARTUP){
-    payrollOffset=Math.min(500000,fedCredit);
-    document.getElementById('payVal').textContent=fmt(payrollOffset);
+    var po=Math.min(500000,fedCredit);
+    document.getElementById('payVal').textContent=fmt(po);
   }
 
   var total=fedCredit+stateCredit;
-
-  // multi-year estimate (use current inputs as proxy for each year, slight decay for prior years)
-  var y2026=CUR_YEAR==='2026'?total:total*1.0;
-  var y2025=total*0.92;
-  var y2024=total*0.85;
-  var y2023=total*0.78;
-  var yTotal=y2026+y2025+y2024+y2023;
+  var y26=total,y25=total*0.92,y24=total*0.85,y23=total*0.78;
+  var yTot=y26+y25+y24+y23;
 
   document.getElementById('fedCredit').textContent=fmt(fedCredit);
   document.getElementById('fedMethod').textContent=totalQRE>0?('Using '+r.rate):'Enter your expenses above';
   document.getElementById('bQRE').textContent=fmt(totalQRE);
   document.getElementById('bWages').textContent=fmt(qualWages);
-  document.getElementById('bSupplies').textContent=fmt(qualSupplies);
+  document.getElementById('bSupplies').textContent=fmt(supplies);
   document.getElementById('bContractors').textContent=fmt(qualContractors);
-  document.getElementById('bComputing').textContent=fmt(qualComputing);
+  document.getElementById('bComputing').textContent=fmt(computing);
   document.getElementById('bBase').textContent=fmt(r.base);
   document.getElementById('bRate').textContent=r.rate||'-';
   document.getElementById('totalVal').textContent=fmt(total);
-
-  document.getElementById('m2026').textContent=fmt(y2026);
-  document.getElementById('m2025').textContent=fmt(y2025);
-  document.getElementById('m2024').textContent=fmt(y2024);
-  document.getElementById('m2023').textContent=fmt(y2023);
-  document.getElementById('mTotal').textContent=fmt(yTotal);
+  document.getElementById('m2026').textContent=fmt(y26);
+  document.getElementById('m2025').textContent=fmt(y25);
+  document.getElementById('m2024').textContent=fmt(y24);
+  document.getElementById('m2023').textContent=fmt(y23);
+  document.getElementById('mTotal').textContent=fmt(yTot);
 
   var entity=document.getElementById('entity').value;
-  var note='Federal + state combined. ';
-  if(entity==='scorp') note+='S-Corp/Partnership: credit passes through to owners. ';
-  if(entity==='startup') note+='Enable startup payroll offset if under 5 yrs and under $5M revenue. ';
+  var note='Federal plus state combined. ';
+  if(entity==='scorp') note+='S-Corp or Partnership: credit passes through to owners. ';
+  if(entity==='startup') note+='Enable the startup payroll offset toggle if under 5 years old and under $5M revenue. ';
   note+='Preliminary estimate only.';
   document.getElementById('totalNote').textContent=note;
-
-  // update example credits
-  updateExamples();
+  updateEg();
 }
 
-function updateExamples(){
-  var examples=[
+function updateEg(){
+  var egs=[
     {id:'eg1',p:3,s:125000,r:0.80,sup:0,con:0,cmp:0},
     {id:'eg2',p:8,s:150000,r:0.70,sup:30000,con:50000,cmp:0},
     {id:'eg3',p:15,s:175000,r:0.65,sup:100000,con:200000,cmp:20000},
-    {id:'eg4',p:5,s:120000,r:0.90,sup:80000,con:0,cmp:0}
+    {id:'eg4',p:5,s:120000,r:0.90,sup:80000,con:0,cmp:0},
+    {id:'eg5',p:20,s:160000,r:0.60,sup:200000,con:150000,cmp:50000},
+    {id:'eg6',p:4,s:140000,r:0.85,sup:50000,con:30000,cmp:10000}
   ];
-  for(var i=0;i<examples.length;i++){
-    var e=examples[i];
+  for(var i=0;i<egs.length;i++){
+    var e=egs[i];
     var w=e.p*e.s*e.r;
-    var sup=e.sup;
-    var con=e.con*0.65;
-    var qre=w+sup+con+e.cmp;
+    var qre=w+e.sup+(e.con*0.65)+e.cmp;
     var cr=calcCredit(qre,0,0,0,0);
     document.getElementById(e.id).textContent=fmt(cr.credit);
   }
 }
 
-function loadExample(people, salary, rdPct, supplies, contractors, computing){
-  document.getElementById('wages').value=people*salary;
-  document.getElementById('rdpct').value=rdPct;
+function loadEx(p,s,r,sup,con,cmp){
+  document.getElementById('wages').value=p*s;
+  document.getElementById('rdpct').value=r;
   document.getElementById('substantial').value='no';
-  document.getElementById('supplies').value=supplies||'';
-  document.getElementById('contractors').value=contractors||'';
-  document.getElementById('computing').value=computing||'';
+  document.getElementById('supplies').value=sup||'';
+  document.getElementById('contractors').value=con||'';
+  document.getElementById('computing').value=cmp||'';
   calc();
   document.getElementById('wages').scrollIntoView({behavior:'smooth',block:'center'});
 }
@@ -884,7 +830,7 @@ function copyResults(){
   var state=document.getElementById('stateName').textContent;
   var total=document.getElementById('totalVal').textContent;
   var method=document.getElementById('fedMethod').textContent;
-  var text='Owedco R&D Tax Credit Estimate\n\nFederal Credit: '+fed+'\nState Credit: '+state+'\nCombined Total: '+total+'\nMethod: '+method+'\n\nowedco.com/rd-tax-credit-calculator.html';
+  var text='Owedco R&D Tax Credit Estimate\n\nFederal Credit: '+fed+'\nState: '+state+'\nCombined Total: '+total+'\nMethod: '+method+'\n\nowedco.com/rd-tax-credit-calculator.html';
   if(navigator.clipboard){
     navigator.clipboard.writeText(text).then(function(){
       var btn=document.getElementById('copyBtn');
@@ -894,14 +840,9 @@ function copyResults(){
   }
 }
 
-// attach all inputs
 var inputs=document.querySelectorAll('input,select');
-for(var i=0;i<inputs.length;i++){
-  inputs[i].addEventListener('input',calc);
-  inputs[i].addEventListener('change',calc);
-}
+for(var i=0;i<inputs.length;i++){inputs[i].addEventListener('input',calc);inputs[i].addEventListener('change',calc);}
 calc();
 </script>
-
 </body>
 </html>
