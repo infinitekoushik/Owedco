@@ -223,11 +223,11 @@ h1 em{font-style:italic;color:var(--gold);}
 <nav class="site-nav">
   <a class="logo" href="/" onclick="goHome();return false;">Owedco</a>
   <div class="nav-links">
-    <a href="/about.html">About</a>
+    <a href="/about">About</a>
     <a href="/blog/">Blog</a>
-    <a href="/activity-checker.html">Activity Checker</a>
-    <a href="/rd-tax-credit-calculator.html">Calculator</a>
-    <a href="/partners.html">Partners</a>
+    <a href="/activity-checker">Activity Checker</a>
+    <a href="/rd-tax-credit-calculator">Calculator</a>
+    <a href="/partners">Partners</a>
     <a href="#" onclick="startQuiz();return false;" class="nav-cta">Check Eligibility</a>
   </div>
   <button class="nav-hamburger" aria-label="Open menu" onclick="toggleMenu()">
@@ -236,16 +236,16 @@ h1 em{font-style:italic;color:var(--gold);}
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="/about.html">About</a>
+  <a href="/about">About</a>
   <a href="/blog/">Blog</a>
-  <a href="/activity-checker.html">Activity Checker</a>
-  <a href="/rd-tax-credit-calculator.html">Calculator</a>
-  <a href="/contact.html">Contact</a>
-  <a href="/privacy.html">Privacy</a>
-  <a href="/terms.html">Terms</a>
-  <a href="/disclaimer.html">Disclaimer</a>
-  <a href="/support.html">Support Us</a>
-  <a href="/partners.html">Partner Program</a>
+  <a href="/activity-checker">Activity Checker</a>
+  <a href="/rd-tax-credit-calculator">Calculator</a>
+  <a href="/contact">Contact</a>
+  <a href="/privacy">Privacy</a>
+  <a href="/terms">Terms</a>
+  <a href="/disclaimer">Disclaimer</a>
+  <a href="/support">Support Us</a>
+  <a href="/partners">Partner Program</a>
   <a href="#" onclick="startQuiz();toggleMenu();return false;" class="mcta">Check My Eligibility</a>
 </div>
 
@@ -350,17 +350,17 @@ h1 em{font-style:italic;color:var(--gold);}
 <footer class="site-footer">
   <span class="footer-copy">&copy; 2026 Owedco. All rights reserved.</span>
   <div class="footer-links">
-    <a href="/about.html">About</a>
+    <a href="/about">About</a>
     <a href="/blog/">Blog</a>
-    <a href="/activity-checker.html">Activity Checker</a>
-    <a href="/rd-tax-credit-calculator.html">Calculator</a>
-    <a href="/partners.html">Partners</a>
-    <a href="/contact.html">Contact</a>
+    <a href="/activity-checker">Activity Checker</a>
+    <a href="/rd-tax-credit-calculator">Calculator</a>
+    <a href="/partners">Partners</a>
+    <a href="/contact">Contact</a>
     <a href="mailto:hello@owedco.com?subject=Owedco Feedback">Feedback</a>
-    <a href="/privacy.html">Privacy</a>
-    <a href="/terms.html">Terms</a>
-    <a href="/disclaimer.html">Disclaimer</a>
-    <a href="/support.html">Support Us</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="/disclaimer">Disclaimer</a>
+    <a href="/support">Support Us</a>
   </div>
 </footer>
 
@@ -573,7 +573,7 @@ h1 em{font-style:italic;color:var(--gold);}
     var rdv=(ans.rdspend&&SPEND[ans.rdspend.v])||100000;
     var lo=Math.round(rdv*0.05);var hi=Math.round(rdv*0.10);
     var ind=(ans.industry&&ans.industry.v)||'';
-    var url='/share.html?tier='+tier+'&lo='+lo+'&hi='+hi+'&ind='+encodeURIComponent(ind);
+    var url='/share?tier='+tier+'&lo='+lo+'&hi='+hi+'&ind='+encodeURIComponent(ind);
     if(typeof gtag!=='undefined'){gtag('event','share_click',{event_category:'results',event_label:tier});}
     if(navigator.share){
       var labels={likely:'Likely Qualified',possible:'Possibly Qualified',unlikely:'Low Match'};
