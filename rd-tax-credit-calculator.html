@@ -26,16 +26,24 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L8QNJVR2MM"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L8QNJVR2MM');</script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+  <script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L8QNJVR2MM');
+(function(){var done=0,ev=['pointerdown','keydown','scroll','touchstart','mousemove'];
+function go(){if(done)return;done=1;ev.forEach(function(e){removeEventListener(e,go)});
+var g=document.createElement('script');g.async=1;g.src='https://www.googletagmanager.com/gtag/js?id=G-L8QNJVR2MM';document.head.appendChild(g);
+(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,'clarity','script','zi70t8zr9s');}
+ev.forEach(function(e){addEventListener(e,go,{passive:true})});
+addEventListener('load',function(){setTimeout(go,5000)});})();
+</script>
 
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     :root{
       --bg:#090E1A;--card:#111827;--border:#1C2A3E;
       --gold:#C9A84C;--gold-light:#E2C06A;--text:#A8BCCE;
-      --dim:#6B7E96;--green:#3DB87A;--red:#E05C5C;--white:#F0F4F8;--blue:#4A9EDB;
+      --dim:#8396AE;--green:#3DB87A;--red:#E05C5C;--white:#F0F4F8;--blue:#4A9EDB;
     }
     body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:1rem;line-height:1.7;}
     a{color:var(--gold);text-decoration:none;}
@@ -200,13 +208,6 @@
       body{background:white!important;color:#111!important;}
     }
   </style>
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "zi70t8zr9s");
-  </script>
 </head>
 <body>
 
@@ -248,7 +249,7 @@
       <div class="sec-hd">Business Info</div>
       <div class="f-row">
         <div class="f">
-          <label>Industry</label>
+          <label for="industry">Industry</label>
           <select id="industry">
             <option value="software">Software and Technology</option>
             <option value="manufacturing">Manufacturing</option>
@@ -265,7 +266,7 @@
           </select>
         </div>
         <div class="f">
-          <label>Entity Type</label>
+          <label for="entity">Entity Type</label>
           <select id="entity">
             <option value="ccorp">C-Corporation</option>
             <option value="scorp">S-Corp or Partnership</option>
@@ -275,7 +276,7 @@
         </div>
       </div>
       <div class="f">
-        <label>State</label>
+        <label for="state">State</label>
         <select id="state">
           <option value="none">No state credit (or not listed)</option>
           <option value="AZ">Arizona (24%)</option>
@@ -314,18 +315,18 @@
     <div class="sec">
       <div class="sec-hd">Qualified Research Expenses</div>
       <div class="f">
-        <label>Total W-2 Wages for R&amp;D Employees</label>
+        <label for="wages">Total W-2 Wages for R&amp;D Employees</label>
         <span class="hint">Gross wages for engineers, developers, scientists and R&amp;D managers doing qualifying work.</span>
         <input type="number" id="wages" placeholder="e.g. 500000" min="0" />
       </div>
       <div class="f-row">
         <div class="f">
-          <label>Percent of Time on R&amp;D</label>
+          <label for="rdpct">Percent of Time on R&amp;D</label>
           <span class="hint">Average across the team. 60 to 80 percent is typical for dedicated R&amp;D staff.</span>
           <input type="number" id="rdpct" value="70" min="1" max="100" />
         </div>
         <div class="f">
-          <label>Substantially All Rule</label>
+          <label for="substantial">Substantially All Rule</label>
           <span class="hint">If 80 percent or more of time is R&amp;D, IRS allows 100 percent of wages to count.</span>
           <select id="substantial">
             <option value="no">No, use percent entered</option>
@@ -334,17 +335,17 @@
         </div>
       </div>
       <div class="f">
-        <label>Supplies Used in Research</label>
+        <label for="supplies">Supplies Used in Research</label>
         <span class="hint">Materials consumed in prototypes, trials and test batches. Not standard production inventory.</span>
         <input type="number" id="supplies" placeholder="e.g. 50000" min="0" />
       </div>
       <div class="f">
-        <label>Contract Research Expenses</label>
+        <label for="contractors">Contract Research Expenses</label>
         <span class="hint">Paid to outside researchers or firms. The 65 percent IRS rule is applied automatically.</span>
         <input type="number" id="contractors" placeholder="e.g. 100000" min="0" />
       </div>
       <div class="f">
-        <label>Cloud and Computing Costs</label>
+        <label for="computing">Cloud and Computing Costs</label>
         <span class="hint">AWS, Azure, GCP compute used directly in R&amp;D: model training, simulations, analysis.</span>
         <input type="number" id="computing" placeholder="e.g. 20000" min="0" />
       </div>
@@ -366,15 +367,15 @@
         </div>
         <div class="py" id="pyFields">
           <div class="py-grid">
-            <div class="f"><label>Year minus 1 QREs</label><input type="number" id="py1" placeholder="e.g. 300000" min="0"/></div>
-            <div class="f"><label>Year minus 2 QREs</label><input type="number" id="py2" placeholder="e.g. 280000" min="0"/></div>
-            <div class="f"><label>Year minus 3 QREs</label><input type="number" id="py3" placeholder="e.g. 260000" min="0"/></div>
+            <div class="f"><label for="py1">Year minus 1 QREs</label><input type="number" id="py1" placeholder="e.g. 300000" min="0"/></div>
+            <div class="f"><label for="py2">Year minus 2 QREs</label><input type="number" id="py2" placeholder="e.g. 280000" min="0"/></div>
+            <div class="f"><label for="py3">Year minus 3 QREs</label><input type="number" id="py3" placeholder="e.g. 260000" min="0"/></div>
           </div>
         </div>
       </div>
       <div id="rc-sec" style="display:none;">
         <div class="f">
-          <label>Base Amount</label>
+          <label for="rcBase">Base Amount</label>
           <span class="hint">Fixed-base percentage times average gross receipts. If unknown, use 3 percent of average annual gross receipts.</span>
           <input type="number" id="rcBase" placeholder="e.g. 150000" min="0" />
         </div>
@@ -400,7 +401,7 @@
     </div>
 
     <div class="eg-wrap">
-      <h4>Example Teams. Click to Load.</h4>
+      <h4 role="heading" aria-level="2">Example Teams. Click to Load.</h4>
       <table class="eg-table">
         <thead><tr><th>Team</th><th>People</th><th>Avg Salary</th><th>R&amp;D %</th><th>Est. Credit</th></tr></thead>
         <tbody>
@@ -485,7 +486,7 @@
   <div class="il-grid">
     <a href="/activity-checker" class="il-card">
       <div class="il-tag">Free Tool</div>
-      <h4>Activity Checker</h4>
+      <h4 role="heading" aria-level="3">Activity Checker</h4>
       <p>Type in what your team does. Get an instant yes, no or partial answer. 200 plus activities covered.</p>
     </a>
     <a href="/" class="il-card">
@@ -512,7 +513,7 @@
   <h2>ASC vs Regular Credit: Which to Use</h2>
   <div class="method-grid">
     <div class="mc">
-      <h4>Alternative Simplified Credit (ASC)</h4>
+      <h4 role="heading" aria-level="3">Alternative Simplified Credit (ASC)</h4>
       <p>14 percent of QREs above 50 percent of your three-year average QREs. No prior R&amp;D history? You get 6 percent of current QREs with no base amount reduction. The most commonly used method because it is easier to document and calculate. Good choice for first-time claimants and businesses without detailed historical data.</p>
     </div>
     <div class="mc">
@@ -557,7 +558,7 @@
   <div class="il-grid">
     <a href="/blog/software-company-rd-tax-credit" class="il-card">
       <div class="il-tag">Industry Guide</div>
-      <h4>Software and Tech</h4>
+      <h4 role="heading" aria-level="3">Software and Tech</h4>
       <p>Developer wages, cloud compute, new feature development, algorithm R&amp;D.</p>
     </a>
     <a href="/blog/manufacturing-company-rd-tax-credit" class="il-card">
