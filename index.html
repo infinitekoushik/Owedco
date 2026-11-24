@@ -380,7 +380,7 @@ h1 em{font-style:italic;color:var(--gold);}
   var coinGo=0,coinEv=['pointerdown','keydown','scroll','touchstart','mousemove'];
   function loadCoin(){if(coinGo)return;coinGo=1;coinEv.forEach(function(e){removeEventListener(e,loadCoin)});document.head.appendChild(coinScript);}
   coinEv.forEach(function(e){addEventListener(e,loadCoin,{passive:true})});
-  addEventListener('load',function(){setTimeout(loadCoin,6000)});
+  addEventListener('load',function(){setTimeout(loadCoin,10000)});
 
   function initCoin(){
     var canvas=document.getElementById('canvas3d');
