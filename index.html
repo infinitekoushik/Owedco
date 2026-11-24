@@ -25,16 +25,19 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"Owedco","alternateName":"owedco.com","url":"https://owedco.com"}
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L8QNJVR2MM"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-L8QNJVR2MM');
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L8QNJVR2MM');
+(function(){var done=0,ev=['pointerdown','keydown','scroll','touchstart','mousemove'];
+function go(){if(done)return;done=1;ev.forEach(function(e){removeEventListener(e,go)});
+var g=document.createElement('script');g.async=1;g.src='https://www.googletagmanager.com/gtag/js?id=G-L8QNJVR2MM';document.head.appendChild(g);
+(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,'clarity','script','zi70t8zr9s');}
+ev.forEach(function(e){addEventListener(e,go,{passive:true})});
+addEventListener('load',function(){setTimeout(go,5000)});})();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap"></noscript>
 <style>
 :root{
   --navy:#090E1A;
@@ -44,7 +47,7 @@
   --gold-lt:#E2C06A;
   --gold-dim:#7A6030;
   --white:#FFFFFF;
-  --text-dim:#6B7E96;
+  --text-dim:#8396AE;
   --text-body:#A8BCCE;
   --good:#3DB87A;
   --bad:#E05C5C;
@@ -217,13 +220,6 @@ h1 em{font-style:italic;color:var(--gold);}
   .btn-hero,.btn-next,.btn-cta{transition:none;}
 }
 </style>
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "zi70t8zr9s");
-  </script>
 </head>
 <body>
 
@@ -337,7 +333,7 @@ h1 em{font-style:italic;color:var(--gold);}
       <div class="email-cap-label">Get your results by email</div>
       <p class="email-cap-sub">We will send you a copy of your eligibility result and credit estimate. No spam, no sales calls. One email, that is it.</p>
       <div class="email-cap-row">
-        <input type="email" id="captureEmail" class="email-cap-input" placeholder="your@email.com" autocomplete="email">
+        <input type="email" id="captureEmail" aria-label="Your email address" class="email-cap-input" placeholder="your@email.com" autocomplete="email">
         <button class="email-cap-btn" onclick="submitEmail()">Send My Results</button>
       </div>
       <div class="email-cap-sent" id="emailSent" style="display:none;">
@@ -379,7 +375,10 @@ h1 em{font-style:italic;color:var(--gold);}
   var coinScript=document.createElement('script');
   coinScript.src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
   coinScript.onload=initCoin;
-  document.head.appendChild(coinScript);
+  var coinGo=0,coinEv=['pointerdown','keydown','scroll','touchstart','mousemove'];
+  function loadCoin(){if(coinGo)return;coinGo=1;coinEv.forEach(function(e){removeEventListener(e,loadCoin)});document.head.appendChild(coinScript);}
+  coinEv.forEach(function(e){addEventListener(e,loadCoin,{passive:true})});
+  addEventListener('load',function(){setTimeout(loadCoin,6000)});
 
   function initCoin(){
     var canvas=document.getElementById('canvas3d');
